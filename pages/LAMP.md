@@ -1,0 +1,7 @@
+- The complete WEB package:
+	- #Linux
+	- #[[Apache (httpd)]]
+	- #MariaDB
+	- #[[PHP]]
+-
+-

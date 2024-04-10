@@ -1,0 +1,339 @@
+Delivered-To: gregleonhardt@gmail.com
+Received: by 2002:a05:7208:3cb:b0:81:eec4:97f2 with SMTP id m11csp46840rbb;
+        Tue, 9 Apr 2024 16:39:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF82oT/50Ean1sUwxFeOssI35miUY1lWK8tDeI7SXYrhOYI/l89a/J5yFersIeQKOZ7BogK
+X-Received: by 2002:a25:3a87:0:b0:dd1:3cc1:5352 with SMTP id h129-20020a253a87000000b00dd13cc15352mr1297876yba.15.1712705956823;
+        Tue, 09 Apr 2024 16:39:16 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1712705956; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=dm4zhQlp12V8eYLL5EKh3xyNY9bxLltbZ5dbNDjUTRHLesM0LuJNbKWEaHJVAVMa/5
+         w/st7k9c/db5EuYMeVrSIBg9ZlgaL2Nvy+ZNO/mjoEZOR5FONUD/i5Cfxqd1FJXK3Bgi
+         Mh2tz61cy9OTZcXsaIiIUrVL1w+gDFhW106mJ9hFusaKiWP3wSqjViMrAsicET84chhe
+         fcVp9tzhq85kTLi6waoJ58NJJqrVd3saWnXDrRP4I/4cZ6C1TgjlDMtkzeb3QkDGTFbQ
+         NX6ll2q41yBTspGiCsH4Jv8+d61DhQWM8VuRWkLewZ4/Z53m94aDxxDODX8PjbReawbB
+         4ufg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=PhZogSL631o9AyZ7QjfGTH/HOYxOErb0Clkz2vi/fKo=;
+        fh=Xshuh/k281dT/amGYMS18AuSC0ItdddNsSlRGO/B3iA=;
+        b=i0f/n3okQfEMwjizwS9Ix9wY9wAbNNAtcsm58V6kJo+CQ+bPS3CzOoL9FeCKYo6QF3
+         JH42J0DK9Tho8TAQBgVCer0gAQsYorPB95RxKjt99zV0vtqiA36G/irEpaP2IoHEZbBW
+         gcZqwxsiAZ3pg8NxZ72BDnk63cUjJ79GkXST6027ngWCFYKzoumX2gKX5zknAjJx/Tnz
+         +SoHoZEowRCOSuYDndgpuM32lKCLUI8GR7fEHbJvIxRJ3dwqpYjWw2X3iWuVnBRCD2tY
+         PO6Fmjwk7Jv+FaxMZSlyWlQ9Qd4CKWQAaW29owR7DPLCzjVRJ+kiwvg89la/DB1jX04O
+         SheQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@NETORGFT3586627.onmicrosoft.com header.s=selector2-NETORGFT3586627-onmicrosoft-com header.b=qL2SnIke;
+       arc=pass (i=1 spf=pass spfdomain=sljlawfirm.com dkim=pass dkdomain=sljlawfirm.com dmarc=pass fromdomain=sljlawfirm.com);
+       spf=pass (google.com: domain of ari@sljlawfirm.com designates 67.231.154.184 as permitted sender) smtp.mailfrom=ari@sljlawfirm.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sljlawfirm.com
+Return-Path: <ari@sljlawfirm.com>
+Received: from dispatch1-us1.ppe-hosted.com (dispatch1-us1.ppe-hosted.com. [67.231.154.184])
+        by mx.google.com with ESMTPS id 66-20020a251345000000b00dce0f302c33si4000371ybt.594.2024.04.09.16.39.16
+        for <gregleonhardt@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 09 Apr 2024 16:39:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ari@sljlawfirm.com designates 67.231.154.184 as permitted sender) client-ip=67.231.154.184;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@NETORGFT3586627.onmicrosoft.com header.s=selector2-NETORGFT3586627-onmicrosoft-com header.b=qL2SnIke;
+       arc=pass (i=1 spf=pass spfdomain=sljlawfirm.com dkim=pass dkdomain=sljlawfirm.com dmarc=pass fromdomain=sljlawfirm.com);
+       spf=pass (google.com: domain of ari@sljlawfirm.com designates 67.231.154.184 as permitted sender) smtp.mailfrom=ari@sljlawfirm.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sljlawfirm.com
+X-Virus-Scanned: Proofpoint Essentials engine
+Received: from NAM11-CO1-obe.outbound.protection.outlook.com (mail-co1nam11lp2168.outbound.protection.outlook.com [104.47.56.168])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx1-us1.ppe-hosted.com (PPE Hosted ESMTP Server) with ESMTPS id 777EE940064
+	for <gregleonhardt@gmail.com>; Tue,  9 Apr 2024 23:39:15 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=Rhz409YuL+XgmeT9BVAqwrUBtiZrHPr3Y30PSa/2WdXLi8hA/kclNLPT0tpEkEbwHXeyIGyyO+r+F7zZWh9x4H+yqcaCdyTspMx0v6iK0mm0CC0b1eKK0j2jVzXL14j7cqTExjEvB1aVy94h0l+SWo9XJm3lm4kILou3qQXXX6DSyMXV/3aF6g8EPJ6EmHqbXnEwLrkEddpT8rszp9N/8nagCs4v6RfelD4iNtJsmjRSA5Ikm1DCe/LnPSWNJYOdDpf2b8ww2q0fZPuE8/Z+llbGEbkQoCie2B8zemh0SCfNayfLQWQgHmf6SwqyhyaR132kDxFQNR+7DgNpml6bzQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=PhZogSL631o9AyZ7QjfGTH/HOYxOErb0Clkz2vi/fKo=;
+ b=ljsvi/zsjaEbEmcEavlMWGvipmI4etiL3w0rHA3EtsrpDTa061OqULQsnD0oIPYTDFzxhoDgwJ5ckC1JNBIJLXKJ7WBmVCf4CbomGoUES1qb4PD226omGRRKUilEyvu3aPhuOjtXC2Kw56jVYPlREPipbsIc20ij9gEBdws0+y4K93cV1JZcIczPr61FNhSfoOqasHarHCxDiz8/9wWaTHhG9Nkr02xsbh2F9S81DGFX0kqgxWpLlDlYu8DUVCgUInlpWoUNXIqXTjBRqhY+8ifsSJ/Mjhm/QFdk9rTZdNNGMJHl2AiQavZLObjIoxJFjmhKtiBik+APqq0LZkP62Q==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=sljlawfirm.com; dmarc=pass action=none
+ header.from=sljlawfirm.com; dkim=pass header.d=sljlawfirm.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=NETORGFT3586627.onmicrosoft.com;
+ s=selector2-NETORGFT3586627-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=PhZogSL631o9AyZ7QjfGTH/HOYxOErb0Clkz2vi/fKo=;
+ b=qL2SnIkeZKOLswvSrfL3Ju/+rfp1CjPS4+ewaPYNC0Ysduqjw7EksNdJdNihzfcA5vFzi1GajKZ2eSwPsL1iQN/aMywKA35lDcGb7s+h443O74k6LxF5F/X21/TwKzEa762Byn/c2eLDAZIRe/l4B6H+TT84aj+moz7hCVCeSQY=
+Received: from DM6PR19MB3354.namprd19.prod.outlook.com (2603:10b6:5:199::10)
+ by CO1PR19MB4933.namprd19.prod.outlook.com (2603:10b6:303:da::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.46; Tue, 9 Apr
+ 2024 23:39:12 +0000
+Received: from DM6PR19MB3354.namprd19.prod.outlook.com
+ ([fe80::ac47:13d7:6b2:29ef]) by DM6PR19MB3354.namprd19.prod.outlook.com
+ ([fe80::ac47:13d7:6b2:29ef%4]) with mapi id 15.20.7409.042; Tue, 9 Apr 2024
+ 23:39:11 +0000
+From: Ari Quesenberry <ari@sljlawfirm.com>
+To: Greg/Sandy Leonhardt <gregleonhardt@gmail.com>
+Subject: CLIO CLIENT PORTAL - DOCUMENT UPLOAD
+Thread-Topic: CLIO CLIENT PORTAL - DOCUMENT UPLOAD
+Thread-Index: AdqK1wFfFVmd6a7KQkG4TFhSIre1Mg==
+Date: Tue, 9 Apr 2024 23:39:11 +0000
+Message-ID:
+ <DM6PR19MB3354C2860446423CCC68FB3FD0072@DM6PR19MB3354.namprd19.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-alphadrive-sender-message-id:
+ [{69475d99-428e-4f44-95b1-7dc62addf65a}-{a0d95843-540e-43c8-a162-f5d7fa13bdd9}]
+x-alphadrive-sender-machine-id: 52B2FCFAA0290D71B6BECBEB30C398E8D68E19F3
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: DM6PR19MB3354:EE_|CO1PR19MB4933:EE_
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ ZdwAX52aL5dMUBKy34PHx3oWr3KS1sCWIduz8B8Kx3dK1TbqUiRRLICVJ/i5/TJ5TdAyCDPG1VnkDxd8G0bq8q/i72564Og99lE/EEC7qIGD1fLijma6RvOzrb447hXUHQLUM1nCphPj9lp8VEFVdTCf/yoPjRDPJkKMh2bk/X8gdUK+fB/IX4CWR+jrR9i3nZrHsBc+qXi+IDBazmIC2H579X8V4kM2oO+1OUiIQhb831XMH48vl8ue4GXSMfc8ww+E0nLNvewJYro5RDvRL8Jq3CpHdRzOWCLnxlPYu7n5U4PwPoZE4owzSWBve4Jde1dAwxklCT9H4SIgXHZZG3ZVUcy8Butro7Msg4IrZyKQcsUwOnVhgBTPcYQLOadyGFWh2OxfQUuvS9+Mif3pcogj1pCZ4/iwk/2JiUK52vvf71c9ZzWswoIiNZ2JzCpmVqUK3AjhPbbOsKlkGb50B5OzQdA5bej4kCbd7FfAZ5wS3ogZlbfEbDfiWUnRdqZtkt+JvbkhnrM3r3Pb+X028we0FbjcQYdDjuMMCythFjacdeBzKOljxOm5xZllWCtbNeV4qEh8SInDrpUdceFfZP2ag9csFN4lNoI9W6BpdCVxSoa1OZGaisraAkOw8zqXemnAPHSamHrZc7BjJnjsMCERBOAZAum2VTa3/XI4rk8=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DM6PR19MB3354.namprd19.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(376005)(1800799015)(366007);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?Ugns5scbinUNIfSHtE374BqDPMhRx+ok9QNh7+gi/BOgb8PRb7WPPXgPaNEP?=
+ =?us-ascii?Q?+3RqXab49sQVpqTUuvDUdpCEmJCqYNjSpHJdAP10fVp38JLx1BDkqNktosOc?=
+ =?us-ascii?Q?LRKakNDwRVBiXRvGWa0ve8hDaLG9FYnL8Ifh8ukbZYoianBlh93Es3ttuF4V?=
+ =?us-ascii?Q?lPc55p/3cj00bwGiLyAdU80SUV/fNVbpiCcUS8c2M/I96ei35qLTk1xb0yOB?=
+ =?us-ascii?Q?lSMhZMXiXBvhux+Yylswcv8FWZupLvLmadctAH5r9D73llADK2xHF6SYLRQR?=
+ =?us-ascii?Q?h96NKNaC1ztzruW//wdmZL6i5jU07VIMwjk/FiPmjBUYUf7UwtcoZb/dabW7?=
+ =?us-ascii?Q?bbqf+cpqi2sYjPcK6IOTVZ5eMRUsT7M5mQ8g9uxBXT+x5XH8XyC5OHXwonZH?=
+ =?us-ascii?Q?fVUsPYKl0FHbUifXuI/uXg8T9TAh9zegGaKFZHG0V7oL+4M74dgCCqn4qMVY?=
+ =?us-ascii?Q?a0mJeWSCqmWdRaC5ejdVi+awvjpDaglVURzUOLQh2fILcOAQehS5iGgt/wbI?=
+ =?us-ascii?Q?6p86xoAiH7bPDic48dp4YaEFSXJWvRXhKJKFQYbHJkSStJ4F06ukwjJAcI8T?=
+ =?us-ascii?Q?6UKQPiznkUPApBUyUZs0GHNS1IbO8V3uWe5ToXEyGTS1kY276IB9awBZE87d?=
+ =?us-ascii?Q?O+P0jeIHOi20nZoiKcronXtiCJ4MX6JkynkeJRFKUvNNhBNLsAqLR1F0IaBg?=
+ =?us-ascii?Q?Lo2yrOu2nkvAX6HlKY+tpKZc8/xwCvuPFu0LH1lNz2WOBBltYwRliwz5ClUZ?=
+ =?us-ascii?Q?KtvZZWDiX6hLQ4O3nVws7Naf0hXy1idUzfIZcp97vWZy1f+yGNCiv18eeuVf?=
+ =?us-ascii?Q?gW/6ESRU0ff5Z5WmeEtRlrQFfPfaGFdKJf7StNp2RiaOuwyNZzNIzbKN4kQ5?=
+ =?us-ascii?Q?DmMuA6rTpeHUUp73JeF3LPk5gGx4WAqWF1LMMkY9KIFo8eUnpgnyYoMmWYXf?=
+ =?us-ascii?Q?+7M0XfSNrZnwZD9PuGJ1SInGGu9c7RCjtkYlWHqWrhucnv+PnJOphwALl7+1?=
+ =?us-ascii?Q?9REWDMMe8mNEoCUT7rKK/kRPdCnsMCbTNWXCX9t7XF9Vb2oD1IsrMrpF2lao?=
+ =?us-ascii?Q?WhMoXb9k6Q8yE7bdpWwqPfM0mMFkquUv3+iokYQWn/9nZ+Pwg3dhYjdX+78Y?=
+ =?us-ascii?Q?T3wsnM+ngsy+1BkbMEYW7C9WtD93aOT2R/LUQ1zI0UJodr9Z1ngXS7O5G1S9?=
+ =?us-ascii?Q?QefDXMp5euwf0maGMHrNQSA7T6UX4efatQs8JqZfAIlPhnD7JKtliMZeDgRT?=
+ =?us-ascii?Q?L1V6NGOgVPTy1ATMdhfC+zAmbUil8EZGDMSRPJnLSVSizsaTr7pSOrBElZp2?=
+ =?us-ascii?Q?ZxPZYyMHq5jYFhyRL7ba3UAEqqv2Ti9MBIK1Xjs+QO0Iy8BiQ8V+TLoqXrwU?=
+ =?us-ascii?Q?L8Md3eLFCkfWPqeU8TJEILxmowaYDaNErTJ1trbM//g1rcDnJoCahIHsdVzv?=
+ =?us-ascii?Q?5IVgvjDAoXiJwdArshAwRPfMAjraUreSvErPiRft2ujlohMoWnEn8mP1PElP?=
+ =?us-ascii?Q?WWJSavJ7nap8g2dBgg1q0EYju4nh+LnS5FBo0nNL7+0kzc8z2EI45tqKSxfR?=
+ =?us-ascii?Q?TxydpipYQmQvp/xRIXslQLEAP0N5z2LE1HUif72r?=
+Content-Type: multipart/alternative;
+	boundary="_000_DM6PR19MB3354C2860446423CCC68FB3FD0072DM6PR19MB3354namp_"
+MIME-Version: 1.0
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-0:
+	5k47BmsLO3Ey92tQRGJdojmLPZrZQd2ISN17MftwgTqAmaS85WEKOzOqV5j0aX+R7vdCflygXzU2/rybOY5gBuxz+dkRlyoGi3VQdE6gZZXkZFzS4sI5ZXtOJhUTXWaWExuIT9MZQSJ9m99jnqPIAE95ndLFlfdyZunbgjS+8DER365S6pgXqoUkDQHSyCvcBlUFYtFnSd1QlLY50rmeLGHm+eV4eymToZ2ohGwiqVfbgaBcM7+5nEqU6LycyBAlgRSwZTmEu7RET4cc8E0fPo4NRnul9YsM7bBvQJ4qLzo0ue2+LEvDlpVSAk48bAySzNCv+yWwNw9Gf3QmmXlyLOaRLJPwudlgs16cVoyByWXlK7FE9cC/Y7QtOVrbrd9W85HrZPJjrJdiLZVeGbFbxMYuFqgswMlLfVH/Dee9VLlHXGdfhpH2y6QUu0X+Awi9twXC6IRLaDCPjkAl36kqhQjJdmJ62C6Fcf/37P5YRPgEAQJsCDcPTExSVt8XCjAgc/Ss/EXdrkoNgC6Q6jgmElbkDadE7NhnmPQoX1fdS5X67DIs44nfFmxNGKqGZmPBloJO+/ZXcKirjRNKZy2VCSyvAy0WJXQ9L/hFaFhID14=
+X-OriginatorOrg: sljlawfirm.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: DM6PR19MB3354.namprd19.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7066d400-a4dd-40ce-05dd-08dc58ee420a
+X-MS-Exchange-CrossTenant-originalarrivaltime: 09 Apr 2024 23:39:11.2571
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 4641adb2-cf5f-4e45-b30e-c5790fc2e986
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: dNa2qRQgoCrzKnzQnWq6zAxXU5BMnKwJyuTIu+jTbIwU+ZyZlqBgjQ+qSJ1+g419AwjHtjywNMPEsxGPT338cQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1PR19MB4933
+X-MDID: 1712705956-oGKZ4sLJo28a
+X-MDID-O:
+ us4;at1;1712705956;oGKZ4sLJo28a;<ari@sljlawfirm.com>;7784469bfd6f3f52b5fb2069d6675897
+
+--_000_DM6PR19MB3354C2860446423CCC68FB3FD0072DM6PR19MB3354namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Greetings Greg,
+
+I just created a Client Portal in Clio where you can upload documents strai=
+ght to your file.
+If you have any difficulties, just let me know.
+
+I have another way of uploading too if Clio doesn't work for you.
+
+Thanks,
+Ari
+
+NOTE: I am on limited maternity leave with my workdays being Thursdays and =
+Fridays. My emails are still being monitored, however,  please expect a del=
+ayed response.
+
+Ari Quesenberry
+Paralegal for Stacey L. Johnson
+Stacey L. Johnson, PLLC
+20325 N. 51st Avenue, Suite 134
+Glendale, AZ 85308
+Phone: 602-218-5445, Ext. 408
+Direct: 623-444-5834
+Fax: 602-218-5405
+ari@sljlawfirm.com<mailto:ari@sljlawfirm.com>
+
+CONFIDENTIALITY NOTICE: The information contained in this message may be pr=
+otected by the attorney-client privilege. If you believe that it has been s=
+ent to you in error, do not read it. Please immediately reply to the sender=
+ that you have received the message in error. Then delete it.
+
+Should you not receive a timely response to an email sent to us or should a=
+n email look "unusual" to you, you agree to contact us through another meth=
+od of communication. You understand that if you do not receive a response f=
+rom us within three (3) business days from the time of sending your email, =
+you will contact us in another manner. Further, you agree to tell us should=
+ you learn that you are a victim of a cyberattack in any capacity.
+
+
+--_000_DM6PR19MB3354C2860446423CCC68FB3FD0072DM6PR19MB3354namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:11.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Greetings Greg,<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I just created a Client Portal in Clio where you can=
+ upload documents straight to your file.
+<o:p></o:p></p>
+<p class=3D"MsoNormal">If you have any difficulties, just let me know.<o:p>=
+</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I have another way of uploading too if Clio doesn&#8=
+217;t work for you.
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-famil=
+y:&quot;Times New Roman&quot;,serif;color:#323130">Thanks,<o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-famil=
+y:&quot;Times New Roman&quot;,serif;color:#323130">Ari
+</span><span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black"=
+><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><b><i><span style=3D"font=
+-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#323130"><=
+o:p>&nbsp;</o:p></span></i></b></p>
+<p class=3D"MsoNormal" style=3D"background:white"><b><i><span style=3D"font=
+-family:&quot;Times New Roman&quot;,serif;color:#323130">NOTE: I am on limi=
+ted maternity leave with my workdays being Thursdays and Fridays. My emails=
+ are still being monitored, however,&nbsp; please expect
+ a delayed response.<o:p></o:p></span></i></b></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-famil=
+y:&quot;Times New Roman&quot;,serif;color:#323130"><o:p>&nbsp;</o:p></span>=
+</p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-famil=
+y:&quot;Times New Roman&quot;,serif;color:#323130">Ari Quesenberry</span><s=
+pan style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black"><o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><i><span style=3D"font-fa=
+mily:&quot;Times New Roman&quot;,serif;color:#323130">Paralegal for Stacey =
+L. Johnson</span></i><span style=3D"font-family:&quot;Arial&quot;,sans-seri=
+f;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span lang=3D"FR" style=
+=3D"font-family:&quot;Times New Roman&quot;,serif;font-variant:small-caps;c=
+olor:#201F1E">Stacey L. Johnson, PLLC</span><span lang=3D"FR" style=3D"font=
+-family:&quot;Times New Roman&quot;,serif;color:#201F1E">&nbsp;</span><span=
+ lang=3D"FR" style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black"=
+><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span lang=3D"FR" style=
+=3D"font-family:&quot;Times New Roman&quot;,serif;color:#201F1E">20325 N. 5=
+1st Avenue, Suite 134</span><span lang=3D"FR" style=3D"font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#201F1E"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span lang=3D"FR" style=
+=3D"font-family:&quot;Times New Roman&quot;,serif;color:#201F1E">Glendale, =
+AZ 85308&nbsp;</span><span lang=3D"FR" style=3D"font-family:&quot;Arial&quo=
+t;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-famil=
+y:&quot;Times New Roman&quot;,serif;color:#201F1E">Phone: 602-218-5445,</sp=
+an><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,=
+serif;color:black"> Ext. 408</span><span style=3D"font-family:&quot;Arial&q=
+uot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-size:=
+12.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#201F1E">Direct:=
+&nbsp;</span><span style=3D"font-size:12.0pt;font-family:&quot;Times New Ro=
+man&quot;,serif;color:black;background:white">623-444-5834</span><span styl=
+e=3D"font-family:&quot;Arial&quot;,sans-serif;color:black"><o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-famil=
+y:&quot;Times New Roman&quot;,serif;color:#201F1E">Fax: 602-218-5405</span>=
+<span style=3D"font-family:&quot;Arial&quot;,sans-serif;color:black"><o:p><=
+/o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"color:blac=
+k"><a href=3D"mailto:ari@sljlawfirm.com"><span style=3D"font-family:&quot;T=
+imes New Roman&quot;,serif;color:black;text-decoration:none">ari@sljlawfirm=
+.com</span></a></span><span style=3D"color:black">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-family:&quot;Times New Roman&quot;,serif;color:b=
+lack"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif;color:#53565A">CONFIDENTIALITY NOTICE:
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,s=
+ans-serif;color:#53565A">The information contained in this message may be p=
+rotected by the attorney-client privilege. If you believe that it has been =
+sent to you in error, do not read it. Please
+ immediately reply to the sender that you have received the message in erro=
+r. Then delete it.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,sans-serif;color:#53565A"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,sans-serif;color:#53565A">Should you not receive a timely respon=
+se to an email sent to us or should an email look &#8220;unusual&#8221; to =
+you, you agree to contact us through another method of communication.
+ You understand that if you do not receive a response from us within three =
+(3) business days from the time of sending your email, you will contact us =
+in another manner. Further, you agree to tell us should you learn that you =
+are a victim of a cyberattack in
+ any capacity.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_DM6PR19MB3354C2860446423CCC68FB3FD0072DM6PR19MB3354namp_--

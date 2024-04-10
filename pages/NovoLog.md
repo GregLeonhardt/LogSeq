@@ -1,0 +1,1 @@
+- NovoLog® is a rapid-acting insulin that helps lower mealtime blood sugar spikes in adults and children with diabetes. It has been proven to help control high blood sugar in people with diabetes when taken with a long-acting insulin.

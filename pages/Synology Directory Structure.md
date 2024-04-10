@@ -1,0 +1,49 @@
+### Family Tree Maker
+	- A collection of disk images
+	- usbshare2/FTM.hbk
+	- unknown
+- ### homes
+  id:: 65f905c0-8ae6-4852-8f35-3b20ea3618c4
+	- All user home folders
+	- usbshare1/Homes.hbk
+	- 426G
+- ### music
+	- My music collection
+	- usbshare1/MUSIC.hbk
+	- 231G
+- ### photo
+	- Humm..  This was initially intended to be the home folder for all photo albums.  This has somewhat changed to be the home folder for all public photo albums with other albums licated in homes/user/Moments.  Naturally this is only partally done so albums are all over the place with duplicates.
+	- usbshare1/PHOTO.hbk
+	- 408G
+- ### SneakerNet
+	- A bunch of folders that are not backed up.
+	- HyperBackup is not configured for this directory.
+	- unknown
+- ### STK
+	- A bunch of old stuff from STK that should be deleted.
+	- HyperBackup is not configured for this directory.
+	- unknown
+- ### STORA
+	- Storage structure inherited from the old Western Digital STORA server.
+	- usbshare1/STORA.hbk
+	- unknown
+- ### surveillance
+	- Surveillance Station files.
+	- HyperBackup is not configured for this directory.
+	- unknown
+- ### TapeBackup
+	- Very old stuff that was backed up to tape then recovered and put here.  99% of this stuff should be deleted.
+	- HyperBackup is not configured for this directory.
+	- unknown
+- ### video
+	- Home videos.
+	- HyperBackup is not configured for this directory.
+	- unknown
+- ### VideoStation
+	- Movies and TV shows.
+	- HyperBackup is not configured for this directory.
+	- unknown
+- ### web
+	- Currently not used for anything and i believe empty.
+	- HyperBackup is not configured for this directory.
+	- unknown

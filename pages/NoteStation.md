@@ -1,0 +1,1 @@
+- Synology NoteStation helps you fully enjoy writing, viewing, managing, and sharing content-rich notes. It is very easy to create content with rich text editing, media embedding, attachments, and much more. Manage your notes by using tags and grouping notes into Notebooks.

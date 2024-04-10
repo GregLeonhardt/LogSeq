@@ -1,0 +1,21 @@
+- For those that prefer hands-on approach, you can as well [manually install crowdsec](https://docs.crowdsec.net/user_guides/building.md).
+- ## Install The Repositories
+- Installing our repositories allows you to access the latest packages of crowdsec and bouncers.
+	- `curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash`
+- ## Install #CrowdSec
+	- `apt install crowdsec`
+	- You now have crowdsec running ! You can move forward and install a [bouncer](https://docs.crowdsec.net/u/bouncers/intro), or take a [tour](https://docs.crowdsec.net/docs/v1.2/getting_started/crowdsec_tour) of the software beforehand !
+- ## Install a bouncer
+	- `apt install crowdsec-firewall-bouncer-iptables`
+		- ### INFO
+		- While we're suggesting the most common firewall bouncer, check our [hub](https://hub.crowdsec.net/) for more bouncers. Find a bouncer directly for your application ([nginx](https://hub.crowdsec.net/author/crowdsecurity/bouncers/cs-nginx-bouncer), [php](https://github.com/crowdsecurity/php-cs-bouncer), [wordpress](https://hub.crowdsec.net/author/crowdsecurity/bouncers/cs-wordpress-bouncer)) or your providers ([cloudflare](https://hub.crowdsec.net/author/crowdsecurity/bouncers/cs-cloudflare-bouncer), [AWS/GCP/...](https://hub.crowdsec.net/author/fallard84/bouncers/cs-cloud-firewall-bouncer))
+-
+- ## Running crowdsec on raspberry pi os/raspbian [​](https://docs.crowdsec.net/docs/v1.2/getting_started/install_crowdsec/#running-crowdsec-on-raspberry-pi-osraspbian)
+	- Please keep in mind that raspberry pi OS is designed to work on all raspberry pi versions. Even if the port target is known as armhf, it's not exactly the same target as the debian named armhf port.
+	- The best way to have a crowdsec version for such an architecture is to do:
+	- install golang (all versions from 1.16 will do)
+		- `export GOARCH=arm`
+		- `export CGO=1`
+	- Update the GOARCH variable in the Makefile to `arm`
+	- install the arm gcc cross compiler (On debian the package is gcc-arm-linux-gnueabihf)
+	- Compile crowdsec using the usual `make` command

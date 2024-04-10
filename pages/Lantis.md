@@ -1,0 +1,1 @@
+- Lantus is a man-made form of a hormone (insulin) that is produced in the body. Insulin is a hormone that works by lowering levels of glucose (sugar) in the blood. Insulin glargine is a long-acting insulin that starts to work several hours after injection and keeps working evenly for 24 hours.

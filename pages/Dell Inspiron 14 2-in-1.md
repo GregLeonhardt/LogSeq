@@ -1,0 +1,1 @@
+- Here is the Reference Guide: ![inspiron-14-7460-laptop_reference-guide_en-us.pdf](../assets/inspiron-14-7460-laptop_reference-guide_en-us_1711131402861_0.pdf)

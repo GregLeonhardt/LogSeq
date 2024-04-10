@@ -1,0 +1,132 @@
+{
+	"@context": "http://schema.org",
+	"@type": ["Recipe"]
+	,"headline": "Mint Chicken"
+	,"datePublished": "2019-07-10T02:55:25.000-04:00"
+	,"dateModified": "2019-07-10T02:55:25.000-04:00"
+	,"author": 
+	[
+		{"@type": "Person"
+			,"name": "TXGIRLSX3"
+		}
+	]
+	,"description": "A favorite family recipe that my Mom has made for hundreds of guests. Fresh lemon juice and mint leaves are a must! Serve over hot cooked white rice."
+	,"image": 
+	{
+		"@type": "ImageObject",
+		"url": "https://www.allrecipes.com/thmb/GApnP7r05VoncCMwDO0OfzWhW9A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Mint_Chicken_010-2000-4ca7a46e70264a799ae9862d78515098.jpg",
+		"height": 1500,
+		"width": 1500
+	}
+	,"publisher": 
+	{
+		"@type": "Organization",
+		"name": "Allrecipes",
+		"url": "https://www.allrecipes.com",
+		"logo": 
+		{
+			"@type": "ImageObject",
+			"url": "https://www.allrecipes.com/thmb/Z9lwz1y0B5aX-cemPiTgpn5YB0k=/112x112/filters:no_upscale():max_bytes(150000):strip_icc()/allrecipes_logo_schema-867c69d2999b439a9eba923a445ccfe3.png",
+			"width": 112,
+			"height": 112
+		},
+		"brand": "Allrecipes"
+		, "publishingPrinciples": "https://www.allrecipes.com/about-us-6648102#toc-editorial-guidelines"
+		, "sameAs" : 
+		[
+			"https://www.facebook.com/allrecipes",
+			"https://www.instagram.com/allrecipes/",
+			"https://www.pinterest.com/allrecipes/",
+			"https://www.tiktok.com/@allrecipes",
+			"https://www.youtube.com/user/allrecipes/videos",
+			"https://twitter.com/Allrecipes",
+			"https://flipboard.com/@Allrecipes",
+			"https://en.wikipedia.org/wiki/Allrecipes.com",
+			"http://linkedin.com/company/allrecipes.com"
+		]
+	}
+	,"name": "Mint Chicken"
+	,"aggregateRating": 
+	{
+		"@type": "AggregateRating",
+		"ratingValue": "4.2",
+		"ratingCount": "66"
+	}
+	,"cookTime": "PT10M"
+	,"nutrition": 
+	{
+		"@type": "NutritionInformation"
+		,"calories": "328 kcal"
+		,"carbohydrateContent": "14 g"
+		,"cholesterolContent": "34 mg"
+		,"fiberContent": "1 g"
+		,"proteinContent": "16 g"
+		,"saturatedFatContent": "4 g"
+		,"sodiumContent": "302 mg"
+		,"sugarContent": "1 g"
+		,"fatContent": "23 g"
+		,"unsaturatedFatContent": "0 g"
+	}
+	,"prepTime": "PT10M"
+	, "recipeCategory": ["Dinner"]
+	,"recipeIngredient": 
+	[
+		"2 skinless, boneless chicken breast halves - cut into bite-size pieces",
+		"1 clove garlic, crushed",
+		"0.5 cup all-purpose flour",
+		"0.5 cup margarine",
+		"0.25 cup fresh lemon juice",
+		"0.5 cup chopped fresh mint leaves" 
+	]
+	,"recipeInstructions": 
+	[
+		{
+			"@type": "HowToStep"
+			,"text": "In a medium bowl, mix together the chicken pieces and garlic. Toss with the flour just to coat, and shake off excess."
+		} 
+	,{
+"@type": "HowToStep"
+,"text": "Heat the margarine in a large skillet over medium-high heat. Add the chicken pieces; cook and stir until browned. Add the mint leaves and lemon juice, cover and steam for about 5 minutes, just until the chicken is cooked through. Do not over cook the chicken or it will be tough."
+} ]
+,"recipeYield": ["4"]
+,"totalTime": "PT20M"
+,"review": [
+{
+"@type": "Review",
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "5"
+},
+"author": {
+"@type": "Person",
+"name": "Sheila S"
+}
+,
+"reviewBody": "This was a pleasant experience all the way around. The taste was fresh and delightful and the recipe so easy to do my daughter has re-created it several times to impress her friends. Try it with a lemon/herb rice and sesame green beans. Letting the chicken \"steam\" in the pan gives it a nice texture."
+},
+{
+"@type": "Review",
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "5"
+},
+"author": {
+"@type": "Person",
+"name": "Allrecipes Member"
+},
+"reviewBody": "I love this chinken 👍 ***5 stars by MichiganRecipes****"
+}
+,
+{
+"@type": "Review",
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "4"
+},
+"author": {
+"@type": "Person",
+"name": "Valerie Dano"
+},
+"reviewBody": "I thought it was very good and the chicken turned out moist. The flavor was different which is exactly what I wanted. Tired of the same old stuff. Husband was unsure, my picky daughter didn't care for it but ate it anyway. Served with white buttered rice and sliced strawberries with a little sugar on them on the side. Very refreshing dinner. Sorry no photo."
+}
+,

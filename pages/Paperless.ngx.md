@@ -1,0 +1,37 @@
+# Install:
+	- Navigate to your base docker directory then create a new directory for the paperless container.
+		- `cd ~/docker`
+		- `mkdir paperless-ngx`
+	- Copy and paste the contents of 'docker-compose.yml' and ''docker-compose.env' to files in the container directory.
+		- `vim docker-compose.yml`
+			- [docker-compose.yml](../assets/docker-compose_1710808289675_0.yml)
+		- `vim docker-compose.env`
+			- [docker-compose.env](../assets/docker-compose_1710808407508_0.env)
+- ## Set the admin user and password:
+	- `docker compose run --rm webserver createsuperuser`
+- ## Starting the container:
+	- `docker compose up -d`
+- ## Stopping the container:
+	- `docker compose down`
+- ## Updating the container:
+	- `docker compose pull`
+- # Stand Alone Commands
+- ## Export (backup) all application data:
+	- `docker exec -it paperless-ngx-webserver-1 document_exporter -p /usr/src/paperless/export`
+- ## Crontab:
+	- `cd /home/greg/VB_Shared/Docker/paperless-ngx && /usr/bin/docker exec -dt paperless-ngx-webserver-1 document_exporter -p /usr/src/paperless/export`
+- ## Import (restore) a previous export (backup):
+	- `docker exec paperless-ngx-webserver-1 document_importer /usr/src/paperless/export
+- ## Retag
+	- `docker exec paperless-ngx-webserver-1 document_retagger [-h] [-c] [-T] [-t] [-i] [--id-range] [--use-first] [-f] [](https://docs.paperless-ngx.com/administration/#__codelineno-15-2)`
+		- optional arguments
+			- ```
+			  -c, --correspondent
+			  -T, --tags
+			  -t, --document_type
+			  -s, --storage_path
+			  -i, --inbox-only
+			  --id-range
+			  --use-first
+			  -f, --overwrite
+			  ```

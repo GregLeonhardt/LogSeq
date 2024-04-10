@@ -1,0 +1,29 @@
+# Install
+	- Debian has been my distribution of choice for some time now.  Well, it has moved from Ubuntu to Mint to Ubuntu-Mate to...
+	- The installation process is fairly straight forward.
+		- Memory: At least 4GB
+		- Disk Space: Usually between 32 and 64 GB
+		- Software packages at install:
+			- Debian Desktop Environment
+			- GNOME
+			- MATE
+			- SSH Server
+			- Standard System Utilities
+	- Following the install the following packages are installed:
+		- Minimum
+			- `sudo apt install -y bzip2 curl git nano python3 pip vim zip  htop btop  bzip2`
+		- Typical  (Everything in the Minimum list plus)
+			- `sudo apt install -y build-essential dkms linux-headers-$(uname -r)`
+		- Everything  (Everything in the Typical list plus)
+			- `sudo apt install -y aptitude gnupg nano python3 python3-dev pip flatpak gnome-software-plugin-flatpak default-jdk libssl-dev manpages-dev`
+- # [[Apache (httpd)]]
+- # [[Bitcoin]]
+- # [[CrashPlan]]
+- # [[CrowdSec]]
+- # [[Docker]]
+- # [[LAMP]]
+- # [[MariaDB]]
+- # [[NetBeans]]
+- # [[PHP]]
+- # [[VirtualBox]]
+- # [[WordPress]]

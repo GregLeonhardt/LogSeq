@@ -1,2 +1,2 @@
-# LogSeq
-Archive backup of LogSeq
+.recycle
+/bak/

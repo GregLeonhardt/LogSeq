@@ -1,0 +1,2 @@
+- Paracentesis is a procedure performed in patients with ascites, during which a needle is inserted into the peritoneal cavity to obtain ascitic fluid.
+- The removal and testing of the ascitic fluid to diagnose the etiology of ascites or to rule out an infection of peritoneal fluid is called diagnostic paracentesis.

@@ -1,0 +1,1 @@
+- Total parenteral nutrition (TPN) is when the IV administered nutrition is the only source of nutrition the patient is receiving. Total parenteral nutrition is indicated when there is impaired gastrointestinal function and contraindications to enteral nutrition.

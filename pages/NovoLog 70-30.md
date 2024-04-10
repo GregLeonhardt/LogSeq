@@ -1,0 +1,1 @@
+- Typically taken twice a day, NovoLog® Mix 70/30 is a premixed insulin that works in 2 ways to help adults control blood sugar. It is a mix of a rapid-acting insulin to help control mealtime spikes in blood sugar and an intermediate-acting insulin that works up to 24 hours to help control blood sugar between meals.

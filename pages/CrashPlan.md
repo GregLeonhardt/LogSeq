@@ -1,0 +1,14 @@
+# Install
+	- ## Install JAVA RLE
+		- Open Ubuntu Software Center
+		- Search ‘JRE’
+		- Install OpenJDK Java 6 Runtime
+	- ## Install CrashPlan
+		- Download CrashPlan
+		- gunzip and tar to extract the install.
+		- cd to CrashPlan-install
+		- Run ./install.sh
+			- Install to /usr/local/crashplan/
+			- Install executables to /usr/local/bin/
+			- Store backups to /usr/local/var/crashplan
+			- To launch: /usr/local/bin/CrashPlanDesktop

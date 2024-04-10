@@ -1,0 +1,11 @@
+### Installing Dockge is easy. Here are the steps they lay out on their [Github page](https://github.com/louislam/dockge?ref=noted.lol#basic).
+- ### Create a directory that stores your stacks and stores dockge's compose.yaml
+	- mkdir -p /opt/stacks /opt/dockge
+	- cd /opt/dockge
+- ### Download the compose.yaml
+	- curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
+- ### Start the Server
+	- docker compose up -d
+- ### If you are using docker-compose V1 or Podman
+	- docker-compose up -d
+- That's all there is to it!
