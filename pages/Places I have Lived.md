@@ -11,7 +11,7 @@
 	- 7100 Boulevard East Unit 5K
 	  Guttenberg, New Jersey 07093
 - 1979
-	- 1201 Seminole Boulevard
+	- 1201 Seminole Boulevard, Apartment 240
 	  Largo, Florida. 33540
 - 1980-1988
 	- 8834 95th Terrace North
