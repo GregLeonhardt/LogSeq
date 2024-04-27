@@ -1,3 +1,9 @@
+Admitted:: April 14, 2024
+discharged:: 
+total-days::
+
+	- Seizure
+		- ((662c7d2b-2582-413a-b3e0-ea1de763a9f8))
 admitted:: March 22, 2024
 discharged:: March 28, 2024
 total-days:: 7
