@@ -7,7 +7,15 @@
 		- Just do a normal Debian install until you get to the software selection menu.
 			- Uncheck 'Debian desktop environment' and 'GNOME' leaving 'standard system utilities' as the ONLY checked box.
 		- After first boot do the following:
-		- ```
-		  login as root
-		  VB-Devices -> Insert
-		  ```
+			- I was hoping that this would allow me to stretch the window to make a larger terminal screen.  So far no luck.
+			  background-color:: yellow
+			- ```
+			  login as root
+			  VB-Devices -> Insert Guest Additions CD image
+			  mount /dev/cdrom /mnt
+			  cd /mnt
+			  ./VBoxLinuxAdditions.run
+			  reboot
+			  ```
+		- When the reboot completes:
+			-
