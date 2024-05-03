@@ -25,5 +25,5 @@
 - # [[MariaDB]]
 - # [[NetBeans]]
 - # [[PHP]]
-- # [[VirtualBox]]
+- # [[VirtualBox OS Install]]
 - # [[WordPress]]

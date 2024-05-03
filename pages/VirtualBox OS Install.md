@@ -1,4 +1,5 @@
 # Create a new VirtualBox image with the following:
+title:: VirtualBox OS Install
 - ```
   debian-12.0.0-amd64-netinst.iso
   memory   4096 MB
