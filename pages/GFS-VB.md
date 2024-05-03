@@ -1,3 +1,4 @@
+- My first instinct was to do the development on a server (no graphical user interface).  This didn't work very well.  The primary problem is that I can't increase the display size.  I suppose I could
 - Probably because it is what I am using for just about everything else I will start with a Debian image.
 	- The following are for "**debian-12.5.0-amd64-netinstall.iso**"
 		- I configured the test system with:
