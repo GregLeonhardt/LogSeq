@@ -7,7 +7,7 @@
 			- NOTE: In order to install the C/C++ stuff a java utility 'unpack200' is required. This is difficult because 'unpack200' was deprecated in jdk14. Hence you need JDK13 installed in add C/C++ functionality.
 			- `cd ~/Downloads`
 			- `wget https://download.java.net/openjdk/jdk13/ri/openjdk-13+33_linux-x64_bin.tar.gz`
-			- `tar -zxvf openjdk-13+33_linux-x64_bin.tar.gz`
+			- `tar -zxf openjdk-13+33_linux-x64_bin.tar.gz`
 			- `sudo apt install -y default-jdk build-essential gdb`
 	- # Download and install:
 		- Packages to install NetBeans IDE are not available through the Debian Bullseye repository, therefore, we cannot get it directly using the APT package manager. Hence, visit the [Apache NetBeans official website](https://netbeans.apache.org/download/index.html).
