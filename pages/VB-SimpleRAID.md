@@ -16,6 +16,7 @@
 			  	DBeaverCE
 			  	Apache-Netbeans
 			      Visual Studio Code
+			      Geany (Python IDE)
 			  sudo apt install -y
 			  	default-jdk
 			      build-essential
