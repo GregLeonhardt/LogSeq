@@ -12,13 +12,14 @@
 					- ``SimpleRAID_2  -  5 GB``
 		- Installed packages used for development:
 			- ```
-			  NetBeans
+			  flatpack
+			  	DBeaverCE
+			  	Apache-Netbeans
+			      Visual Studio Code
+			  sudo apt install -y
 			  	default-jdk
 			      build-essential
 			      gdb
-			  flatpack
-			  	DBeaverCE
-			  sudo apt install -y
 			  	gparted
 			  ```
 		- Installed packages needed by the SimpleRAID package.
