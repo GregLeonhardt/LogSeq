@@ -16,6 +16,8 @@
 			  	default-jdk
 			      build-essential
 			      gdb
+			  flatpack
+			  	DBeaverCE
 			  sudo apt install -y
 			  	gparted
 			  ```
@@ -27,3 +29,4 @@
 			  	------
 			  ```
 		-
+-
