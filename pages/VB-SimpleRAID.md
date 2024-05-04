@@ -24,6 +24,6 @@
 			  sudo apt install -y
 			  	pip
 			  pip install
-			  	sqlite
+			  	------
 			  ```
 		-
