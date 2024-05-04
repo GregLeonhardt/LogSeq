@@ -21,6 +21,7 @@
 			      build-essential
 			      gdb
 			  	gparted
+			      vim
 			  ```
 		- Installed packages needed by the SimpleRAID package.
 			- ```
