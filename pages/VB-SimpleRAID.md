@@ -12,15 +12,18 @@
 					- ``SimpleRAID_2  -  5 GB``
 		- Installed packages used for development:
 			- ```
-			  gparted
 			  NetBeans
 			  	default-jdk
 			      build-essential
 			      gdb
-			  ---
+			  sudo apt install -y
+			  	gparted
 			  ```
 		- Installed packages needed by the SimpleRAID package.
 			- ```
-			  RAID-Packages
+			  sudo apt install -y
+			  	pip
+			  pip install
+			  	sqlite
 			  ```
 		-
