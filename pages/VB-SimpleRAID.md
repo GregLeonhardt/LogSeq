@@ -8,7 +8,8 @@
 		- RAID Drives:
 			- Controller:
 				- LsiLogic (Default SCSI)
-					-
+					- ``SimpleRAID_1  -  5 GB``
+					- ``SimpleRAID_2  -  5 GB``
 		- Installed packages used for development:
 			- ```
 			  gparted
