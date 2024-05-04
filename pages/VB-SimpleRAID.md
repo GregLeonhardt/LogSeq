@@ -5,9 +5,13 @@
 				- 16 GB disk space
 				- 8 GB memory
 				- 4 CPUs
+		- RAID Drives:
+			- Controller:
+				- LsiLogic (Default SCSI)
+					-
 		- Installed packages used for development:
 			- ```
-			  DEVEL-Packages
+			  gparted
 			  ```
 		- Installed packages needed by the SimpleRAID package.
 			- ```
