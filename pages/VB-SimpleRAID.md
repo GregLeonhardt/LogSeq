@@ -13,6 +13,11 @@
 		- Installed packages used for development:
 			- ```
 			  gparted
+			  NetBeans
+			  	default-jdk
+			      build-essential
+			      gdb
+			  ---
 			  ```
 		- Installed packages needed by the SimpleRAID package.
 			- ```
