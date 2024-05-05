@@ -8,13 +8,12 @@
 		- RAID Drives:
 			- Controller:
 				- LsiLogic (Default SCSI)
-					- ``SimpleRAID_1  -  5 GB``
-					- ``SimpleRAID_2  -  5 GB``
+					- ``lhr_1  -  5 GB``
+					- ``lhr_2  -  5 GB``
 		- Installed packages used for development:
 			- ```
 			  flatpack
 			  	DBeaverCE
-			      Visual Studio Code
 			  sudo apt install -y
 			      gdb
 			  	gparted
