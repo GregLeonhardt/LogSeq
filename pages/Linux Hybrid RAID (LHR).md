@@ -3,6 +3,7 @@
 		- Requirements:
 			- The base file system will be [[BtrFS]]
 			- RAID Level is self determining (User does not get to choose).
+				- A combination of RAID-1 and RAID-5 will be used.
 			- Any number of any disk sizes may be grouped.
 			- Snapshot will be available in some form.
 - # Resources:
