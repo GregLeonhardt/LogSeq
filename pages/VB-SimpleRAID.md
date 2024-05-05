@@ -14,9 +14,7 @@
 			- ```
 			  flatpack
 			  	DBeaverCE
-			  	Apache-Netbeans
 			      Visual Studio Code
-			      Kdevelop
 			  sudo apt install -y
 			  	default-jdk
 			      build-essential
