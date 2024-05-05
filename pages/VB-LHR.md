@@ -13,11 +13,12 @@
 		- Installed packages used for development:
 			- ```
 			  sudo apt install -y \
+			  	flatpack \
 			  	gparted \
 			      mdadm \
 			      pip \
 			      vim
-			  flatpack install -y
+			  flatpak install -y \
 			  	DBeaverCE
 			  ```
 		- Installed packages needed by the SimpleRAID package.
