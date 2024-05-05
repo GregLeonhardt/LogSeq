@@ -16,8 +16,6 @@
 			  	DBeaverCE
 			      Visual Studio Code
 			  sudo apt install -y
-			  	default-jdk
-			      build-essential
 			      gdb
 			  	gparted
 			      vim
