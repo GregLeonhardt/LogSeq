@@ -19,7 +19,7 @@
 			      pip \
 			      vim
 			  flatpak install -y \
-			  	DBeaverCE
+			  	DBeaver    (app/io.dbeaver.DBeaverCommunity/x86_64/stable)
 			  ```
 		- Installed packages needed by the SimpleRAID package.
 			- ```
