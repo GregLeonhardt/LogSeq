@@ -17,7 +17,7 @@
 			      mdadm \
 			      pip \
 			      vim
-			  flatpack
+			  flatpack install -y
 			  	DBeaverCE
 			  ```
 		- Installed packages needed by the SimpleRAID package.
