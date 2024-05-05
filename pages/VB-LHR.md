@@ -15,7 +15,7 @@
 			  flatpack
 			  	DBeaverCE
 			  sudo apt install -y
-			      gdb
+			      mdadm
 			  	gparted
 			      vim
 			  ```
