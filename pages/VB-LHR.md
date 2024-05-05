@@ -12,12 +12,12 @@
 					- ``lhr_2  -  5 GB``
 		- Installed packages used for development:
 			- ```
-			  flatpack
-			  	DBeaverCE
 			  sudo apt install -y
 			      mdadm
 			  	gparted
 			      vim
+			  flatpack
+			  	DBeaverCE
 			  ```
 		- Installed packages needed by the SimpleRAID package.
 			- ```
