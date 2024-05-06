@@ -6,6 +6,8 @@
 				- A combination of RAID-1 and RAID-5 will be used.
 			- Any number of any disk sizes may be grouped.
 			- Snapshot will be available in some form.
+- # Experiment #01
+	-
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
