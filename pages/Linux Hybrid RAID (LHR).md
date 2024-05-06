@@ -12,8 +12,8 @@
 		- sdc - 5GB
 		- mount lv-01 as a 10 GB volume
 	- Commands:
-		- mkfs.btrfs /dev/sdXN
-			- Where X is the drive letter (sda, sdb, etc.) and N is the partition number.
+		- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 50% mkpart primary btrfs 50% 100%``
+			- Start with an uninitialized disk and create two partitions of equal size.
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
