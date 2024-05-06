@@ -12,7 +12,8 @@
 		- sdc - 5GB
 		- mount lv-01 as a 10 GB volume
 	- Commands:
-		-
+		- mkfs.btrfs /dev/sdXN
+			- Where X is the drive letter (sda, sdb, etc.) and N is the partition number.
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
