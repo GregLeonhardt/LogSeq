@@ -7,7 +7,12 @@
 			- Any number of any disk sizes may be grouped.
 			- Snapshot will be available in some form.
 - # Experiment #01
-	-
+	- Construct a simple RAID-01 with two drives the same size:
+		- sdb - 5GB
+		- sdc - 5GB
+		- mount lv-01 as a 10 GB volume
+	- Commands:
+		-
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
