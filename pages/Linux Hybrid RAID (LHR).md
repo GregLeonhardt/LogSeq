@@ -15,6 +15,7 @@
 			  ``parted -s /dev/sdc mklabel gpt mkpart primary btrfs 0% 100%``
 		- Next we will create the RAID-5 storage pool using BTRFS.
 			- ``mkfs.btrfs -d raid1 /dev/sdb1 /dev/sdc1``
+				- NOTE: This does not work if there is an existing file system on any of the drives.  Use the '-f' command line option to force the remaking of the filesystem
 		- Finally we will mount the new storage pool.
 			- ``mkdir /mnt/raid1``
 			  ``mount -t btrfs /dev/sdb1 /mnt/raid1``
