@@ -12,9 +12,9 @@
 		  /dev/sda - 3GB
 		  /dev/sda - 4GB
 		- We will start by wiping the drives clean of all existing data and partitions.
-			- ``gprted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 100%``
-			  ``gprted -s /dev/sdc mklabel gpt mkpart primary btrfs 0% 100%``
-			  ``gprted -s /dev/sdd mklabel gpt mkpart primary btrfs 0% 100%``
+			- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 100%``
+			  ``parted -s /dev/sdc mklabel gpt mkpart primary btrfs 0% 100%``
+			  ``parted -s /dev/sdd mklabel gpt mkpart primary btrfs 0% 100%``
 		- Next we will create the RAID-5 storage pool using BTRFS.
 			- ``mkfs.btrfs -d raid5 /dev/sdb1 /dev/sdc1 /dev/sdd1``
 		- Finally we will mount the new storage pool.
@@ -22,14 +22,14 @@
 				- NOTE: BTRFS sees all drives in the array as the same drive.  Thus any of the drives in the storage pool (/dev/sdb, /dev/sdc, /dev/sdc) could have been chosen when performing the mount.
 - # Commands:
 	- ## **gparted**
-		- ``gprted -s /dev/sdb mklabel gpt``
+		- ``parted -s /dev/sdb mklabel gpt``
 			- This command will create a partition table on the drive.
 				- ** *NOTE: This command will remove any and all existing partitions and data from the drive.  USE IT WITH CAUTION!* **
 				  background-color:: yellow
 		- ``parted -s /dev/sdb mkpart primary btrfs 0% 50%``
 			- This command will create a primary partition on the drive using the first half of the drive space.
 		- NOTE: 'parted' commands may be stacked.  For example the above two commands could be executes as a single command:
-			- ``gprted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 50%``
+			- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 50%``
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
