@@ -7,18 +7,17 @@
 			- Any number of any disk sizes may be grouped.
 			- Snapshot will be available in some form.
 - # Test 01:
-	- Build a RAID-5 array using mismatched drives:
-		- /dev/sda - 2GB
-		  /dev/sda - 3GB
-		  /dev/sda - 4GB
+	- Build a RAID-1 array using drives with the same size:
+		- /dev/sda - 5GB
+		  /dev/sda - 5GB
 		- We will start by wiping the drives clean of all existing data and partitions.
 			- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 100%``
 			  ``parted -s /dev/sdc mklabel gpt mkpart primary btrfs 0% 100%``
-			  ``parted -s /dev/sdd mklabel gpt mkpart primary btrfs 0% 100%``
 		- Next we will create the RAID-5 storage pool using BTRFS.
-			- ``mkfs.btrfs -d raid5 /dev/sdb1 /dev/sdc1 /dev/sdd1``
+			- ``mkfs.btrfs -d raid1 /dev/sdb1 /dev/sdc1``
 		- Finally we will mount the new storage pool.
-			- ``mount -t btrfs /dev/sdb1 /mnt/raid5``
+			- ``mkdir /mnt/raid1``
+			  ``mount -t btrfs /dev/sdb1 /mnt/raid1``
 				- NOTE: BTRFS sees all drives in the array as the same drive.  Thus any of the drives in the storage pool (/dev/sdb, /dev/sdc, /dev/sdc) could have been chosen when performing the mount.
 	- # Test 02:
 		- Fill the storage pool to 100%
