@@ -14,6 +14,14 @@
 	- Commands:
 		- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 50% mkpart primary btrfs 50% 100%``
 			- Start with an uninitialized disk and create two partitions of equal size.
+- # Commands:
+	- ``gprted -s /dev/sdb mklabel gpt``
+		- This command will create a partition table on the drive.
+			- ** *NOTE: This command will remove any and all existing partitions and data from the drive.  USE IT WITH CAUTION!* **
+			  background-color:: yellow
+	- ``sudo parted -s /dev/sdb mkpart primary btrfs 0% 50%``
+		- This command will create a primary partition on the drive using the first half of the drive space.
+	- NOTE: 'parted' commands may be stacked.  For example the above two commands could
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
