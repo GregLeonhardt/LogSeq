@@ -7,21 +7,24 @@
 			- Any number of any disk sizes may be grouped.
 			- Snapshot will be available in some form.
 - # Experiment #01
-	- Construct a simple RAID-01 with two drives the same size:
-		- sdb - 5GB
-		- sdc - 5GB
-		- mount lv-01 as a 10 GB volume
-	- Commands:
-		- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 50% mkpart primary btrfs 50% 100%``
-			- Start with an uninitialized disk and create two partitions of equal size.
+	- Build a RAID-5 array using mismatched drives:
+		- /dev/sda - 2GB
+		  /dev/sda - 3GB
+		  /dev/sda - 4GB
+		- W
+		- ``gprted -s /dev/sdb mklabel gpt``
+		  ``gprted -s /dev/sdc mklabel gpt``
+		  ``gprted -s /dev/sdd mklabel gpt``
 - # Commands:
-	- ``gprted -s /dev/sdb mklabel gpt``
-		- This command will create a partition table on the drive.
-			- ** *NOTE: This command will remove any and all existing partitions and data from the drive.  USE IT WITH CAUTION!* **
-			  background-color:: yellow
-	- ``sudo parted -s /dev/sdb mkpart primary btrfs 0% 50%``
-		- This command will create a primary partition on the drive using the first half of the drive space.
-	- NOTE: 'parted' commands may be stacked.  For example the above two commands could
+	- ## **gparted**
+		- ``gprted -s /dev/sdb mklabel gpt``
+			- This command will create a partition table on the drive.
+				- ** *NOTE: This command will remove any and all existing partitions and data from the drive.  USE IT WITH CAUTION!* **
+				  background-color:: yellow
+		- ``parted -s /dev/sdb mkpart primary btrfs 0% 50%``
+			- This command will create a primary partition on the drive using the first half of the drive space.
+		- NOTE: 'parted' commands may be stacked.  For example the above two commands could be executes as a single command:
+			- ``gprted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 50%``
 - # Resources:
 	- [VirtualBox image]([[VB-LHR]])
 		- This is a VirtualBox development environment.
