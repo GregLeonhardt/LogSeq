@@ -12,5 +12,5 @@
 	- **MODIFY**
 		- ``snapper -c {NAME} set-config "{KEY}={VALUE}"``
 		- EXAMPLE:
-			- ``snapper -c STORA set``
+			- ``snapper -c STORA set-config TIMELINE_LIMIT_HOURLY=48``
 -
