@@ -1,7 +1,16 @@
 ### Configuration Files:
 	- **CREATE**
 		- ``snapper -c {NAME} create-config {/path/to/subvolume}``
+		- EXAMPLE:
+			- ``snapper -c STORA create-config /volume1/STORA``
 	- **LIST**
 		- ``snapper list-configs``
 	- **DELETE**
-		-
+		- ``snapper -c {NAME} delete-config``
+		- EXAMPLE:
+			- ``snapper -c STORA delete-config``
+	- **MODIFY**
+		- ``snapper -c {NAME} set-config "{KEY}={VALUE}"``
+		- EXAMPLE:
+			- ``snapper -c STORA set``
+-
