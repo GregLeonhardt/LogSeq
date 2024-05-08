@@ -15,4 +15,14 @@
 			- ``snapper -c STORA set-config TIMELINE_LIMIT_HOURLY=48``
 - ### Snapshots:
 	- **CREATE**
-		- ``snapper -c {}``
+		- ``snapper -c {NAME} create -d "Description"``
+	- **LIST**
+		- ``snapper -c {NAME} list``
+	- **DELETE**
+		- ``snapper -c {NAME} delete {number or range}``
+		- EXAMPLE:
+			- ``snapper -c STORA delete 1``
+			- ``snapper -c STORA delete 1-10``
+		-
+		-
+		-
