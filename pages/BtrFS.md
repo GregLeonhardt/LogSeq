@@ -24,12 +24,20 @@
 	- #### Identify New Drive:
 		- First, identify the new drive you want to add to the Btrfs filesystem. You can use the `lsblk` tool to list available drives and partitions.
 	- #### Partition New Drive:
-		- If the new drive is not already partitioned, you need to partition it. You can use the 'parted' tool like `fdisk` or `parted` for this purpose. Create a partition of type "Linux filesystem" (type 83) on the new drive.
-	- **Add New Drive to Btrfs Filesystem**:
-	  Once the new drive is partitioned, you can add it to the existing Btrfs filesystem using the `btrfs device add` command. For example:
-	- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
-	- EXAMPLE:
-		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- If the new drive is not already partitioned, you need to partition it. You can use the 'parted' tool for this purpose. (*See above.*)
+	- #### Add New Drive to Btrfs Filesystem:
+		- Once the new drive is partitioned, you can add it to the existing Btrfs filesystem using the `btrfs device add` command. For example:
+		- ``btrfs device add {DRIVE-ID}1 {POOL_LOCATION}``
+		- EXAMPLE:
+			- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+	- #### Expand the filesystem to use the added space.
+		- After adding the new drive, you need to resize the Btrfs filesystem to make use of the additional space. Use the `btrfs filesystem resize` command:
+		- ```
+		  bash
+		  - Copy code
+		  - sudo btrfs filesystem resize max /mnt/btrfs
+		  ```
+		- This command will resize the filesystem to use all available space.
 - ### Check the status of a balance:
 	- ``btrfs scrub status {POOL_LOCATION}``
 	- EXAMPLE:
