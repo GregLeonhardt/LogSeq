@@ -21,11 +21,12 @@
 			- ``sudo btrfs filesystem show {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``sudo btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-					- ``Label: none  uuid: 71a84d92-2675-45de-b343-cd7565537305``
-					  ``Total devices 3 FS bytes used 25.98GiB``        
-					  ``devid    1 size 10.00GiB used 10.00GiB path /dev/sdb1``        
-					          devid    2 size 20.00GiB used 19.00GiB path /dev/sdc1
-					          devid    3 size 30.00GiB used 19.00GiB path /dev/sdd1``
+					- Will produce an output something like:
+					  ``Label: none  uuid: 71a84d92-2675-45de-b343-cd7565537305``
+					  ``        Total devices 3 FS bytes used 25.98GiB``        
+					  ``        devid    1 size 10.00GiB used 10.00GiB path /dev/sdb1``        
+					  ``        devid    2 size 20.00GiB used 19.00GiB path /dev/sdc1``        
+					  ``        devid    3 size 30.00GiB used 19.00GiB path /dev/sdd1``
 	- ### Convert from RAID-1 to RAID-5
 		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
 		- EXAMPLE:
@@ -49,6 +50,9 @@
 			- ``sudo btrfs filesystem resize max {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``sudo btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+- ### Balance BtrFS data distribution.
+	- Redistributing data across devices to ensure optimal performance and space utilization.
+		-
 - ### Scrub BtrFS to check data integrity.
 	- Scrubbing is an important maintenance task for ensuring the integrity of your data, especially on RAID setups where data integrity is crucial.
 		- #### start
