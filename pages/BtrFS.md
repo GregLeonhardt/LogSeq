@@ -16,6 +16,16 @@
 				- ``mkfs.btrfs -d raid5 /dev/sdb1 /dev/sdc1 /dev/sdd1``
 		- NOTE: You do NOT mount the file system.  it will be imported from [[OpenMediaVault OMV]]
 		  background-color:: gray
+	- ### List all drives:
+		- To list all drives that are part of a Btrfs filesystem or pool, you can use the `btrfs filesystem show` command. This command provides detailed information about the Btrfs filesystem, including the devices that make up the filesystem.
+			- ``sudo btrfs filesystem show {POOL_LOCATION}``
+			- EXAMPLE:
+				- ``sudo btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``Label: none  uuid: 71a84d92-2675-45de-b343-cd7565537305``
+					  ``Total devices 3 FS bytes used 25.98GiB``        
+					  ``devid    1 size 10.00GiB used 10.00GiB path /dev/sdb1``        
+					          devid    2 size 20.00GiB used 19.00GiB path /dev/sdc1
+					          devid    3 size 30.00GiB used 19.00GiB path /dev/sdd1``
 	- ### Convert from RAID-1 to RAID-5
 		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
 		- EXAMPLE:
