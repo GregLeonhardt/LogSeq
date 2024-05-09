@@ -1,4 +1,6 @@
-### Drive initialization:
+- ***NOTE: BtrFS does not officially support RAID-5.  Their documentation lists it as "EXPERIMENTAL".***
+  background-color:: red
+- ### Drive initialization:
 	- Use the built-in 'parted' command to perform the initialization.  It will create the drive label and create a primary partition.  Do this for every drive that will be added to the array.
 		- ``parted -s {DRIVE-ID} mklabel gpt mkpart primary btrfs 0% 100%``
 		- EXAMPLE:
@@ -14,3 +16,7 @@
 			- ``mkfs.btrfs -d raid5 /dev/sdb1 /dev/sdc1 /dev/sdd1``
 	- NOTE: You do NOT mount the file system.  it will be imported from [[OpenMediaVault OMV]]
 	  background-color:: gray
+- ### Convert from RAID-1 to RAID-5
+	- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
+	- EXAMPLE:
+		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/````
