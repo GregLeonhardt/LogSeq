@@ -19,4 +19,8 @@
 - ### Convert from RAID-1 to RAID-5
 	- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
 	- EXAMPLE:
-		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/````
+		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+- ### Check the status of a balance:
+	- ``btrfs scrub status {POOL_LOCATION}``
+	- EXAMPLE:
+		- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
