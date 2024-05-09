@@ -25,24 +25,30 @@
 	- EXAMPLE:
 		- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Scrub BtrFS to check data integrity.
+	- Scrubbing is an important maintenance task for ensuring the integrity of your data, especially on RAID setups where data integrity is crucial.
 	- #### start
 		- To start a scrub operation on a Btrfs filesystem, you use the following command:
 			- ``btrfs scrub start {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs scrub start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- #### status
-		- You can check the status of the scrub operation using the following command:
+		- You can check the status of the scrub operation using the following command.  This command will display information about the scrub operation, including progress, the number of bytes scrubbed, and any errors encountered.
 			- ``btrfs scrub status {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+	- #### suspend
+		-
+	-
+	-
 	- #### cancel
-		- If needed, you can cancel a scrub operation using the following command:
+		- If needed, you can cancel a scrub operation using the following command.  This command will stop the scrub operation before it completes.
 			- ``btrfs scrub cancel {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs scrub cancel /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- #### stop
 		-
-			- Once the scrub operation completes, you can stop it using the following command:
+			- Once the scrub operation completes, you can stop it using the following command.  This command stops the scrub operation and finalizes the results.
 			- ``btrfs scrub stop {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs scrub stop /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+-
