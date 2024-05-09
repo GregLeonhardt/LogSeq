@@ -50,6 +50,17 @@
 			- ``sudo btrfs filesystem resize max {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``sudo btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+- ### Replacing a failed drive.
+	- Recovering from a failed drive in a Btrfs RAID array requires careful planning and execution to minimize the risk of data loss and ensure the integrity of the filesystem.
+	- **Identify the Failed Drive**: The first step is to identify which drive in the RAID array has failed. You can use Btrfs-specific tools like `btrfs device stats` or general-purpose tools like `lsblk` or `fdisk` to list the drives and identify the failed one.
+	- **Replace the Failed Drive**: Once you've identified the failed drive, replace it with a new, healthy drive of equal or larger capacity. Follow any hardware-specific procedures for safely replacing the drive, such as hot-swapping or powering down the system.
+	- **Allow Rebuild**: After replacing the failed drive, the RAID array will automatically begin the rebuild process to restore redundancy and data integrity. Monitor the rebuild process to ensure it completes successfully.
+	- **Monitor System Health**: While the RAID array is rebuilding, monitor the health of the system and the status of the RAID array using Btrfs-specific tools like `btrfs device stats` and system monitoring tools. Look out for any signs of additional drive failures or errors during the rebuild process.
+	- **Verify Data Integrity**: Once the rebuild process is complete, verify the integrity of the data on the RAID array. You can use Btrfs-specific tools like `btrfs scrub` to perform a data scrubbing operation to check for and repair any errors in the filesystem.
+	- **Perform Regular Backups**: To mitigate the risk of data loss in the event of future drive failures or other unforeseen issues, establish a regular backup regimen for your data. Back up critical data to an external storage device or offsite location regularly to ensure redundancy and disaster recovery capabilities.
+	- **Monitor System Health Continuously**: Even after recovering from a failed drive, continue to monitor the health and performance of your Btrfs RAID array and the underlying hardware regularly. Implement proactive monitoring and alerting mechanisms to detect and respond to any potential issues promptly.
+	  
+	  By following these best practices for recovering from a failed drive in a Btrfs RAID array, you can minimize the risk of data loss, ensure the integrity of your filesystem, and maintain the availability and reliability of your data storage infrastructure.
 - ### Balance BtrFS data distribution.
 	- Redistributing data across devices to ensure optimal performance and space utilization.
 		- #### balance
