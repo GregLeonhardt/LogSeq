@@ -34,7 +34,7 @@
 	- ### Check the status of a balance:
 		- ``btrfs scrub status {POOL_LOCATION}``
 		- EXAMPLE:
-			- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+			- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Expand an array by adding a new drive.
 	- #### Identify New Drive:
 		- First, identify the new drive you want to add to the Btrfs filesystem. You can use the `lsblk` tool to list available drives and partitions.
