@@ -11,6 +11,12 @@
 	- TODO Image Viewer (Local and Remote)
 		- TODO Local
 		- TODO Remote
+	- TODO Recipe Manager (Local and Remote)
+		- TODO Local
+		- TODO Remote
+	- TODO LogSeq (Local and Remote)
+		- TODO Local
+		- TODO Remote
 - Additional needs:
 	- TODO Public facing connection monitor
-		- {failtoban}
+		- TODO FailToBan (or something like it)
