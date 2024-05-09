@@ -4,3 +4,4 @@
 	- DONE Manage snapshot copy
 		- Use the '[[snapper]]' package
 	- DONE Scrub [[BtrFS]]
+		- Use a 'cron' job to perform the scrub.

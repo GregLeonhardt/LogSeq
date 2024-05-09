@@ -5,21 +5,25 @@
 		- ``parted -s {DRIVE-ID} mklabel gpt mkpart primary btrfs 0% 100%``
 		- EXAMPLE:
 			- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 100%``
-- ### Make an array:
-	- #### RAID-1
-		- ``mkfs.btrfs -d raid1 {DRIVE_1}1 {DRIVE_2}1``
+	- ### Make an array:
+		- #### RAID-1
+			- ``mkfs.btrfs -d raid1 {DRIVE_1}1 {DRIVE_2}1``
+			- EXAMPLE:
+				- ``mkfs.btrfs -d raid1 /dev/sdb1 /dev/sdc1``
+		- #### RAID-5
+			- ``mkfs.btrfs -d raid5 {DRIVE_1}1 {DRIVE_2}1 {DRIVE_3}1``
+			- EXAMPLE:
+				- ``mkfs.btrfs -d raid5 /dev/sdb1 /dev/sdc1 /dev/sdd1``
+		- NOTE: You do NOT mount the file system.  it will be imported from [[OpenMediaVault OMV]]
+		  background-color:: gray
+	- ### Convert from RAID-1 to RAID-5
+		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
 		- EXAMPLE:
-			- ``mkfs.btrfs -d raid1 /dev/sdb1 /dev/sdc1``
-	- #### RAID-5
-		- ``mkfs.btrfs -d raid5 {DRIVE_1}1 {DRIVE_2}1 {DRIVE_3}1``
+			- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+	- ### Check the status of a balance:
+		- ``btrfs scrub status {POOL_LOCATION}``
 		- EXAMPLE:
-			- ``mkfs.btrfs -d raid5 /dev/sdb1 /dev/sdc1 /dev/sdd1``
-	- NOTE: You do NOT mount the file system.  it will be imported from [[OpenMediaVault OMV]]
-	  background-color:: gray
-- ### Convert from RAID-1 to RAID-5
-	- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 {POOL_LOCATION}``
-	- EXAMPLE:
-		- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+			- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Expand an array by adding a new drive.
 	- #### Identify New Drive:
 		- First, identify the new drive you want to add to the Btrfs filesystem. You can use the `lsblk` tool to list available drives and partitions.
@@ -31,17 +35,10 @@
 		- EXAMPLE:
 			- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- #### Expand the filesystem to use the added space.
-		- After adding the new drive, you need to resize the Btrfs filesystem to make use of the additional space. Use the `btrfs filesystem resize` command:
-		- ```
-		  bash
-		  - Copy code
-		  - sudo btrfs filesystem resize max /mnt/btrfs
-		  ```
-		- This command will resize the filesystem to use all available space.
-- ### Check the status of a balance:
-	- ``btrfs scrub status {POOL_LOCATION}``
-	- EXAMPLE:
-		- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- After adding the new drive, you need to resize the Btrfs filesystem to make use of the additional space.
+			- ``sudo btrfs filesystem resize max {POOL_LOCATION}``
+			- EXAMPLE:
+				- ``sudo btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Scrub BtrFS to check data integrity.
 	- Scrubbing is an important maintenance task for ensuring the integrity of your data, especially on RAID setups where data integrity is crucial.
 		- #### start
