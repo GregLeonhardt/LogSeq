@@ -52,7 +52,14 @@
 				- ``sudo btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Balance BtrFS data distribution.
 	- Redistributing data across devices to ensure optimal performance and space utilization.
-		-
+		- #### balance
+			- ``sudo btrfs balance start {POOL_LOCATION}``
+			- EXAMPLE:
+				- ``sudo btrfs balance start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- #### status
+			- ``sudo btrfs balance status {POOL_LOCATION}``
+			- EXAMPLE:
+				- ``sudo btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Scrub BtrFS to check data integrity.
 	- Scrubbing is an important maintenance task for ensuring the integrity of your data, especially on RAID setups where data integrity is crucial.
 		- #### start
