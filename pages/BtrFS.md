@@ -24,3 +24,7 @@
 	- ``btrfs scrub status {POOL_LOCATION}``
 	- EXAMPLE:
 		- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+- ### Scrub BtrFS to check data integrity.
+	- ``btrfs scrub start {POOL_LOCATION}``
+	- EXAMPLE:
+		- ``btrfs scrub start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
