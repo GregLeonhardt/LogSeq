@@ -1,20 +1,20 @@
 - Daily Checklist
   template:: Sandy's Daily Checklist
   template-including-parent:: false
-	- TODO Morning Vitals
+	- DONE Morning Vitals
 		- Weight:
 		- Temperature:
 		- Blood Pressure:
 		- Heart Rate:
 		- SpO2:
-	- TODO Morning Glucose
+	- DONE Morning Glucose
 		-
-	- TODO Morning Medicine
-	- TODO Disconnect TPN
-	- TODO Afternoon Glucose
+	- DONE Morning Medicine
+	- DONE Disconnect TPN
+	- DONE Afternoon Glucose
 		-
-	- TODO Afternoon Medicine
-	- TODO Evening Glucose
+	- DONE Afternoon Medicine
+	- DONE Evening Glucose
 		-
-	- TODO Evening Medicine
-	- TODO Start TPN
+	- DONE Evening Medicine
+	- DONE Start TPN
