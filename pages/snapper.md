@@ -24,4 +24,5 @@
 			- ``snapper -c STORA delete 1``
 			- ``snapper -c STORA delete 1-10``
 - ### NOTES:
-	- Apparently snapper cleanup only runs once a day.  Consiquently if you take hourly snapshots the regardless of what you set
+	- Apparently snapper cleanup only runs once a day.  Consiquently if you take hourly snapshots the regardless of what you set 'TIMELINE_LIMIT_HOURLY' to, there will be up to 24 of them when cleanup starts.
+	  background-color:: gray
