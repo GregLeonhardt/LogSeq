@@ -1,0 +1,16 @@
+- Applications I use on Synology that need replacements:
+	- TODO BitTorrent
+	- TODO File Synchronization
+	- TODO Backup to a second server
+	- TODO Video Player (Local and Remote)
+		- TODO Local
+		- TODO Remote
+	- TODO Audio Player (Local and Remote)
+		- TODO Local
+		- TODO Remote
+	- TODO Image Viewer (Local and Remote)
+		- TODO Local
+		- TODO Remote
+- Additional needs:
+	- TODO Public facing connection monitor
+		- {failtoban}
