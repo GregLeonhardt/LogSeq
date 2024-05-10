@@ -107,4 +107,11 @@
 - ### Device statistics
 	- Provides statistics about the devices in the filesystem, including information such as read and write operations, errors, and performance metrics. This command is useful for monitoring the health and performance of Btrfs devices, especially in RAID configurations where multiple devices are involved.
 		- ``btrfs device stats {POOL_LOCATION}``
-		-
+		- EXAMPLE:
+			- ``btrfs device stats /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- 'read': Number of read operations performed on the device.
+		- 'write': Number of write operations performed on the device.
+		- 'ioctl': Number of input/output control operations performed on the device.
+		- 'trim': Number of trim operations performed on the device (for SSDs).
+		- 'flush': Number of flush operations performed on the device.
+		- 'errors': Number of errors encountered on the device.
