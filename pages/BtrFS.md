@@ -104,4 +104,7 @@
 				- ``btrfs scrub stop {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub stop /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
--
+- ### Device statistics
+	- Provides statistics about the devices in the filesystem, including information such as read and write operations, errors, and performance metrics. This command is useful for monitoring the health and performance of Btrfs devices, especially in RAID configurations where multiple devices are involved.
+		- ``btrfs device stats {POOL_LOCATION}``
+		-
