@@ -4,7 +4,12 @@
 			- System -> Workbench: Port
 				- Change from '80' to just about anything else.  '8080' is a good choice.
 		- Create a subvolume for CasaOSs Docker containers.
-			- Storage
+			- Storage -> Shared Folders + (create)
+				- Name: docker
+				- File system: (use the pull down to select)
+			- Create an automated snapshot copy using snapper.
+				- ``snapper -c docker create-config /volume1/docker``
+				- Edit '/etc/snapper/configs/docker' as needed
 - ### Install:
 	- ``wget -qO- https://get.casaos.io | sudo bash``
 	- -OR-
