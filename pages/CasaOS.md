@@ -1,7 +1,10 @@
 ### Pre-Install:
-	- If CasaOS is being installed along side of Open Media Vault (OMV) then the web interface for OMV must be changed as by default both OMV and CasaOS use port 80.
-		- System -> Workbench: Port
-			- Change from '80' to just about anything else.  '8080' is a good choice.
+	- When running under Open Media Vault (OMV):
+		- The web interface for OMV must be changed as by default both OMV and CasaOS use port 80.
+			- System -> Workbench: Port
+				- Change from '80' to just about anything else.  '8080' is a good choice.
+		- Create a subvolume for CasaOSs Docker containers.
+			- Storage
 - ### Install:
 	- ``wget -qO- https://get.casaos.io | sudo bash``
 	- -OR-
