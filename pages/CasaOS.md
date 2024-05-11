@@ -1,4 +1,13 @@
--
+### TODO : Backup:
+:LOGBOOK:
+CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
+:END:
+	- Backup both '/var/lib/casaos' and '/DATA'.
+- ### TODO Move data from boot disk to RAID disk.
+  :LOGBOOK:
+  CLOCK: [2024-05-11 Sat 07:35:56]--[2024-05-11 Sat 07:36:04] =>  00:00:08
+  :END:
+	- Move both '/var/lib/casaos' and '/DATA'.
 - ### Pre-Install:
 	- When running under Open Media Vault (OMV):
 		- The web interface for OMV must be changed as by default both OMV and CasaOS use port 80.
