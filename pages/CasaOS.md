@@ -10,8 +10,10 @@
 		- Snapper snapshot copies:
 			- ``ln -s {PATH_TO}/CasaOS /volume1/CasaOS``
 			- ``snapper -c CasaOS create-config /volume1/CasaOS``
-				- Edit '/etc/sn
-		-
+			- Edit '/etc/snapper/configs/CasaOS' to set the snapshot configuration.
+		- Stop all CasaOS daemons.
+			- ``systemctl stop casaos*.service``
+			- ``systemctl stop docker.*``
 - ### TODO : Backup:
   :LOGBOOK:
   CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
@@ -40,11 +42,11 @@
 	- CasaOS (by default) uses '/DATA' as it's root folder.  The problem is that this directory isn't part of an OMV volume.  Use the following steps to move it to a new location.
 		- Stop and confirm that CasaOS services are stopped.
 			- ``systemctl stop casaos*.service``
-			- ``sudo systemctl status casaos.service``
+			- ``systemctl status casaos.service``
 		- Stop and confirm that Docker services are stopped.
-			- ``sudo systemctl stop docker.*``
-			- ``sudo systemctl status docker.service``
-			- ``sudo systemctl status docker.socket``
+			- ``systemctl stop docker.*``
+			- ``systemctl status docker.service``
+			- ``systemctl status docker.socket``
 		- Create the new directory for images and volumes.
 			- ``mkdir -p /path/to/new/location``
 		- Edit the CasaOS configuration file at '/lib/systemd/system/docker.service'
