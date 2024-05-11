@@ -17,6 +17,8 @@
 	- TODO LogSeq (Local and Remote)
 		- TODO Local
 		- TODO Remote
+	- TODO Network Video Recorder (NVR)
+	- TODO CrashPlan
 - Additional needs:
 	- TODO Public facing connection monitor
 		- TODO FailToBan (or something like it)
