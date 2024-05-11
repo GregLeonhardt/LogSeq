@@ -17,6 +17,11 @@
 		- Create CasaOS root and data directories.
 			- ``mkdir /volume1/CasaOS/var_lib/casaos``
 			- ``mkdir /volume1/CasaOS/DATA``
+		- Edit the CasaOS configuration file at '/lib/systemd/system/docker.service'
+			- From:
+				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock``
+			- To:
+				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root /path/to/new/location``
 		- Move all existing data from the boot drive to the RAID volume
 			- ``mv /var/lib/casaos/* /volume1/CasaOS/var_lib_casaos/.``
 			- ``mv /DATA/* /volume1/CasaOS/DATA/.``
