@@ -1,4 +1,8 @@
-### Configuration Files:
+### Documentation
+	- ![Ubuntu Manpage_ snapper-configs - Configuration files for snapper configs.pdf](../assets/Ubuntu_Manpage_snapper-configs_-_Configuration_files_for_snapper_configs_1715440592896_0.pdf)
+	- ![SLES 12 SP5 _ Administration Guide _ System Recovery and Snapshot Management with Snapper.pdf](../assets/SLES_12_SP5_Administration_Guide_System_Recovery_and_Snapshot_Management_with_Snapper_1715440626973_0.pdf)
+	-
+- ### Configuration Files:
 	- **CREATE**
 		- ``snapper -c {NAME} create-config {/path/to/subvolume}``
 		- EXAMPLE:
