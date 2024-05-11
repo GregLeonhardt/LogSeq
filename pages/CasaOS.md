@@ -21,7 +21,7 @@
 			- From:
 				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock``
 			- To:
-				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root /path/to/new/location``
+				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root /volume1/CasaOS/var_lib_casaos``
 		- Move all existing data from the boot drive to the RAID volume
 			- ``mv /var/lib/casaos/* /volume1/CasaOS/var_lib_casaos/.``
 			- ``mv /DATA/* /volume1/CasaOS/DATA/.``
