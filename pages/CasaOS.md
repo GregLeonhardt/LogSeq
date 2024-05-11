@@ -14,6 +14,16 @@
 		- Stop all CasaOS daemons.
 			- ``systemctl stop casaos*.service``
 			- ``systemctl stop docker.*``
+		- Create CasaOS root and data directories.
+			- ``mkdir /volume1/CasaOS/var_lib/casaos``
+			- ``mkdir /volume1/CasaOS/DATA``
+		- Move all existing data from the boot drive to the RAID volume
+			- ``mv /var/lib/casaos/* /volume1/CasaOS/var_lib_casaos/.``
+			- ``mv /DATA/* /volume1/CasaOS/DATA/.``
+		- Delete the old folders.
+			- ``rm -rf /var/lib/casaos``
+			- rm -rf /DATA
+		-
 - ### TODO : Backup:
   :LOGBOOK:
   CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
