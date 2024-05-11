@@ -1,4 +1,6 @@
-### Install:
+- ***CasaOS Is a bust.***
+	- There may be a way to do it but I was unsuccessful at moving the '/var/lib/casaos' and 'DATA' directories to BtrFS. I followed the directions but it just wouldn't work.  I tried to move the data and link the directories and I also followed the directions for changing the location of '/var/lib/casaos'.  I
+- ### Install:
 	- ``wget -qO- https://get.casaos.io | sudo bash``
 	- -OR-
 	- ``curl -fsSL https://get.casaos.io | sudo bash``
@@ -15,7 +17,7 @@
 			- ``systemctl stop casaos*.service``
 			- ``systemctl stop docker.*``
 		- Create CasaOS root and data directories.
-			- ``mkdir /volume1/CasaOS/var_lib/casaos``
+			- ``mkdir /volume1/CasaOS/var_lib_casaos``
 			- ``mkdir /volume1/CasaOS/DATA``
 		- Edit the CasaOS configuration file at '/lib/systemd/system/docker.service'
 			- From:
