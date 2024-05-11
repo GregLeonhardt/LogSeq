@@ -1,5 +1,8 @@
 - ***CasaOS Is a bust.***
-	- There may be a way to do it but I was unsuccessful at moving the '/var/lib/casaos' and 'DATA' directories to BtrFS. I followed the directions but it just wouldn't work.  I tried to move the data and link the directories and I also followed the directions for changing the location of '/var/lib/casaos'.  I
+  background-color:: red
+  id:: 663fe8b4-e0f4-42d0-890c-831f21afa06d
+	- There may be a way to do it but I was unsuccessful at moving the '/var/lib/casaos' and 'DATA' directories to BtrFS. I followed the directions but it just wouldn't work.  I tried to move the data and link the directories and I also followed the directions for changing the location of '/var/lib/casaos'.  In the end when the system restarted it would just create a new '/var/lib/casaos' directory and it couldn't see anything in the /DATA directory.  Maybe some day, or some year I'll come back and try again but I am done for now.
+	  background-color:: red
 - ### Install:
 	- ``wget -qO- https://get.casaos.io | sudo bash``
 	- -OR-
