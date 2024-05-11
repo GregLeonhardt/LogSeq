@@ -30,4 +30,15 @@
 		- Edit the CasaOS configuration file at '/lib/systemd/system/docker.service'
 			- From:
 				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock``
-			-
+			- To:
+				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --data-root /path/to/new/location``
+			- Copy the existing content from `/var/lib/docker` to the new path.
+				- ``rsync -avxP /var/lib/docker/ /path/to/new/location``
+			- Copy the existing content from `/DATA` to the new path.
+				- ``rsync -avxP /DATA/ /path/to/new/location``
+			- Restart the machine.
+				- ``reboot``
+			- If everything goes well in couple of days, feel free to delete '/var/lib/docker/*' to reclaim some storage space.
+				- ``rm -rf /var/lib/docker/*``
+			- Then delete the old root folder.
+				- ``rm -rf /DATA``
