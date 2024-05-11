@@ -17,6 +17,7 @@
 		- ``snapper -c {NAME} set-config "{KEY}={VALUE}"``
 		- EXAMPLE:
 			- ``snapper -c STORA set-config TIMELINE_LIMIT_HOURLY=48``
+		- Alternatively just edit the configuration file at '/etc/snapper/configs/{NAME}'
 - ### Snapshots:
 	- **CREATE**
 		- ``snapper -c {NAME} create -d "Description"``
