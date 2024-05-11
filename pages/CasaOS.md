@@ -1,7 +1,12 @@
-### TODO : Backup:
-:LOGBOOK:
-CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
-:END:
+### Install:
+	- ``wget -qO- https://get.casaos.io | sudo bash``
+	- -OR-
+	- ``curl -fsSL https://get.casaos.io | sudo bash``
+	- When runniong under Open Media Vault ()
+- ### TODO : Backup:
+  :LOGBOOK:
+  CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
+  :END:
 	- Backup both '/var/lib/casaos' and '/DATA'.
 - ### TODO Move data from boot disk to RAID disk.
   :LOGBOOK:
@@ -20,10 +25,6 @@ CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
 			- Create an automated snapshot copy using snapper.
 				- ``snapper -c docker create-config /volume1/docker``
 				- Edit '/etc/snapper/configs/docker' as needed
-- ### Install:
-	- ``wget -qO- https://get.casaos.io | sudo bash``
-	- -OR-
-	- ``curl -fsSL https://get.casaos.io | sudo bash``
 - ### Uninstall:
 	- ``casaos-uninstall``
 - # Move root folder (for OMV)
