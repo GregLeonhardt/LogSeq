@@ -22,8 +22,12 @@
 			- ``mv /DATA/* /volume1/CasaOS/DATA/.``
 		- Delete the old folders.
 			- ``rm -rf /var/lib/casaos``
-			- rm -rf /DATA
-		-
+			- ``rm -rf /DATA``
+		- Create symbolic links from the new directories back to where CasaOS expects them to be.
+			- ``ln -s /volume1/CasaOS/var_lib_casaos /var/lib/casaos``
+			- ``ln -s /volume1/CasaOS/DATA /DATA``
+		- Reboot to activate the new configuration.
+			- ``reboot``
 - ### TODO : Backup:
   :LOGBOOK:
   CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
