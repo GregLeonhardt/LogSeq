@@ -16,3 +16,5 @@
 	- ``curl -fsSL https://get.casaos.io | sudo bash``
 - ### Uninstall:
 	- ``casaos-uninstall``
+- # Move root folder (for OMV)
+	- CasaOS (by default) uses '/DATA' as it's root folder.  The problem is that this directory isn't part of an OMV volume.
