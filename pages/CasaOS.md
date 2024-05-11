@@ -17,4 +17,17 @@
 - ### Uninstall:
 	- ``casaos-uninstall``
 - # Move root folder (for OMV)
-	- CasaOS (by default) uses '/DATA' as it's root folder.  The problem is that this directory isn't part of an OMV volume.
+	- CasaOS (by default) uses '/DATA' as it's root folder.  The problem is that this directory isn't part of an OMV volume.  Use the following steps to move it to a new location.
+		- Stop and confirm that CasaOS services are stopped.
+			- ``systemctl stop casaos*.service``
+			- ``sudo systemctl status casaos.service``
+		- Stop and confirm that Docker services are stopped.
+			- ``sudo systemctl stop docker.*``
+			- ``sudo systemctl status docker.service``
+			- ``sudo systemctl status docker.socket``
+		- Create the new directory for images and volumes.
+			- ``mkdir -p /path/to/new/location``
+		- Edit the CasaOS configuration file at '/lib/systemd/system/docker.service'
+			- From:
+				- ``ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock``
+			-
