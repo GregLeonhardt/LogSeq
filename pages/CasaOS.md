@@ -6,6 +6,12 @@
 		- Create a shared BtrFS folder:
 			- From OMV desktop: Storage -> Shared Folders -> Create
 				- Name: CasaOS
+				  File system: {select}
+		- Snapper snapshot copies:
+			- ``ln -s {PATH_TO}/CasaOS /volume1/CasaOS``
+			- ``snapper -c CasaOS create-config /volume1/CasaOS``
+				- Edit '/etc/sn
+		-
 - ### TODO : Backup:
   :LOGBOOK:
   CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
