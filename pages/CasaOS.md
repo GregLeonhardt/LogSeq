@@ -2,7 +2,10 @@
 	- ``wget -qO- https://get.casaos.io | sudo bash``
 	- -OR-
 	- ``curl -fsSL https://get.casaos.io | sudo bash``
-	- When runniong under Open Media Vault ()
+	- When running under Open Media Vault (OMV) the CasaOS root folder and the 'DATA' folders need to be moved to the BtrFS.
+		- Create a shared BtrFS folder:
+			- From OMV desktop: Storage -> Shared Folders -> Create
+				- Name: CasaOS
 - ### TODO : Backup:
   :LOGBOOK:
   CLOCK: [2024-05-11 Sat 07:36:56]--[2024-05-11 Sat 07:37:00] =>  00:00:04
