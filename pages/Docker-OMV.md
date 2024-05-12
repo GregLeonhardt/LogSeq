@@ -32,6 +32,8 @@
 		- Docker -> Docker storage
 			- /volume1/Docker
 	- Click the 'Save' button.
+- NOTE: This is where things get *VERY* murky.  I can't find anything that gives any kind of a list of available Docker containers.  I guess this is why at this point all the tutorials install some sort of Docker manager.  'Portainer' is the most common but probably the oldest.
+  background-color:: purple
 - ``docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest``
 -
 -
