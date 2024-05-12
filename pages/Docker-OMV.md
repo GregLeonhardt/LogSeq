@@ -7,13 +7,12 @@
 		- ``ln -s {/path/to/subvolume} /volume1/Docker``
 		- ``snapper -c Docker create-config /volume1/Docker``
 		- Edit ``/etc/snapper/configs/Docker`` as needed.
-	- Docker-Compose
-	- Docker-Data
-	- Docker-Storage
-- Now that we have successfullt created the Docker subvolumes let's get snapshot copy configured for them
-	-
+	- Create directories for the various docker parts:
+		- ``mkdir /volume1/Docker/Compose``
+		- ``mkdir /volume1/Docker/Data``
+		- ``mkdir /volume1/Docker/Storage``
 - We are ready to start downloading and installing the OMV Extras package.
-	- ``wget -O - [https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install](https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install) | bash``
+	- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
 -
 -
 -
