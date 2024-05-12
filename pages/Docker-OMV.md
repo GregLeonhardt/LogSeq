@@ -1,4 +1,9 @@
 - Docker uses three directory roots for all the Docker images, configurations, and data.  Create them as follows:
+	- Create a new shared filesystem for Docker stuff:
+		- Storage -> Shared Folders -> Create
+			- Name: Docker
+			  File system: {File System Location}
+	- Configure 'snapper'
 	- Docker-Compose
 	- Docker-Data
 	- Docker-Storage
