@@ -3,7 +3,10 @@
 		- Storage -> Shared Folders -> Create
 			- Name: Docker
 			  File system: {File System Location}
-	- Configure 'snapper'
+	- Configure 'snapper' to take regular snapshot copies:
+		- ``ln -s {/path/to/subvolume} /volume1/Docker``
+		- ``snapper -c Docker create-config /volume1/Docker``
+		- Edit ``/etc/snapper/configs/Docker`` as needed.
 	- Docker-Compose
 	- Docker-Data
 	- Docker-Storage
