@@ -21,7 +21,14 @@
   background-color:: red
 - Install 'Docker-Compose'
 	- Install System -> Plugins -> openmediavault-compose
--
+- Configure openmediavault-compose:
+	- Services -> Compose -> Settings
+		- Compose Files -> Shared folder
+			- Select the Docker subvolume.
+		- Data -> Shared Folder
+			- Select the Docker subvolume
+		- Docker -> Docker storage
+			- /volume1/Docker
 - ``docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest``
 -
 -
