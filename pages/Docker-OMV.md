@@ -12,8 +12,11 @@
 		- ``mkdir /volume1/Docker/Data``
 		- ``mkdir /volume1/Docker/Storage``
 - We are ready to start downloading and installing the OMV Extras package.
-	- clear ; wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
--
+	- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
+- Refresh the Open Media Vault WEB interface (F5) and go to:
+	- System -> omv-extras
+		- Check the 'Docker repo' checkbox.
+		- Click the Save button
 -
 -
 - ``docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest``
