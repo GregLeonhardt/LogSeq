@@ -12,7 +12,7 @@
 		- ``mkdir /volume1/Docker/Data``
 		- ``mkdir /volume1/Docker/Storage``
 - We are ready to start downloading and installing the OMV Extras package.
-	- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
+	- clear ; wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash
 -
 -
 -
