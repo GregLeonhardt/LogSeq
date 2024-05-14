@@ -14,7 +14,12 @@
 		- [[Docker-LogSeq]]
 	- TODO Network Video Recorder (NVR)
 	- TODO Off Site Backup
-		- Crash
+		- CrashPlan
+	- TODO Home Automation
+		- Docker-Home Assistant
+	- Additional Docker Containers:
+		- Jupyter Notebook
+		- Pa
 - Additional needs:
 	- TODO Public facing connection monitor
 		- [[Fail2Ban]]
