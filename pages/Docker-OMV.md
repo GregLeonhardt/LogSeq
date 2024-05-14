@@ -48,6 +48,8 @@
 	  logseq.order-list-type:: number
 		- EXAMPLE:
 			- ``CHANGE_TO_COMPOSE_DATA_PATH/adguard/work:/opt/adguardhome/work``
-	- Currently the firewall will block communications for most ports.
+	- Currently the firewall will block communications for most ports.  You will have to add a firewall rule to allow the port.
 	  logseq.order-list-type:: number
+		- Network -> Firewall -> Add
+		  logseq.order-list-type:: number
 	-
