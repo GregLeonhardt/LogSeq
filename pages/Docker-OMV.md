@@ -25,14 +25,13 @@
 		- Using the editor of choice, edit the configuration files in ``/etc/snapper/configs/{NAME}``
 - ## Docker Install:
 	- Download and install the OMV Extras package.
-		- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
+		- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
 	- Refresh the Open Media Vault WEB user interface (F5) and go to:
 		- System -> omv-extras
 			- Check the 'Docker repo' checkbox.
 			- Click the Save button
-	- NOTE: Another WEB interface refresh may have been required here.  Not sure.
-	  background-color:: red
 	- Install 'Docker-Compose'
+	  background-color:: red
 		- Install System -> Plugins -> openmediavault-compose
 	- Configure openmediavault-compose:
 		- Services -> Compose -> Settings
