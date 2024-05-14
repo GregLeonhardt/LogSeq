@@ -31,18 +31,17 @@
 			- Check the 'Docker repo' checkbox.
 			- Click the Save button
 	- Install 'Docker-Compose'
-	  background-color:: red
 		- Install System -> Plugins -> openmediavault-compose
 	- Configure openmediavault-compose:
 		- Services -> Compose -> Settings
 			- Compose Files -> Shared folder
-				- Select the Docker subvolume.
+				- Select the {docker-compose} subvolume.
 			- Data -> Shared Folder
-				- Select any other subvolume
-					- NOTE: Selecting the same subvolume as above will result in an error.
-					  background-color:: red
+				- Select the {docker-data} subvolume
+			- Data -> Backup Folder
+				- Select the {docker-backup} subvolume
 			- Docker -> Docker storage
-				- /volume1/Docker
+				- ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/docker-system``
 		- Click the 'Save' button.
 - NOTE: This is where things get *VERY* murky.  I can't find anything that gives any kind of a list of available Docker containers.  I guess this is why at this point all the tutorials install some sort of Docker manager.  'Portainer' is the most common but probably the oldest.
   background-color:: yellow
