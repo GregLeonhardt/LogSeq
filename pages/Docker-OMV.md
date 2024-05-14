@@ -2,30 +2,27 @@
 	- For simplicity the following will use ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/`` to identify the 'File system'.  This directory will be different on your system.
 - ## Sub-Volumes:
 	- ### Compose Files:
-		- Name:            docker-compose
-		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- NAME:            docker-compose
+		- FILE SYSTEM:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Data:
-		- Name:            docker-data
-		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- NAME:            docker-data
+		- FILE SYSTEM:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Backup:
-		- Name:            docker-backup
-		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- NAME:            docker-backup
+		- FILE SYSTEM:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Docker
 		- Name:            docker
-		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- FILE SYSTEM:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ## Install:
-- Create the directories listed above as follows:
+- For each of the above sub-volumes create the sub-volumes:
 	- Storage -> Shared Folders -> Create
 		- Name:           {NAME}
-		  File system:  {File system}
-	- Configure 'snapper' to take regular snapshot copies:
-		- ``ln -s {/path/to/subvolume} /volume1/Docker``
-		- ``snapper -c Docker create-config /volume1/Docker``
-		- Edit ``/etc/snapper/configs/Docker`` as needed.
-	- Create directories for the various docker parts:
-		- ``mkdir /volume1/Docker/Compose``
+		  File system:  {FILE SYSTEM}
+	- For each of the above sub-volumes 'snapper' configuration files:
+		- ``snapper -c {NAME} create-config {FILE SYSTEM}/{NAME}``
 		- ``mkdir /volume1/Docker/Data``
 		- ``mkdir /volume1/Docker/Storage``
+	- Using the editor of choice, edi
 - We are ready to start downloading and installing the OMV Extras package.
 	- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
 - Refresh the Open Media Vault WEB interface (F5) and go to:
