@@ -1,10 +1,10 @@
 - Applications I use on Synology that need replacements:
-	- TODO BitTorrent
+	- DONE BitTorrent
+		- [[Transmission]]
 	- TODO File Synchronization
 	- TODO Backup to a second server
-	- TODO Video Player (Local and Remote)
-		- TODO Local
-		- TODO Remote
+	- DONE Video Player (Local and Remote)
+		- [[Jellyfin]]
 	- TODO Audio Player (Local and Remote)
 		- TODO Local
 		- TODO Remote
