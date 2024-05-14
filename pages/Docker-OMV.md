@@ -44,6 +44,10 @@
 				- ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/docker-system``
 		- Click the 'Save' button.
 - NOTES:
+	- In the Docker Compose file insert "CHANGE_TO_COMPOSE_DATA_PATH" in front of all volume directories.  This will be replaces when the container is started.
+	  logseq.order-list-type:: number
+		- EXAMPLE:
+			- ``CHANGE_TO_COMPOSE_DATA_PATH/adguard/work:/opt/adguardhome/work``
+	- Currently the firewall will block communications for most ports.
+	  logseq.order-list-type:: number
 	-
-	- ``docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest``
-		- Before we can connect to this (or any other) Docker container we must punch a hole in the OMV firewall.
