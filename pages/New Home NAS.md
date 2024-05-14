@@ -39,22 +39,32 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-14 Tue 14:45:01]
 		  :END:
-	- /n DNS and Add Blocker
+	- DNS and Add Blocker
 	  logseq.order-list-type:: number
 		- DOING [[Docker-PiHole]]
 		  :LOGBOOK:
 		  CLOCK: [2024-05-14 Tue 14:45:07]
 		  :END:
-	- /n Keep track of all servers
+	- Keep track of all servers
+	  logseq.order-list-type:: number
 		- DOING [[Docker-UpTime-Kuma]]
 		  :LOGBOOK:
 		  CLOCK: [2024-05-14 Tue 14:46:58]
 		  :END:
-	- /n TODO File Synchronization
-	- /n TODO Backup to a second server
-	- /n TODO Image Viewer
+	- TODO File Synchronization
+	  logseq.order-list-type:: number
+	- TODO Backup to a second server
+	  logseq.order-list-type:: number
+	- TODO Image Viewer
+	  logseq.order-list-type:: number
 	- TODO Network Video Recorder (NVR)
-	- TODO CrashPlan
+	  logseq.order-list-type:: number
+	- NOW CrashPlan
+	  logseq.order-list-type:: number
+	  :LOGBOOK:
+	  CLOCK: [2024-05-14 Tue 15:43:32]
+	  :END:
 	- TODO [[Fail2Ban]]
+	  logseq.order-list-type:: number
 		- TODO  Will this will be installed on OMV before docker or on the proxy server?
 		- TODO Will the proxy server be installed on OMV or in a docker container
