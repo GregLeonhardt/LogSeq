@@ -47,4 +47,4 @@
 	- TODO CrashPlan
 	- TODO [[Fail2Ban]]
 		- TODO  Will this will be installed on OMV before docker or on the proxy server?
-		- TODO
+		- TODO Will the proxy server be installed on OMV or in a docker container
