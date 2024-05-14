@@ -1,24 +1,20 @@
 - Applications I use on Synology that need replacements:
 	- DONE BitTorrent
-		- [[Transmission]]
+		- [[Docker-Transmission]]
 	- TODO File Synchronization
 	- TODO Backup to a second server
 	- DONE Video Player (Local and Remote)
-		- [[Jellyfin]]
+		- [[Docker-Jellyfin]]
 	- TODO Audio Player (Local and Remote)
-		- TODO Local
-		- TODO Remote
+		- [[Docker-Jellyfin]]
 	- TODO Image Viewer (Local and Remote)
-		- TODO Local
-		- TODO Remote
 	- TODO Recipe Manager (Local and Remote)
-		- TODO Local
-		- TODO Remote
+		- [[Docker-Mealie]]
 	- TODO LogSeq (Local and Remote)
-		- TODO Local
-		- TODO Remote
+		- [[Docker-LogSeq]]
 	- TODO Network Video Recorder (NVR)
-	- TODO CrashPlan
+	- TODO Off Site Backup
+		- Crash
 - Additional needs:
 	- TODO Public facing connection monitor
-		- TODO FailToBan (or something like it)
+		- [[Fail2Ban]]
