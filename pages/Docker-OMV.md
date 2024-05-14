@@ -1,6 +1,6 @@
 ## Definitions:
 	- For simplicity the following will use ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/`` to identify the 'File system'.  This directory will be different on your system.
-- ## Sub-Volumes:
+- ## Sub-Volume List:
 	- ### Compose Files:
 		- NAME:            docker-compose
 		- FILE SYSTEM:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
@@ -13,37 +13,38 @@
 	- ### Docker
 		- Name:            docker
 		- FILE SYSTEM:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-- ## Install:
-- For each of the above sub-volumes create the sub-volumes:
-	- Storage -> Shared Folders -> Create
-		- Name:           {NAME}
-		  File system:  {FILE SYSTEM}
-	- For each of the above sub-volumes 'snapper' configuration files:
-		- ``snapper -c {NAME} create-config {FILE SYSTEM}/{NAME}``
-		- ``mkdir /volume1/Docker/Data``
-		- ``mkdir /volume1/Docker/Storage``
-	- Using the editor of choice, edi
-- We are ready to start downloading and installing the OMV Extras package.
-	- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
-- Refresh the Open Media Vault WEB interface (F5) and go to:
-	- System -> omv-extras
-		- Check the 'Docker repo' checkbox.
-		- Click the Save button
-- NOTE: Another WEB interface refresh may have been required here.  Not sure.
-  background-color:: red
-- Install 'Docker-Compose'
-	- Install System -> Plugins -> openmediavault-compose
-- Configure openmediavault-compose:
-	- Services -> Compose -> Settings
-		- Compose Files -> Shared folder
-			- Select the Docker subvolume.
-		- Data -> Shared Folder
-			- Select any other subvolume
-				- NOTE: Selecting the same subvolume as above will result in an error.
-				  background-color:: red
-		- Docker -> Docker storage
-			- /volume1/Docker
-	- Click the 'Save' button.
+- ## Sub-Volume Creation:
+	- For each of the above sub-volumes create the sub-volumes:
+		- Storage -> Shared Folders -> Create
+			- Name:           {NAME}
+			  File system:  {FILE SYSTEM}
+		- For each of the above sub-volumes 'snapper' configuration files:
+			- ``snapper -c {NAME} create-config {FILE SYSTEM}/{NAME}``
+			- ``mkdir /volume1/Docker/Data``
+			- ``mkdir /volume1/Docker/Storage``
+		- Using the editor of choice, edit the configuration files in ``/etc/snapper/configs/{NAME}``
+- ## Docker Install:
+	- Download and install the OMV Extras package.
+		- ``wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash``
+	- Refresh the Open Media Vault WEB user interface (F5) and go to:
+		- System -> omv-extras
+			- Check the 'Docker repo' checkbox.
+			- Click the Save button
+	- NOTE: Another WEB interface refresh may have been required here.  Not sure.
+	  background-color:: red
+	- Install 'Docker-Compose'
+		- Install System -> Plugins -> openmediavault-compose
+	- Configure openmediavault-compose:
+		- Services -> Compose -> Settings
+			- Compose Files -> Shared folder
+				- Select the Docker subvolume.
+			- Data -> Shared Folder
+				- Select any other subvolume
+					- NOTE: Selecting the same subvolume as above will result in an error.
+					  background-color:: red
+			- Docker -> Docker storage
+				- /volume1/Docker
+		- Click the 'Save' button.
 - NOTE: This is where things get *VERY* murky.  I can't find anything that gives any kind of a list of available Docker containers.  I guess this is why at this point all the tutorials install some sort of Docker manager.  'Portainer' is the most common but probably the oldest.
   background-color:: yellow
 - To install and run portainer, run the following command:
