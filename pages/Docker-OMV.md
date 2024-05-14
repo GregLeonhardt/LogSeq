@@ -1,18 +1,23 @@
 ## Definitions:
-	- For simplicity the following will use `/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/" to identify the 'File system'.  This directory will be different on your system.
+	- For simplicity the following will use ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/`` to identify the 'File system'.  This directory will be different on your system.
 - ## Sub-Volumes:
 	- ### Compose Files:
-		- Name:
-		- File system:
+		- Name:            docker-compose
+		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Data:
+		- Name:            docker-data
+		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Backup:
+		- Name:            docker-backup
+		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Docker
+		- Name:            docker
+		- File system:  ``/srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ## Install:
-- Docker uses three directory roots for all the Docker images, configurations, and data.  Create them as follows:
-	- Create a new shared filesystem for Docker stuff:
-		- Storage -> Shared Folders -> Create
-			- Name: Docker
-			  File system: {File System Location}
+- Create the directories listed above as follows:
+	- Storage -> Shared Folders -> Create
+		- Name:           {NAME}
+		  File system:  {File system}
 	- Configure 'snapper' to take regular snapshot copies:
 		- ``ln -s {/path/to/subvolume} /volume1/Docker``
 		- ``snapper -c Docker create-config /volume1/Docker``
