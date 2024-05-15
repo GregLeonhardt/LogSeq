@@ -1,7 +1,7 @@
 - Applications I use on Synology that need replacements:
 	- Proxy and Reverse-Proxy
 	  logseq.order-list-type:: number
-		- TODO NGNIX
+		- TODO [[NGNIX]]
 	- BitTorrent Client
 	  logseq.order-list-type:: number
 		- DONE [[Docker-Transmission]]
@@ -66,5 +66,3 @@
 	  :END:
 	- TODO [[Fail2Ban]]
 	  logseq.order-list-type:: number
-		- TODO  Will this will be installed on OMV before docker or on the proxy server?
-		- TODO Will the proxy server be installed on OMV or in a docker container
