@@ -32,7 +32,7 @@
 		- EXAMPLE:
 			- ``btrfs balance start -dconcert=raid5 -mconvert=raid1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Check the status of a balance:
-		- ``btrfs scrub status {POOL_LOCATION}``
+		- ``btrfs balance status {POOL_LOCATION}``
 		- EXAMPLE:
 			- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Expand an array by adding a new drive.
@@ -50,6 +50,23 @@
 			- ``sudo btrfs filesystem resize max {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``sudo btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+	- ### Remove and replace a drive:
+		- #### Identify the Drive to Replace
+			- First, identify the drive you want to replace. You can list all the devices in the Btrfs filesystem using:
+				- ``sudo btrfs filesystem show /mount_point``
+				- EXAMPLE:
+					- ``sudo btrfs filesystem show /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- ### Step 2: Remove the Drive
+		  
+		  Before removing the drive, ensure that the filesystem is balanced to spread the data across the remaining drives:
+		  
+		  ```
+		  sh
+		  
+		  Copy code
+		  
+		  sudo btrfs balance start /mount_point
+		  ```
 - ### Replacing a failed drive.
 	- Recovering from a failed drive in a Btrfs RAID array requires careful planning and execution to minimize the risk of data loss and ensure the integrity of the filesystem.
 	- **Identify the Failed Drive**: The first step is to identify which drive in the RAID array has failed. You can use Btrfs-specific tools like `btrfs device stats` or general-purpose tools like `lsblk` or `fdisk` to list the drives and identify the failed one.
