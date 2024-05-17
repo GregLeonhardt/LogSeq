@@ -79,7 +79,7 @@
 		- Once the new drive is in place and the system is booted up, add the new drive to the Btrfs filesystem:
 			- ``btrfs device add /dev/sdY /mount_point``
 			- EXAMPLE:
-				- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+				- ``btrfs device add /dev/sdb1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Rebalance the Filesystem
 		- Rebalance the filesystem to redistribute the data across all drives, including the new one:
 			- ``btrfs balance start /mount_point``
