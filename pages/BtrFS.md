@@ -70,6 +70,11 @@
 				- ``btrfs device remove /dev/sdb1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Physically Replace the Drive
 		- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
+	- ### Reformat the new drive
+		- Wipe the drive clean of all existing data and partitions.
+			- ``parted -s /dev/sdX mklabel gpt mkpart primary btrfs 0% 100%``
+			- EXAMPLE:
+				- ``parted -s /dev/sdb mklabel gpt mkpart primary btrfs 0% 100%``
 	- ### Add the New Drive
 		- Once the new drive is in place and the system is booted up, add the new drive to the Btrfs filesystem:
 			- ``btrfs device add /dev/sdY /mount_point``
