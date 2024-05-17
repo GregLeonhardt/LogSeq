@@ -59,8 +59,15 @@
 	- #### Remove the Drive
 		- Before removing the drive, ensure that the filesystem is balanced to spread the data across the remaining drives:
 			- ``btrfs balance start /mount_point``
+			- ``btrfs balance status /mount_point``
 			- EXAMPLE:
 				- ``btrfs balance start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/ --full-balance``
+				- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/ --full-balance``
+	- #### Drain / Remove a device from the pool
+		- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
+			- btrfs device remove /dev/sdX /mount_point``
+			- EXAMPLE:
+				- btrfs device remove /dev/sdb1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/
 	- #### Physically Replace the Drive
 		- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
 	- #### Add the New Drive
