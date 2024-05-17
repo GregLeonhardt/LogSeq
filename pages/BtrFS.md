@@ -56,9 +56,21 @@
 				- ``sudo btrfs filesystem show /mount_point``
 				- EXAMPLE:
 					- ``sudo btrfs filesystem show /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- ### Step 2: Remove the Drive
+		- #### Remove the Drive
+			- Before removing the drive, ensure that the filesystem is balanced to spread the data across the remaining drives:
+				- ``sudo btrfs balance start /mount_point``
+				- EXAMPLE:
+					- ``sudo btrfs balance start /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+		- #### Physically Replace the Drive
+			- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
+		- #### Add the New Drive
+			- Once the new drive is in place and the system is booted up, add the new drive to the Btrfs filesystem:
+			- ``sudo btrfs device add /dev/sdY /mount_point``
+			  
+			  Replace `/dev/sdY` with the identifier of the new drive.
+		- ### Step 5: Rebalance the Filesystem
 		  
-		  Before removing the drive, ensure that the filesystem is balanced to spread the data across the remaining drives:
+		  Rebalance the filesystem to redistribute the data across all drives, including the new one:
 		  
 		  ```
 		  sh
@@ -67,6 +79,31 @@
 		  
 		  sudo btrfs balance start /mount_point
 		  ```
+		- ### Step 6: Verify the Configuration
+		  
+		  Check the status of the Btrfs filesystem to ensure everything is working correctly:
+		  
+		  ```
+		  sh
+		  
+		  Copy code
+		  
+		  sudo btrfs filesystem df /mount_point
+		  sudo btrfs filesystem show /mount_point
+		  ```
+		- ### Step 7: (Optional) Optimize the Filesystem
+		  
+		  To optimize the filesystem further and clean up any remaining issues, you can run another balance operation with specific options:
+		  
+		  ```
+		  sh
+		  
+		  Copy code
+		  
+		  sudo btrfs balance start -dusage=75 /mount_point
+		  ```
+		  
+		  This command will rebalance only chunks that are less than 75% full, which can help in optimizing the layout without causing excessive I/O load.
 - ### Replacing a failed drive.
 	- Recovering from a failed drive in a Btrfs RAID array requires careful planning and execution to minimize the risk of data loss and ensure the integrity of the filesystem.
 	- **Identify the Failed Drive**: The first step is to identify which drive in the RAID array has failed. You can use Btrfs-specific tools like `btrfs device stats` or general-purpose tools like `lsblk` or `fdisk` to list the drives and identify the failed one.
