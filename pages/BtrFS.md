@@ -1,6 +1,6 @@
 - ***NOTE: BtrFS does not officially support RAID-5.  Their documentation lists it as "EXPERIMENTAL".***
   background-color:: red
-- ### Drive initialization:
+- ## Drive initialization:
 	- Use the built-in 'parted' command to perform the initialization.  It will create the drive label and create a primary partition.  Do this for every drive that will be added to the array.
 		- ``parted -s {DRIVE-ID} mklabel gpt mkpart primary btrfs 0% 100%``
 		- EXAMPLE:
@@ -35,59 +35,59 @@
 		- ``btrfs balance status {POOL_LOCATION}``
 		- EXAMPLE:
 			- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-- ### Expand an array by adding a new drive.
+- ## Expand an array by adding a new drive.
 	- #### Identify New Drive:
 		- First, identify the new drive you want to add to the Btrfs filesystem. You can use the `lsblk` tool to list available drives and partitions.
-	- #### Partition New Drive:
+	- ### Partition New Drive:
 		- If the new drive is not already partitioned, you need to partition it. You can use the 'parted' tool for this purpose. (*See above.*)
-	- #### Add New Drive to Btrfs Filesystem:
+	- ### Add New Drive to Btrfs Filesystem:
 		- Once the new drive is partitioned, you can add it to the existing Btrfs filesystem using the `btrfs device add` command. For example:
 		- ``btrfs device add {DRIVE-ID}1 {POOL_LOCATION}``
 		- EXAMPLE:
 			- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-	- #### Expand the filesystem to use the added space.
+	- ### Expand the filesystem to use the added space.
 		- After adding the new drive, you need to resize the Btrfs filesystem to make use of the additional space.
 			- ``btrfs filesystem resize max {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-- ### Remove and replace a drive:
-	- #### Identify the Drive to Replace
+- ## Remove and replace a drive:
+	- ### Identify the Drive to Replace
 		- First, identify the drive you want to replace. You can list all the devices in the Btrfs filesystem using:
 			- ``btrfs filesystem show /mount_point``
 			- EXAMPLE:
 				- ``btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-	- #### Remove the Drive
+	- ### Remove the Drive
 		- Before removing the drive, ensure that the filesystem is balanced to spread the data across the remaining drives:
 			- ``btrfs balance start /mount_point``
 			- ``btrfs balance status /mount_point``
 			- EXAMPLE:
 				- ``btrfs balance start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/ --full-balance``
-				- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/ --full-balance``
-	- #### Drain / Remove a device from the pool
+				- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+	- ### Drain / Remove a device from the pool
 		- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
 			- btrfs device remove /dev/sdX /mount_point``
 			- EXAMPLE:
 				- btrfs device remove /dev/sdb1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/
-	- #### Physically Replace the Drive
+	- ### Physically Replace the Drive
 		- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
-	- #### Add the New Drive
+	- ### Add the New Drive
 		- Once the new drive is in place and the system is booted up, add the new drive to the Btrfs filesystem:
 			- ``btrfs device add /dev/sdY /mount_point``
 			- EXAMPLE:
 				- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-	- #### Rebalance the Filesystem
+	- ### Rebalance the Filesystem
 		- Rebalance the filesystem to redistribute the data across all drives, including the new one:
 			- ``btrfs balance start /mount_point``
 			- EXAMPLE:
 				- ``btrfs balance start /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-	- #### Verify the Configuration
+	- ### Verify the Configuration
 		- Check the status of the Btrfs filesystem to ensure everything is working correctly:
 			- ``btrfs filesystem df /mount_point``
 			  ``btrfs filesystem show /mount_point``
 			- EXAMPLE:
 				- ``btrfs filesystem df /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 				- ``btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-- ### Replacing a failed drive.
+- ## Replacing a failed drive.
 	- Recovering from a failed drive in a Btrfs RAID array requires careful planning and execution to minimize the risk of data loss and ensure the integrity of the filesystem.
 	- **Identify the Failed Drive**: The first step is to identify which drive in the RAID array has failed. You can use Btrfs-specific tools like `btrfs device stats` or general-purpose tools like `lsblk` or `fdisk` to list the drives and identify the failed one.
 	- **Replace the Failed Drive**: Once you've identified the failed drive, replace it with a new, healthy drive of equal or larger capacity. Follow any hardware-specific procedures for safely replacing the drive, such as hot-swapping or powering down the system.
@@ -98,50 +98,50 @@
 	- **Monitor System Health Continuously**: Even after recovering from a failed drive, continue to monitor the health and performance of your Btrfs RAID array and the underlying hardware regularly. Implement proactive monitoring and alerting mechanisms to detect and respond to any potential issues promptly.
 	  
 	  By following these best practices for recovering from a failed drive in a Btrfs RAID array, you can minimize the risk of data loss, ensure the integrity of your filesystem, and maintain the availability and reliability of your data storage infrastructure.
-- ### Balance BtrFS data distribution.
+- ## Balance BtrFS data distribution.
 	- Redistributing data across devices to ensure optimal performance and space utilization.
-		- #### balance
+		- ### balance
 			- ``btrfs balance start {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs balance start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- #### status
+		- ### status
 			- ``btrfs balance status {POOL_LOCATION}``
 			- EXAMPLE:
 				- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-- ### Scrub BtrFS to check data integrity.
+- ## Scrub BtrFS to check data integrity.
 	- Scrubbing is an important maintenance task for ensuring the integrity of your data, especially on RAID setups where data integrity is crucial.
-		- #### start
+		- ### start
 			- To start a scrub operation on a Btrfs filesystem, you use the following command:
 				- ``btrfs scrub start {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- #### status
+		- ### status
 			- You can check the status of the scrub operation using the following command.  This command will display information about the scrub operation, including progress, the number of bytes scrubbed, and any errors encountered.
 				- ``btrfs scrub status {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- #### suspend
+		- ### suspend
 			- By suspending and resuming a scrub operation, you can temporarily halt the operation and then continue it later without losing progress. This can be useful if you need to free up system resources or if you want to schedule the scrub to run during off-peak hours.
 				- ``btrfs scrub suspend {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub suspend /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- #### resume
+		- ### resume
 			- To resume a previously suspended scrub operation, you can use the following command.  This command will resume the scrub operation on the specified filesystem from where it was suspended.
 				- ``btrfs scrub resume {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub resume /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- #### cancel
+		- ### cancel
 			- If needed, you can cancel a scrub operation using the following command.  This command will stop the scrub operation before it completes.
 				- ``btrfs scrub cancel {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub cancel /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-		- #### stop
+		- ### stop
 			-
 				- Once the scrub operation completes, you can stop it using the following command.  This command stops the scrub operation and finalizes the results.
 				- ``btrfs scrub stop {POOL_LOCATION}``
 				- EXAMPLE:
 					- ``btrfs scrub stop /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-- ### Device statistics
+- ## Device statistics
 	- Provides statistics about the devices in the filesystem, including information such as read and write operations, errors, and performance metrics. This command is useful for monitoring the health and performance of Btrfs devices, especially in RAID configurations where multiple devices are involved.
 		- ``btrfs device stats {POOL_LOCATION}``
 		- EXAMPLE:
