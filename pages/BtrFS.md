@@ -78,8 +78,8 @@
 				- ``sudo btrfs filesystem df /mount_point``
 				  ``sudo btrfs filesystem show /mount_point``
 				- EXAMPLE:
-					- ``sudo btrfs filesystem df /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-					- ``sudo btrfs filesystem show /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``sudo btrfs filesystem df /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``sudo btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Replacing a failed drive.
 	- Recovering from a failed drive in a Btrfs RAID array requires careful planning and execution to minimize the risk of data loss and ensure the integrity of the filesystem.
 	- **Identify the Failed Drive**: The first step is to identify which drive in the RAID array has failed. You can use Btrfs-specific tools like `btrfs device stats` or general-purpose tools like `lsblk` or `fdisk` to list the drives and identify the failed one.
