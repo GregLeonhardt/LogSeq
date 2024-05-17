@@ -1,6 +1,7 @@
 - ***NOTE: BtrFS does not officially support RAID-5.  Their documentation lists it as "EXPERIMENTAL".***
   background-color:: red
 - ### Drive initialization:
+  collapsed:: true
 	- Use the built-in 'parted' command to perform the initialization.  It will create the drive label and create a primary partition.  Do this for every drive that will be added to the array.
 		- ``parted -s {DRIVE-ID} mklabel gpt mkpart primary btrfs 0% 100%``
 		- EXAMPLE:
@@ -18,9 +19,9 @@
 		  background-color:: gray
 	- ### List all drives:
 		- To list all drives that are part of a Btrfs filesystem or pool, you can use the `btrfs filesystem show` command. This command provides detailed information about the Btrfs filesystem, including the devices that make up the filesystem.
-			- ``sudo btrfs filesystem show {POOL_LOCATION}``
+			- ``btrfs filesystem show {POOL_LOCATION}``
 			- EXAMPLE:
-				- ``sudo btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+				- ``btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 					- Will produce an output something like:
 					  ``Label: none  uuid: 71a84d92-2675-45de-b343-cd7565537305``
 					  ``        Total devices 3 FS bytes used 25.98GiB``        
@@ -36,6 +37,7 @@
 		- EXAMPLE:
 			- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Expand an array by adding a new drive.
+  collapsed:: true
 	- #### Identify New Drive:
 		- First, identify the new drive you want to add to the Btrfs filesystem. You can use the `lsblk` tool to list available drives and partitions.
 	- #### Partition New Drive:
@@ -47,40 +49,41 @@
 			- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- #### Expand the filesystem to use the added space.
 		- After adding the new drive, you need to resize the Btrfs filesystem to make use of the additional space.
-			- ``sudo btrfs filesystem resize max {POOL_LOCATION}``
+			- ``btrfs filesystem resize max {POOL_LOCATION}``
 			- EXAMPLE:
-				- ``sudo btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+				- ``btrfs filesystem resize max /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 	- ### Remove and replace a drive:
 		- #### Identify the Drive to Replace
 			- First, identify the drive you want to replace. You can list all the devices in the Btrfs filesystem using:
-				- ``sudo btrfs filesystem show /mount_point``
+				- ``btrfs filesystem show /mount_point``
 				- EXAMPLE:
-					- ``sudo btrfs filesystem show /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``btrfs filesystem show /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 		- #### Remove the Drive
 			- Before removing the drive, ensure that the filesystem is balanced to spread the data across the remaining drives:
-				- ``sudo btrfs balance start /mount_point``
+				- ``btrfs balance start /mount_point``
 				- EXAMPLE:
-					- ``sudo btrfs balance start /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``btrfs balance start /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 		- #### Physically Replace the Drive
 			- Shut down the system if necessary, and physically replace the drive with a new one. Ensure the new drive is properly connected and recognized by the system.
 		- #### Add the New Drive
 			- Once the new drive is in place and the system is booted up, add the new drive to the Btrfs filesystem:
-				- ``sudo btrfs device add /dev/sdY /mount_point``
+				- ``btrfs device add /dev/sdY /mount_point``
 				- EXAMPLE:
-					- ``sudo btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``btrfs device add /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 		- #### Rebalance the Filesystem
 			- Rebalance the filesystem to redistribute the data across all drives, including the new one:
-				- ``sudo btrfs balance start /mount_point``
+				- ``btrfs balance start /mount_point``
 				- EXAMPLE:
-					- ``sudo btrfs balance start /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``btrfs balance start /dev/sde1 /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 		- #### Verify the Configuration
 			- Check the status of the Btrfs filesystem to ensure everything is working correctly:
-				- ``sudo btrfs filesystem df /mount_point``
-				  ``sudo btrfs filesystem show /mount_point``
+				- ``btrfs filesystem df /mount_point``
+				  ``btrfs filesystem show /mount_point``
 				- EXAMPLE:
-					- ``sudo btrfs filesystem df /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
-					- ``sudo btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``btrfs filesystem df /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+					- ``btrfs filesystem show /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Replacing a failed drive.
+  collapsed:: true
 	- Recovering from a failed drive in a Btrfs RAID array requires careful planning and execution to minimize the risk of data loss and ensure the integrity of the filesystem.
 	- **Identify the Failed Drive**: The first step is to identify which drive in the RAID array has failed. You can use Btrfs-specific tools like `btrfs device stats` or general-purpose tools like `lsblk` or `fdisk` to list the drives and identify the failed one.
 	- **Replace the Failed Drive**: Once you've identified the failed drive, replace it with a new, healthy drive of equal or larger capacity. Follow any hardware-specific procedures for safely replacing the drive, such as hot-swapping or powering down the system.
@@ -92,16 +95,18 @@
 	  
 	  By following these best practices for recovering from a failed drive in a Btrfs RAID array, you can minimize the risk of data loss, ensure the integrity of your filesystem, and maintain the availability and reliability of your data storage infrastructure.
 - ### Balance BtrFS data distribution.
+  collapsed:: true
 	- Redistributing data across devices to ensure optimal performance and space utilization.
 		- #### balance
-			- ``sudo btrfs balance start {POOL_LOCATION}``
+			- ``btrfs balance start {POOL_LOCATION}``
 			- EXAMPLE:
-				- ``sudo btrfs balance start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+				- ``btrfs balance start /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 		- #### status
-			- ``sudo btrfs balance status {POOL_LOCATION}``
+			- ``btrfs balance status {POOL_LOCATION}``
 			- EXAMPLE:
-				- ``sudo btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
+				- ``btrfs balance status /srv/dev-disk-by-uuid-71a84d92-2675-45de-b343-cd7565537305/``
 - ### Scrub BtrFS to check data integrity.
+  collapsed:: true
 	- Scrubbing is an important maintenance task for ensuring the integrity of your data, especially on RAID setups where data integrity is crucial.
 		- #### start
 			- To start a scrub operation on a Btrfs filesystem, you use the following command:
@@ -144,4 +149,3 @@
 		- 'ioctl': Number of input/output control operations performed on the device.
 		- 'trim': Number of trim operations performed on the device (for SSDs).
 		- 'flush': Number of flush operations performed on the device.
-		- 'errors': Number of errors encountered on the device.
