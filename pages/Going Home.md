@@ -21,4 +21,6 @@
 	- TODO Sandy Find a new PCP
 		- TODO Sandy Transfer heart Doctor to Colorado
 		- TODO Sandy Transfer vascular Doctor to Colorado
+	- TODO Greg Get internet up and running
+	-
 	-
