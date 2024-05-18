@@ -15,6 +15,7 @@
 	  :END:
 	- TODO Greg Return Wheelchair
 	- TODO Greg Contact Daniel to coordinate next year kidney and liver appointments.
+	- TODO Reset all three TVs
 	- # Things to do IMMEDIATELY in Colorado
 	- TODO Sandy Endocrinology appointment
 	- TODO Sandy [[IVIG]]
@@ -22,5 +23,6 @@
 		- TODO Sandy Transfer heart Doctor to Colorado
 		- TODO Sandy Transfer vascular Doctor to Colorado
 	- TODO Greg Get internet up and running
+	- TODO Chrome Cast for living room TV
 	-
 	-
