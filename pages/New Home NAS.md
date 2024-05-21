@@ -1,7 +1,7 @@
 - Applications I use on Synology that need replacements:
 	- Proxy and Reverse-Proxy
 	  logseq.order-list-type:: number
-		- TODO [[NGNIX]]
+		- TODO [[NGNIX]] or [[Traefic]]
 	- BitTorrent Client
 	  logseq.order-list-type:: number
 		- TODO [[Docker-Transmission]]
