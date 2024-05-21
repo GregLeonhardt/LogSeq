@@ -75,5 +75,5 @@
 		  :END:
 	- Intrusion Detection
 	  logseq.order-list-type:: number
-		- TODO [[Fail2Ban]]
+		- TODO [[Fail2Ban]] or [[CrowdSec]]
 		  logseq.order-list-type:: number
