@@ -36,5 +36,5 @@
 	- https://dockerlabs.collabnix.com/docker/cheatsheet/
 - # Packages
 - ## [[Dockage]]
-- # [[Paperless.ngx]]
-- # [[WebTrees]]
+- ## [[Paperless.ngx]]
+- ## [[WebTrees]]
