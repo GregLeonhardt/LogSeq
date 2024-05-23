@@ -18,6 +18,14 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-14 Tue 14:42:14]--[2024-05-20 Mon 06:16:46] =>  135:34:32
 		  :END:
+	- Genealogy
+	  logseq.order-list-type:: number
+		- TODO [[WebTrees]]
+		  logseq.order-list-type:: number
+	- Personal (Family) Web 
+	  logseq.order-list-type:: number
+		- TODO ?? ????? ???
+		  logseq.order-list-type:: number
 	- Recipe Manager
 	  logseq.order-list-type:: number
 		- TODO [[Docker-Mealie]]
