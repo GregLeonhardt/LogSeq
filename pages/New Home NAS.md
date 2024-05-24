@@ -74,9 +74,10 @@
 		  logseq.order-list-type:: number
 			- WAITING [[Immich]]
 			  logseq.order-list-type:: number
-			- WAITING PiGallery
+			- WAITING [[PiGallery]]
 			  logseq.order-list-type:: number
-			- logseq.order-list-type:: number
+			- WAITING [[PiWigo]]
+			  logseq.order-list-type:: number
 	- Network Video Recorder (NVR)
 	  logseq.order-list-type:: number
 		- TODO Find an application
