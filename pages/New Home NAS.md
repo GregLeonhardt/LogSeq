@@ -74,10 +74,14 @@
 		  logseq.order-list-type:: number
 			- WAITING [[Immich]]
 			  logseq.order-list-type:: number
-				- OMV Docker-Compose is available but it's VERY complex and still in beta.
+				- OMV Docker-Compose is available
+				  logseq.order-list-type:: number
+				- It's VERY complex and still in beta.
 				  logseq.order-list-type:: number
 			- WAITING [[PiGallery]]
 			  logseq.order-list-type:: number
+				- OMV Docker-Compose is available.
+				  logseq.order-list-type:: number
 			- WAITING [[PiWigo]]
 			  logseq.order-list-type:: number
 				- No Docker-Compose file for OMV.
