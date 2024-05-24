@@ -1,7 +1,9 @@
 - Applications I use on Synology that need replacements:
 	- Proxy and Reverse-Proxy
 	  logseq.order-list-type:: number
-		- TODO [[NGNIX]] or [[Traefic]]
+		- TODO Choose
+			- WAITING [[NGNIX]]
+			- WAITING [[Traefic]]
 	- BitTorrent Client
 	  logseq.order-list-type:: number
 		- TODO [[Docker-Transmission]]
@@ -68,8 +70,13 @@
 	  logseq.order-list-type:: number
 	- Photo Library
 	  logseq.order-list-type:: number
-		- TODO Find an application
+		- TODO Choose
 		  logseq.order-list-type:: number
+			- WAITING [[Immich]]
+			  logseq.order-list-type:: number
+			- WAITING PiGallery
+			  logseq.order-list-type:: number
+			- logseq.order-list-type:: number
 	- Network Video Recorder (NVR)
 	  logseq.order-list-type:: number
 		- TODO Find an application
@@ -83,5 +90,9 @@
 		  :END:
 	- Intrusion Detection
 	  logseq.order-list-type:: number
-		- TODO [[Fail2Ban]] or [[CrowdSec]]
+		- TODO Choose
 		  logseq.order-list-type:: number
+			- WAITING [[Fail2Ban]]
+			  logseq.order-list-type:: number
+			- WAITING [[CrowdSec]]
+			  logseq.order-list-type:: number
