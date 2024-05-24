@@ -80,7 +80,7 @@
 			  logseq.order-list-type:: number
 			- WAITING [[PiWigo]]
 			  logseq.order-list-type:: number
-				- No Docker Compose file for OMV.
+				- No Docker-Compose file for OMV.
 				  logseq.order-list-type:: number
 	- Network Video Recorder (NVR)
 	  logseq.order-list-type:: number
