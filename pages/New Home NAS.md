@@ -3,23 +3,16 @@
 	  logseq.order-list-type:: number
 		- TODO Choose
 			- WAITING [[NGNIX]]
+				- My first attempt didn't go very well.
 			- WAITING [[Traefic]]
+				- Supposed to be a bit complex to get running.
+				- Docker container aware so configuration changes are easier.
 	- BitTorrent Client
 	  logseq.order-list-type:: number
 		- TODO [[Docker-Transmission]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:42:35]--[2024-05-14 Tue 14:54:09] =>  00:11:34
-		  CLOCK: [2024-05-14 Tue 14:54:10]--[2024-05-14 Tue 14:54:11] =>  00:00:01
-		  CLOCK: [2024-05-20 Mon 06:16:55]--[2024-05-20 Mon 06:16:57] =>  00:00:02
-		  CLOCK: [2024-05-20 Mon 06:16:58]--[2024-05-20 Mon 06:16:59] =>  00:00:01
-		  CLOCK: [2024-05-20 Mon 06:17:01]
-		  :END:
 	- Home Media (Video and Audio) Player
 	  logseq.order-list-type:: number
 		- DONE [[Docker-Jellyfin]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:42:14]--[2024-05-20 Mon 06:16:46] =>  135:34:32
-		  :END:
 	- Genealogy
 	  logseq.order-list-type:: number
 		- TODO [[WebTrees]]
@@ -31,27 +24,15 @@
 	- Recipe Manager
 	  logseq.order-list-type:: number
 		- TODO [[Docker-Mealie]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:43:24]--[2024-05-20 Mon 06:28:34] =>  135:45:10
-		  :END:
 	- Note Taking
 	  logseq.order-list-type:: number
 		- TODO [[Docker-LogSeq]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:43:34]--[2024-05-20 Mon 06:28:43] =>  135:45:09
-		  :END:
 	- Home Automation
 	  logseq.order-list-type:: number
 		- TODO [[Docker-Home Assistant]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:51:50]--[2024-05-20 Mon 06:28:53] =>  135:37:03
-		  :END:
 	- Document Manager
 	  logseq.order-list-type:: number
 		- TODO [[Paperless-ngx]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:45:01]
-		  :END:
 	- DNS and Add Blocker
 	  logseq.order-list-type:: number
 		- TODO [[Docker-PiHole]]
@@ -59,9 +40,6 @@
 	- Keep track of all servers
 	  logseq.order-list-type:: number
 		- TODO [[Docker-UpTime-Kuma]]
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 14:46:58]--[2024-05-20 Mon 06:29:59] =>  135:43:01
-		  :END:
 	- File Synchronization
 	  logseq.order-list-type:: number
 		- TODO Find an application
@@ -94,9 +72,6 @@
 	  logseq.order-list-type:: number
 		- TODO [[Docker-CrashPlan]]
 		  logseq.order-list-type:: number
-		  :LOGBOOK:
-		  CLOCK: [2024-05-14 Tue 15:43:32]--[2024-05-20 Mon 06:30:09] =>  134:46:37
-		  :END:
 	- Intrusion Detection
 	  logseq.order-list-type:: number
 		- TODO Choose
