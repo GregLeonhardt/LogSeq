@@ -1,7 +1,11 @@
 - Apps that I use:
-	- LogSeq
-	- JellyFin
-	- Paperless-NGX
-	- Immich
-	- SyncThing
+	- LogSeq                          Available
+	- JellyFin                          Available
+	- Paperless-NGX             Available
+	- Immich                           Available
+	- SyncThing                      Available
+	- WebTrees
+	- HumHub
+	- Mealie                            Available
+	- CrowdSec
 	-
