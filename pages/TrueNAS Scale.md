@@ -1,0 +1,7 @@
+- Apps that I use:
+	- LogSeq
+	- JellyFin
+	- Paperless-NGX
+	- Immich
+	- SyncThing
+	-
