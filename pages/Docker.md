@@ -34,6 +34,7 @@
 		- `sudo usermod -a -G docker `whoami``
 - # Operational Notes
 	- https://dockerlabs.collabnix.com/docker/cheatsheet/
+	- ![docker_cheatsheet.pdf](../assets/docker_cheatsheet_1718998483926_0.pdf)
 - # Packages
 - ## [[Dockage]]
 - ## [[Paperless.ngx]]

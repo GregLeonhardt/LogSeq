@@ -27,6 +27,8 @@
 		  bitcoin-qt
 		  bitcoind
 		  ```
+- # Configuration
+	- [bitcoin.conf](../assets/bitcoin_1718998632363_0.conf)
 - # AutoStart
 	- Create or modify file /etc/systemd/system/bitcoind.service:
 		- `sudo vi /etc/systemd/system/bitcoind.service`
