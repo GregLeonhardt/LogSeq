@@ -55,3 +55,22 @@
 		- Use a 'cron' job to perform the scrub.
 	- DONE Balance [[BtrFS]]
 		- Though not absolutely required this is a good thing to do every once-in-a-while to prevent the over use of some drives while under using the remainder.  Like scrub above, this can be accomplished with the use of BtrFS commands and a cron job.
+- ### Apps that I use:
+	- | Application | Description | Available |
+	  | LogSeq | Note taking | Yes |
+	  | JellyFin | Media Server | Yes |
+	  | Paperless-NGX | Document archive | Yes |
+	  | Immich | Photo viewer & Organizer | Yes |
+	  | SyncThing | Synchronize data between computers | Yes |
+	  | WebTrees | Geanology | No |
+	  | HumHub | Group messaging & chat | Yes |
+	  | Mealie | Cooking & recipes | Yes |
+	  | CrowdSec | Multi-System network security for Docker | Yes |
+	  | Traefic | Reverse proxy for Docker | Yes |
+	  | Transmission | Bittorrent client | Yes |
+	  | Home Assistant | IOT Internet Of Things automation | Yes |
+	  | PiHole | Intranet DNS | Yes |
+	  | Uptime-Kuma | Network monitoring | Yes |
+	  |
+	-
+	-
