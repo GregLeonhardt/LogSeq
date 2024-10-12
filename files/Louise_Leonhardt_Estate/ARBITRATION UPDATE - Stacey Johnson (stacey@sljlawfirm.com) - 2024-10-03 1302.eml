@@ -1,0 +1,439 @@
+Delivered-To: gregleonhardt@gmail.com
+Received: by 2002:a05:7208:2086:b0:8a:5d0c:de6f with SMTP id y6csp1619509rby;
+        Thu, 3 Oct 2024 12:02:18 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AJvYcCUzNQ/aPu0JGNPiiKlrckO8qUgRF0DzI2f+mzgaPT4HC2XW1OL1z88k0IHIhmFfthSLkMyaEhBP6mTVQNi3@gmail.com
+X-Google-Smtp-Source: AGHT+IEz38BuFheFeoF0e3dyf4pTOrWSI35797B+ts1w+hwziU7vf+qa8wZZi2NNR94qz0JMBjC6
+X-Received: by 2002:a05:690c:5884:b0:6dd:b983:8563 with SMTP id 00721157ae682-6e2c701764dmr3030377b3.14.1727982138600;
+        Thu, 03 Oct 2024 12:02:18 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1727982138; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=WP/8b3OhMILTppysNQ+C7eDxisS53BwHLG69CS+ueCMyGRF+DKhES/rNyxRdsCHKO5
+         aZU1je1IS1egxXZPXWEWz2dGfMeuC97Rco+/6cbfJxu1ea290ms8EbsGzCQP7UB3VHYt
+         FeWXiPbWk3/3oDpcrkzZSV/rBnkZCX0yJqCwxKc1ROo5vzMhMybV+DnA5YF+s7Mndg5E
+         j281yA3zR1H6BCdaR7tZv7oghBWSkQuM6uBx4XmIxM3JMHh0e/qxdv+KyCUnIExlR9x3
+         Ffe2ZVrGEfkq6EZsdqi9OLp/nd4Y9xWog6N7x7KE+LoAnCnJpVsaRLCDTYc9Bs7G5ZtY
+         VShQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:cc:to:from:dkim-signature;
+        bh=vweCA1WqeOj8yv64k+QpivXbhz7wBXXCSeFbU0rsW04=;
+        fh=mJMw4qKcohyX1g5XZWq8K/fp3/9h0GEt8Uoaz1BiOcM=;
+        b=dAqCLfYoxcLQz818V2gPoGvew527nrwHmH44cGTsOKnlXjkfLd+0VH66513Tey/Yjy
+         P1o5AaP09dT7nABe+oMDMUr0yI+L/X3RuXBtMQV3rRroeR9yj6qE0KwoSW9dRYA1bdmU
+         pEGOGrNPUUtEaTNqR2fehdrO8F7WWDzr/Mvw3HxQ2S8gCK9PXNMAwBCIZP7CYEwgW2kS
+         O/fy4voPosOgp29CV1blo2wV+AK4nPY7y7ehVM+AldpzlB0inyhhIZnKuGgJWtLcL/1e
+         rGT69aOozpbsa8HuE2YFjLzhkdrohZhotdR9jOspC8k5FiwEh7KC75ZBpALw91i46/O4
+         8AAA==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@NETORGFT3586627.onmicrosoft.com header.s=selector2-NETORGFT3586627-onmicrosoft-com header.b="c/32DraH";
+       arc=pass (i=1 spf=pass spfdomain=sljlawfirm.com dkim=pass dkdomain=sljlawfirm.com dmarc=pass fromdomain=sljlawfirm.com);
+       spf=pass (google.com: domain of stacey@sljlawfirm.com designates 67.231.154.183 as permitted sender) smtp.mailfrom=stacey@sljlawfirm.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sljlawfirm.com
+Return-Path: <stacey@sljlawfirm.com>
+Received: from dispatch1-us1.ppe-hosted.com (dispatch1-us1.ppe-hosted.com. [67.231.154.183])
+        by mx.google.com with ESMTPS id 00721157ae682-6e2bd68528asi10802277b3.537.2024.10.03.12.02.18
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 03 Oct 2024 12:02:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of stacey@sljlawfirm.com designates 67.231.154.183 as permitted sender) client-ip=67.231.154.183;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@NETORGFT3586627.onmicrosoft.com header.s=selector2-NETORGFT3586627-onmicrosoft-com header.b="c/32DraH";
+       arc=pass (i=1 spf=pass spfdomain=sljlawfirm.com dkim=pass dkdomain=sljlawfirm.com dmarc=pass fromdomain=sljlawfirm.com);
+       spf=pass (google.com: domain of stacey@sljlawfirm.com designates 67.231.154.183 as permitted sender) smtp.mailfrom=stacey@sljlawfirm.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sljlawfirm.com
+X-Virus-Scanned: Proofpoint Essentials engine
+Received: from NAM11-DM6-obe.outbound.protection.outlook.com (mail-dm6nam11lp2174.outbound.protection.outlook.com [104.47.57.174])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx1-us1.ppe-hosted.com (PPE Hosted ESMTP Server) with ESMTPS id 73867440093;
+	Thu,  3 Oct 2024 19:02:15 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=fzBMgF/+pnUAFxRkzjR1XSChFFtSmOT5iauYddNWp4fFij22PypACtzZoO7T54ahbc8IWW9dKvhynx7a3MOZ85t9UYo9Vi9cH0QXRZtAAGOcjiiuf9jZ4zEnukLk1p3uSexCm1jFjlsiYb8UsukckmWxEjOcqE/X7ENI79vg7/beIDwNsVhzukByfxiIoUEPPJ6MSVHSNal4LNHlFQkZv2Gu6SK3W3ghYsYm6/CuNCA2fMTtm9MNoT9vTfoR8CUSDoccFxua43uTPBtvafVYgwRhKx3YrJIgZEjH/0MrGmPh+pR2wSGZSxCS2KcZvniGgXM4NQnAi/d4O8wnawIA6g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=vweCA1WqeOj8yv64k+QpivXbhz7wBXXCSeFbU0rsW04=;
+ b=pml9aalT2I3G3qyIIJnMq1qY19Y0amnlOEPxnCS3MdcbquWIoJVdr3dGctQAjNHmVU7TcR06XTeZbm3T0IS75wPPN18YCxeiMPJfGYSp4fg0YYlv4SawtCKnC9RiZSxpWC/X83Kw4sA5ExZu3kIyc8UnjxlIVaCsZmsy5ZMYJjQmFqKXy1D4Vyx1qLuY62KsiEZjPO1coww+QaG6vzNlIt2O/avo3FaHCLiV2gqPRf9jYYnn4doZOk6AT1c2+1E96yJwqPEKhZQzd5hIgUiFTdK2FtMD3J17QX2K/1GM0lDGFCHTxWWW8K9O5ypriwdfdpjXQ5V5gqLGS83LcCfrhQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=sljlawfirm.com; dmarc=pass action=none
+ header.from=sljlawfirm.com; dkim=pass header.d=sljlawfirm.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=NETORGFT3586627.onmicrosoft.com;
+ s=selector2-NETORGFT3586627-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=vweCA1WqeOj8yv64k+QpivXbhz7wBXXCSeFbU0rsW04=;
+ b=c/32DraHedg0UgBy+90la6KtZNAHtiA4s31tWJ3dsDYE3ZEwZEtE+7Qwx5nswxVADjDH9udY8cav9JQ6bWq0cEU5GFB7laWuC5CkWdN3uEKr0TpFWqVbDqlL+lDSqwVjSF6Li14z2WHVpCTX67Wvk6rbkD5cbAFj8LuraPVtlhk=
+Received: from IA1PR19MB7662.namprd19.prod.outlook.com (2603:10b6:208:3f3::22)
+ by PH0PR19MB5243.namprd19.prod.outlook.com (2603:10b6:510:96::24) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8026.18; Thu, 3 Oct
+ 2024 19:02:11 +0000
+Received: from IA1PR19MB7662.namprd19.prod.outlook.com
+ ([fe80::7d2f:5483:fa1e:8df]) by IA1PR19MB7662.namprd19.prod.outlook.com
+ ([fe80::7d2f:5483:fa1e:8df%4]) with mapi id 15.20.8026.016; Thu, 3 Oct 2024
+ 19:02:11 +0000
+From: Stacey Johnson <stacey@sljlawfirm.com>
+To: "Joyce Anderson (Home)" <lazyjoyce@aol.com>, "Ruth Leonhardt (Other)"
+	<rleo.usa@gmail.com>, "Greg Leonhardt (Home)" <gregleonhardt@gmail.com>,
+	"Scott Leonhardt (Other)" <sleonhardt@comcast.net>
+CC: Ari Quesenberry <ari@sljlawfirm.com>
+Subject: ARBITRATION UPDATE
+Thread-Topic: ARBITRATION UPDATE
+Thread-Index: AdsVxFXGMcmg32kXSzmJb+rhRXhFgg==
+Date: Thu, 3 Oct 2024 19:02:11 +0000
+Message-ID:
+ <IA1PR19MB76629103474764E0AF589CD3B3712@IA1PR19MB7662.namprd19.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-alphadrive-sender-message-id:
+ [{a2ba24f5-dafa-4614-99a9-adbbc1553f21}-{446779a4-c310-46aa-b765-cf6137719c5d}]
+x-alphadrive-sender-machine-id: 730FE3A36711C8ADF5BFC4D4C03F2278DAF342D0
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=sljlawfirm.com;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: IA1PR19MB7662:EE_|PH0PR19MB5243:EE_
+x-ms-office365-filtering-correlation-id: 76fc3436-e575-43ba-e33b-08dce3dde2f3
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;ARA:13230040|366016|1800799024|376014|38070700018;
+x-microsoft-antispam-message-info:
+ =?us-ascii?Q?MP0ISWj0FEji1FjYGfwEkWCX3ueGXJ7j8c2TIVYD1dZC96OAeHi7azir/66i?=
+ =?us-ascii?Q?9ZjzUSkHvV4XLMP6qw6BTna8U4n0HZHbmOTrHvha4x0JgzX1PagP3Vf/T+HX?=
+ =?us-ascii?Q?2eMjXFLl1/QGxHg3fTJf76jYFH5sleBsgs8y+XGU9Jo1Icet3FBdXvAykKGb?=
+ =?us-ascii?Q?C2JMTxzXG5DNSCsy7+wk4u/nPuPTc63u10auT9mIAm/5A4c1qndLEa+31SP1?=
+ =?us-ascii?Q?86dg20DVHxz7t+gXJk5kCT3Na7E4bWY/nFCJQZuIceMaGm5J/Iqp0qaYXmyW?=
+ =?us-ascii?Q?R80gkPvUHLNwctgvRR5nnrjnfsIXLx0Hbbl6irxZnPktMcOSAz61TFuHRlI2?=
+ =?us-ascii?Q?O2RKV5zFVIDVgAzPGnB6OjXUJBCxlMUvf7ysLX+i7tHMUf8rpG9NIdYzWORm?=
+ =?us-ascii?Q?adPzMrNYwk7bMVNjQ8sxdeN2gFI6cW6BYPLbbj3VRvDr+XBZdEnKPVH1jACL?=
+ =?us-ascii?Q?rAslZ1cJ8yUqlVq4oDs6vv1dZgtIOrprObD3rs/Z6IdNjcgXOdLY1iQHmRLg?=
+ =?us-ascii?Q?J3e+CoqYZqZx85R8TniwAHSmk30nDUKh6yQILtpC7h51tAsv97hGvFZEGKcw?=
+ =?us-ascii?Q?9p1JbdYF5Kt8613ISt9JvL4zxcRu505G8zYwB0Tf9jFYBWivkHKXhsgaIx2U?=
+ =?us-ascii?Q?s4wQ9hsertF25rxjTleM+L2ZEK/koOGF0Je61Jv0dxDjnUAD+hLvNeRoCFpM?=
+ =?us-ascii?Q?hqDkgU9mio9lqWGIJ1NPns1+Xpstqu2O+NkIvf2XKZGyWfebenTJk2bQtPNO?=
+ =?us-ascii?Q?48gRJxggMc7BEt/+OgFu6Oo4z93MLrE0gzdHdhMNiTwsgcGIqhX0nogy0RIv?=
+ =?us-ascii?Q?HfP9zjIzXY7D+i91S5T7AO+Kg9JKDYmsqblPk7Xd5xNV6xhduAlcRu7a5yLS?=
+ =?us-ascii?Q?eDi5McCp3UmikrROZT+XwbzFcHxGMW1/XseoLVOm1BiZOJBTMkcBY9c7gQeW?=
+ =?us-ascii?Q?i9YrAkCpV1mS6XqTV1eCMKQkgVOe945+STKXn70Cwt9k4WFlaIV1cUpOx200?=
+ =?us-ascii?Q?4QW86oWAMVnn+gVmy6XYzk4L2b0bemfTbsToN0LBSkX1uTuK1CTFCbMR8gDH?=
+ =?us-ascii?Q?ZKoJ2kEp8b3AFsFtFZCaNqlPNOLqppkSsz4yiI+hwJ/nnAqrSkAFZSqfkfp9?=
+ =?us-ascii?Q?03RooSI/g6xrJE0awb/8JztjaQbOJxstHJ8rRHypMrC34zobSBeHL6rXWtLH?=
+ =?us-ascii?Q?Sj+YoTXl2zamMWTCyQ+T2ngctGNEZKiVA4SajUqNEcBsQfLv4TrQNZTzzQ4n?=
+ =?us-ascii?Q?phdkrsCgSBHrovDVMHUlFSXKJ7N0Caz/nqIC6xScbqY+sO6Yh+vU39763qxe?=
+ =?us-ascii?Q?gwfwanXdboru+C5Jb27v7FlcHpThvmQZ9rt3w0ffCFR7WA=3D=3D?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:IA1PR19MB7662.namprd19.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(366016)(1800799024)(376014)(38070700018);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?G6NEis+aTl1FGBHqxIh6jJDl6m6ZSJdCxSGythY8eh/0c6h+KzfRk/QMEM9X?=
+ =?us-ascii?Q?Qfma8pbc6XhXWfMvEZQTVYc6m4RUY/ahEYlBRUTIG9E+yBZs9Fj0InveIEuv?=
+ =?us-ascii?Q?HP0YCi6fkdgBd7vk9L0sfJ/sTvne9nlvMfvaMr/rmfOrEGCRiu2DpfkPiadF?=
+ =?us-ascii?Q?qwSGCtwgv8BczwRZ1AnAv5l/5fprMtF+Rf3W0HOkMnL/n0G8UbldYdkCMq0b?=
+ =?us-ascii?Q?93OBHfZMup+Z0yXcyN9be9hAt3yXz9gIWAnv7fRQNvwN8Lvr59xleam5O5Sb?=
+ =?us-ascii?Q?fMk89KBNkvg3MX6cVdeiWUJdduOTa+YGZvxF6MfI3sm3dEIpK19REOrxvWTM?=
+ =?us-ascii?Q?3G+0/bpHqGGWHGRuRnmHmLnKShrzWWjyw/mXVqGkuL6pKu21gxVc54Oy36I6?=
+ =?us-ascii?Q?Da0UtmhSo+lLwfChw+KE1DA5l8OMjMogfkTY9S7vom3fBAaNZ8/N/gBZm/Iq?=
+ =?us-ascii?Q?AvwYpbvpFDvnfNOpN/vm2jVw3ZDp9R/i1qcoNBksy1s6vQijz6L7biJZY5kz?=
+ =?us-ascii?Q?6BLrsTQx4sIr+JpTJ8DTIG2kNUMdzIdvZItuOUnBX3VhLNQmrWVB6Dwa05Ob?=
+ =?us-ascii?Q?QW9ZQeWiVjBppNZLuvU4eSFwFu02vqfxMQXcoiBjowkz5GASJXJstxLxEtGC?=
+ =?us-ascii?Q?uYzfUmsDbsRqGpqE29AfQIewCzyiXQzh/wve0oJK32Z7lhw25z/yejS3mJIL?=
+ =?us-ascii?Q?DoMoiyBLidpSkJY4yqV53u5zJb4RUeIdH3+3JdD/37F5vF5VrvOLapsYJC8s?=
+ =?us-ascii?Q?HAvm5uuSnnv1+NJf0RqKBbsCVxhvJ1dquIHahx8wDf8U9Mpy6AQAqU636fo2?=
+ =?us-ascii?Q?ofwW7q071YH59c8xzeVFHTSORvEfuIpx9pBIWrvDw6yvnngJIvuDxrEK9HRu?=
+ =?us-ascii?Q?P5Nwt9vJlBXE6ZERHqWpFUOLkAjtR6oB9frqw5izanFZj0qCRbEUVnhiw8El?=
+ =?us-ascii?Q?0P0mff1Wit/GuhfZLD/jO8ktldDH4MbjGiii0pLUATvavw+pDOygRHb6/QJy?=
+ =?us-ascii?Q?Q5iGHsJwKjchFX5OedUAJQIFuFdludTO59G0UlqvTf6VNTWIkygNOTnteO8/?=
+ =?us-ascii?Q?3GnE+J7RUOy3mnDacrZ8eCb1szSi49CMC1UqXpLxzO423S8BUAwOpBneznCv?=
+ =?us-ascii?Q?4VcHoA7mFjDae7njG6yfGhG2KUGJgeEANThE+nfIeCEc0Zeb/toPj0x+yagA?=
+ =?us-ascii?Q?Yyhhc54uDs2NyZ+UBc2AR8Ya7QM/oywTcHBbsuBYoh7pWn6CyGIKL6iqvdJz?=
+ =?us-ascii?Q?YGZf/mNgCzcr+cwl5qSQT6VbKnIFW8AnarPmgojLSeSdlak+LJfuTQJAcTfE?=
+ =?us-ascii?Q?je77kR+JnN3F1xEih9m/n6rMW0rXidtaPNkPdilxLCb3nQhuIYCTtdUFzwo3?=
+ =?us-ascii?Q?LoR5RnERycYq/o1Ia0EsvT6nbP4X1Sr+RMcojEKPhhg1EzQyfECgw8Hzkr3n?=
+ =?us-ascii?Q?25NdsrqPs541g9ehZgJjGrTuRLRcBQ99x9JDJDeg2TO2tYysc+qmlMRjJKzw?=
+ =?us-ascii?Q?qSJT4Vu/Y/rh4Cz4Cxps2viiPy8078wGViWBHN9jK6dW00xrhMG2amjLt90Q?=
+ =?us-ascii?Q?JnjPzPVZFfW8D8a0OEo1LTESLXJrmtNgksqFMq4b?=
+Content-Type: multipart/alternative;
+	boundary="_000_IA1PR19MB76629103474764E0AF589CD3B3712IA1PR19MB7662namp_"
+MIME-Version: 1.0
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-0:
+	Un1Y39/p4QngEfQZ/FyVLUeB0EHomCXAXmtlDjU5UA5ebZiPPhQkyZccae4eXzhwgnWMI6tFfyLdNtv+VYq2IqPyiaXNJoRCV+SKf9ew4fgrXkncq+ppyrBfzrwhO7wddeM/zuVnlbmRD1EpAcRozVD8eJyK4kjtj4XT0usrnblv0Q5RlzzhGZCyNBK1nVI74EysGL82nBcACCM9a7lL0STOh/NDIXgtvR9hgDtsRsTrjQIsyNFQ3fU/MsLsJHA9rAKc2To1hIhvqyKfv+f1rSyt21w8ADG2ZPrGk3B/OKuDSGdqzNTV1rLR8hvk7RDK6wSPwCJwqmEWkVJwmN+mwSIxIWMdhr4N2114UuofUqywcYo9nffH0SScsclRbWb2pj8RafzyrcfZms+tSwSS7+XDdzVv/7b67KKNF4zOAdD76IiOWyHJSUZY+P1Xg9h8MwAUAUDY10DnaywFGiYzwPB8JKW4O/mp3uL0Adk1ubCIJurr/LNfYEljUyV71uTRQuV7kWEvFzV6vgjSuKmM0XHXxLBfsEjq1td/RVLGOneBHxpGGdsfIGIucOeTUg+vZc7ZUi0yA9EVUE7kopNUZ6y/Ggiy/S97DS/sm2AFB9c=
+X-OriginatorOrg: sljlawfirm.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: IA1PR19MB7662.namprd19.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 76fc3436-e575-43ba-e33b-08dce3dde2f3
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 Oct 2024 19:02:11.4099
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 4641adb2-cf5f-4e45-b30e-c5790fc2e986
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: gqo8xLrsakkwF40vMCgPyJEFzY2Canm4zhJXaTWi7uSbiT1x4OYAnxLL0WjcmALzwJquWpWOP/nbbOVRT0kdLQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR19MB5243
+X-MDID: 1727982136-xQSMWBDFPycm
+X-MDID-O:
+ us4;at1;1727982136;xQSMWBDFPycm;<stacey@sljlawfirm.com>;9a8e96ad5c6a19d5557178798382377b
+X-PPE-TRUSTED: V=1;DIR=OUT;
+
+--_000_IA1PR19MB76629103474764E0AF589CD3B3712IA1PR19MB7662namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Greetings Team!
+
+I had a call with Stephen Brower this morning to discuss the arbitration. W=
+e have agreed on Marlene Appel based upon both her experience and her hourl=
+y rate.
+
+Outstanding matters, some of which require your input are as follows:
+
+
+  1.  Virtual or in-person? We can also do a hybrid where the out-of-town f=
+olks appear virtually.
+  2.  Potential dates: need to get from Marlene but for my schedule I am lo=
+oking primarily at 11/14 through 11/21. How about you all?
+  3.  Applicable rules - we can discuss this more if needed but the trust r=
+equires American Arbitration Association rules for Wills and Trusts, but th=
+ere are no active rules, only archived rules. The attorneys and arbitrator =
+are discussing the best procedural process.
+  4.  Binding - the trust provides for binding arbitration. I am confirming=
+ with Stephen and the arbitrator our expectation that there is no right to =
+appeal the arbitrator's decision, which is final and binding on all parties=
+ and anyone who does or may have an interest in the trust. I am also confir=
+ming with each of you the understanding that the arbitrator's decision is f=
+inal, binding, and not appealable.
+  5.  Cost of arbitration: I believe we discussed this previously; the expe=
+nse is typically shared by the parties equally. I will confirm with Stephen=
+ and the arbitrator (and ask that the trust pay the cost).
+
+Please let me know if you have any questions. I look forward to receiving i=
+nput from each of you regarding items (1), (2), and (4) above.
+
+Many thanks,
+Stacey
+
+Stacey L. Johnson, PLLC
+20325 N. 51st Avenue, Suite 134
+Glendale, AZ 85308
+PH: 602-218-5445 Ext: 402
+DIRECT: 623-498-8105
+FAX: 602-218-5405
+stacey@sljlawfirm.com<mailto:stacey@sljlawfirm.com>
+CONFIDENTIALITY NOTICE: The information contained in this message may be pr=
+otected by the attorney-client privilege. If you believe that it has been s=
+ent to you in error, do not read it. Please immediately reply to the sender=
+ that you have received the message in error. Then delete it.
+
+Should you not receive a timely response to an email sent to us or should a=
+n email look "unusual" to you, you agree to contact us through another meth=
+od of communication. You understand that that if you do not receive a respo=
+nse from us within three (3) business days from the time of sending your em=
+ail, you will contact us  in another manner. Further, you agree to tell us =
+should you learn that you are a victim of a cyberattack in any capacity.
+
+
+--_000_IA1PR19MB76629103474764E0AF589CD3B3712IA1PR19MB7662namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:11.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:15931638;
+	mso-list-type:hybrid;
+	mso-list-template-ids:997094714 67698703 67698713 67698715 67698703 676987=
+13 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Greetings Team!<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I had a call with Stephen Brower this morning to dis=
+cuss the arbitration. We have agreed on Marlene Appel based upon both her e=
+xperience and her hourly rate.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Outstanding matters, some of which require your inpu=
+t are as follows:<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<ol style=3D"margin-top:0in" start=3D"1" type=3D"1">
+<li class=3D"MsoListParagraph" style=3D"margin-left:0in;mso-list:l0 level1 =
+lfo1">Virtual or in-person? We can also do a hybrid where the out-of-town f=
+olks appear virtually.<o:p></o:p></li><li class=3D"MsoListParagraph" style=
+=3D"margin-left:0in;mso-list:l0 level1 lfo1">Potential dates: need to get f=
+rom Marlene but for my schedule I am looking primarily at 11/14 through 11/=
+21. How about you all?<o:p></o:p></li><li class=3D"MsoListParagraph" style=
+=3D"margin-left:0in;mso-list:l0 level1 lfo1">Applicable rules &#8211; we ca=
+n discuss this more if needed but the trust requires American Arbitration A=
+ssociation rules for Wills and Trusts, but there are no active rules, only =
+archived
+ rules. The attorneys and arbitrator are discussing the best procedural pro=
+cess.<o:p></o:p></li><li class=3D"MsoListParagraph" style=3D"margin-left:0i=
+n;mso-list:l0 level1 lfo1">Binding &#8211; the trust provides for binding a=
+rbitration. I am confirming with Stephen and the arbitrator our expectation=
+ that there is no right to appeal the arbitrator&#8217;s decision, which
+ is final and binding on all parties and anyone who does or may have an int=
+erest in the trust.
+<i>I am also confirming with each of you the understanding that the arbitra=
+tor&#8217;s decision is final, binding, and not appealable.</i><o:p></o:p><=
+/li><li class=3D"MsoListParagraph" style=3D"margin-left:0in;mso-list:l0 lev=
+el1 lfo1">Cost of arbitration: I believe we discussed this previously; the =
+expense is typically shared by the parties equally. I will confirm with Ste=
+phen and the arbitrator (and ask that the
+ trust pay the cost).<o:p></o:p></li></ol>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Please let me know if you have any questions. I look=
+ forward to receiving input from each of you regarding items (1), (2), and =
+(4) above.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none">Many thanks,<o:p>=
+</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none">Stacey<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none"><o:p>&nbsp;</o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Georgia&quot;,serif=
+;font-variant:small-caps;mso-ligatures:none">Stacey L. Johnson, PLLC<br>
+</span><span style=3D"mso-ligatures:none">20325 N. 51st Avenue, Suite 134<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none">Glendale, AZ 8530=
+8<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none">PH: 602-218-5445 =
+Ext: 402<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none">DIRECT: 623-498-8=
+105<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none">FAX: 602-218-5405=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none"><a href=3D"mailto=
+:stacey@sljlawfirm.com">stacey@sljlawfirm.com</a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-ligatures:none"><o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif;color:#53565A;mso-ligatures:none">CONFIDENTIALITY =
+NOTICE:
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,s=
+ans-serif;color:#53565A;mso-ligatures:none">The information contained in th=
+is message may be protected by the attorney-client privilege. If you believ=
+e that it has been sent to you in error, do
+ not read it. Please immediately reply to the sender that you have received=
+ the message in error. Then delete it.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,sans-serif;color:#53565A;mso-ligatures:none"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,sans-serif;color:#53565A;mso-ligatures:none">Should you not rece=
+ive a timely response to an email sent to us or should an email look &#8220=
+;unusual&#8221; to you, you agree to contact us through another
+ method of communication. You understand that that if you do not receive a =
+response from us within three (3) business days from the time of sending yo=
+ur email, you will contact us &nbsp;in another manner. Further, you agree t=
+o tell us should you learn that you are
+ a victim of a cyberattack in any capacity.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_IA1PR19MB76629103474764E0AF589CD3B3712IA1PR19MB7662namp_--

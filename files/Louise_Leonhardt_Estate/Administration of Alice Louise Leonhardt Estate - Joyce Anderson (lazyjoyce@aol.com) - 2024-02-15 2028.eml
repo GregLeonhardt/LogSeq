@@ -1,0 +1,179 @@
+Delivered-To: gregleonhardt@gmail.com
+Received: by 2002:a05:7208:42a5:b0:7d:4698:48 with SMTP id bo37csp819815rbb;
+        Thu, 15 Feb 2024 19:29:30 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEBTkK8Ocx6wD7/g7h80vzkaGimMS8uaaX9S284KAVyzP7g2i7DSWTwtrXeKjb86uEmOePZ
+X-Received: by 2002:a05:620a:40d4:b0:787:268c:eee2 with SMTP id g20-20020a05620a40d400b00787268ceee2mr4124280qko.69.1708054170576;
+        Thu, 15 Feb 2024 19:29:30 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1708054170; cv=none;
+        d=google.com; s=arc-20160816;
+        b=e4012bd7QYgTloyQZzcDNQSzRasI91fLy0dnZeK9AeuDtlLu127m+YDWFABoA30l59
+         SsdUanWXuK2CY8r/Q421SDQi6yId4YjzxNx7mcpRV+r9f23BlGn7R3DvaBHxFqgxL+iH
+         v/k9nZ7gl/x0cIrAqAX/yKExBGsBlVUs6UbGwrl6roGg4tme3AFUyTPVhowz1n4OPbkN
+         iswzH9RGntgrQSnYWRfc1PEL5C0hbb+9f92/USU7U0y2ds/0sgglqjcMSsNZxhcXH75Y
+         Xdqm2a82bjPrOlQ7gdneRuRPy7TxvO79t+nnZB1EUjDfwn3+sw9SjoLOMw8XAgm43J32
+         51gw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:mime-version:subject:message-id:cc:to:from:date
+         :dkim-signature;
+        bh=LhNatble0t63E+I5nnF5XWBRW34s/3W9orialjkAs/M=;
+        fh=PgX3oC+JV2yyZK8UobnCEWwfX6Eorta9KYeXBhP6VU4=;
+        b=XfJ6V9ZV/DrJRCLKsgDMRCfpl+D/hZq3CDN2pXennW5ywZNzwHB56941MUBmhATkVb
+         FqzddxRBN+cGiHtcaGraCrQZyNNvWLBweciG7GHV6/AmV58TfJSxqvqqYtIYMghGxJIs
+         ORXmkg8aXFBzM9ymjh7SDvRyWzrhAcqzprvi/HU8drwsaaMzz0tadTGSJD8K+IbtaoCS
+         rSMu9oWBbnWw8T4YNijDQf6epfZ5ZitZnHMiOGbJ1wnftuErcmEIjMnJcTqJjO4TYeGj
+         TSyjFt/eyUb6oFhgiHrSlZCDFloRfgBlHSdcQNqwD3Q5N5C39BIjwbpLwGqYyYWpZcOM
+         UIKg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@aol.com header.s=a2048 header.b=Zcp62Pk2;
+       spf=pass (google.com: domain of lazyjoyce@aol.com designates 74.6.132.125 as permitted sender) smtp.mailfrom=lazyjoyce@aol.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=aol.com
+Return-Path: <lazyjoyce@aol.com>
+Received: from sonic314-15.consmr.mail.bf2.yahoo.com (sonic314-15.consmr.mail.bf2.yahoo.com. [74.6.132.125])
+        by mx.google.com with ESMTPS id cx14-20020a05620a51ce00b0078725fc3680si2965746qkb.726.2024.02.15.19.29.30
+        for <gregleonhardt@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 15 Feb 2024 19:29:30 -0800 (PST)
+Received-SPF: pass (google.com: domain of lazyjoyce@aol.com designates 74.6.132.125 as permitted sender) client-ip=74.6.132.125;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@aol.com header.s=a2048 header.b=Zcp62Pk2;
+       spf=pass (google.com: domain of lazyjoyce@aol.com designates 74.6.132.125 as permitted sender) smtp.mailfrom=lazyjoyce@aol.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=aol.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aol.com; s=a2048; t=1708054170; bh=LhNatble0t63E+I5nnF5XWBRW34s/3W9orialjkAs/M=; h=Date:From:To:Cc:Subject:References:From:Subject:Reply-To; b=Zcp62Pk2cGi5bXWhKjwDHNWYCoOon9+a/g270/QlHYXjl6LZc3ap30eNEIYWNZY1nlAyIBSU5czYziJSGuJBMFoOmmZzRMfvT5E99olx7jDGIQqRA/jAC7n2rlnT0JKQsKkfsvFN54pWAe293UFRYUti5UZWQGRxU7SC+q1uIhiQUasjF7pvsN6DsQy6GdHv9vsaOkKMHZbO9HwBotpaHjOOhOHq9PQGKUV3vHervxb4DYGGnLGyFcEZsMlxzDQPwMLInaQTAnn5avWXtQJwDQRX7ne2qoZW6LE1R2DpYETce7CDMcCugl2bVj7ikBP6BHptOdV/bray3CkKhRG4wQ==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1708054170; bh=vnmyLwUxFhv9vSQYCjYYEMZh0xTSzs6eSHxRRtU1L8Y=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=oFbAjf9Vhkz3wjl4HkfytMeFZRj9j91JkmGZMd9GzMfTT6qmRp4JT4FJ2I+xEouPIJorCtmIalZSLm0AlTFXBXA8qoI/oxIlLTUdCJZum2rGUigt+fOYXB4234gz9K4MlJgttGnav9114FwAefopULcs6rYmTMlrdk6FcDF/WLRW1bAZ1IhCBVOS/dsWHhY0JQpdMk0W94FHdvwyMvm4ahUopg2yievRgAr3yy59hV/bnWdD7qasrMtSMbFknGkagM8V+g1i9d8VsNFmW0XC+SMvqXcven4GyjUg1htxSo+DbdYpiRZzx85aMRAPdZdsglHx0qnpssve2mv0hU0u/w==
+X-YMail-OSG: qgsjEQkVM1mRvGcAVx65hB3e_6PS9mDNS9AQDE2jTopcbbOnR6IZuCvI0eXGzNU
+ Gs4i43saTJnP59EHggg3ZVp6lO_wNaNpxP1JLN127pgMO3SsvdOh0QG3sXDpw1m33lOIaq.QW7s0
+ DCinqrvFRp6k4mKkcl200pVgRwE5kTGSnNFB7at0jFdiZ5n.0i2C_fa2q5pRHggyi6QMLJLTItM8
+ iSCvCecnvTsflvelT8J3e.ZkHF5WdBiYjOTYkfe6KEkYMVTI4HkbzId2t5R2h4agWzJ8xHm3XnUX
+ dcrZmpYAfygpFOQUFDe7ht9XRE9ABO5rbS_RFWYvJes3h_fsYGC50VzZiB5aYf1aJ_2aTdRTgsb3
+ R96iqRPfGLOpKEuIQZTM7cdODcZ20QZFjMbKQczeqSQ_QuU75m8jbzD1QZoaemBVpokzMsNgEQvK
+ ewjChnoFdYzRKQkWWVeCigXdELsJLsVIbk.pQd8c8QaiU0w4RCl9C61QD7LEJILqiAt98cYT9LG0
+ CMBHfOqec4oIICcUiKO_tftDUK56zgEEq7HDYicSU.Pk5rqpv93uZ5G3FGfEZ.RRO7JbMcEYf5BR
+ HOq3Fw845S0PmRy9GRvo4IW0KbmBBiED9NxezVxEk6hC8dKc3W2LRKyVc2TNPKV91.Jt0ClXBh3v
+ XbhaidBiff53P8EsHWjCMNQAcQqlEcQ5FYhMCDqQBnbzzKmpCCG6AxEqksSta..ZmYlPrvb4C8ZA
+ K311BiYaoblJdOFYFWxcSvZqVTUPKm.Qx.TBIF9q08FBbErXOhnYWa_5zoN0ELOpdm29tVcsU_Bb
+ ta_4y.fhO9UpAWt3S24EjgGYVPjtIUXeT8_Yt10wNfnAPTEKiuZu_eVKDGtqLBuTTVh8EOM6.YLz
+ c5qG7Iwc731ygRQuxZr59.KLIkYOdSog7C52cjgysF7PnF6G6wXdudBLL088Ty8Jfy2jaMQ9BHB1
+ zsCaNDe.NdmDJVIcQwNh4QCtn1MrGW2EX7WbEvp8_AMj1.XdT5O_jflP9nM739CMvOIGIlIHzW1o
+ IRPpabsCK5ZMM.pSrEDwVxuBpUkCJl2.OEdbT0f08.mHpy9OHiMtYMj77M5t5kKK_wnbCSXqPfLj
+ mx5QNkPT.Rwv52f_vlCiFdIXwEZiI33BAmYPeveBWuUF7lJly3k4Gdsh4B6b7T0to6BGEeXrpFg1
+ A8Z6SjK92HGpBGhflaZlAal3L7KwrNI48XlCEqnKj6xjL24NtH.BSp3EfdeKluqCzVfmamCtHaYP
+ GndPpnhDDbvxCoujKsZKrW1.cDNxkHbmmw4y_3vWs7yO.Iw_bRzH8ELFCaR2cbOuix_Y5bVq90PO
+ 0D0MKfOIpgCutneQHdfz4pcmeF55la3sc4zxRUSo7wBK3YE8cxM1de5vomwqpzrmM9AB2zt5HHhl
+ fpJfLNN0FkHg4xIQN6hu2amSrO9qlA024jjvBc9EtTlSw5lJsNYm7qudvSzWqKjlU5sH7LxIgDGn
+ 1E6OSUI9PFBIxh_iJn5rN8phqMckzQ02YKNeDUjL.wukIp1BfTvijLPTIUzBcZyluC.mNoS0YSyb
+ sUIeag0B77UkEElDL_7HcEx5ndMKXOJMj2uJp0KVi9c.cKsIcGlOLPxFyUR5pzFjBSP.nN8EsYDG
+ c251_PuYUljPw0r1dxLrCpMP.RllfOdc7VO_ttQnZv_poSOaPOemz48fba8n3EZRMdwV5BSg84yO
+ 3ZdmeQASizgnBlRyyOnilfyEDQQ7evYxyM_S5bIW0MwJktsQrAOKSLR0VtzR19H.sCHdzrB77CG1
+ rVd1DasK18wlZnlBKMRQsoG7No5.TFV5Bs3bMOjyv8d93YFtajyAyHGtKt8va7_8faOu96ECtWBS
+ yHa..Qo33t.qwWqWT7OlCGgc0lv4Tixo3MhxtHoi5bmxXNrWpcKBKhF1.1VUXSnLFfAeAQ.wJYXc
+ 7RdALt8RDnwv3mFnQo4idAIL6Ky09dVKVh555HB.J4IjJTsm61p792lVTlkA8ymsFVnzQ1b5qPZa
+ dq.22Uk5TBlvagWwU4c5E6ULQkqE1YUypX2Ctp04UcNeyipA6iVFz57MKvAvC_XjISGst.esBT8F
+ p_MpR96dvmGkFMfl2Ui29oY1D1LnRqGq9Hii4Bqoik8ulKcFfBaWz5NrWtAd2mp6sncqLo27ZHBo
+ wL.NA4prUy1dKC9wAo0A0vCl5mzPDp_4hqWqs4LOoww9y88RSke5RFUy0DN7242hJ1LmvVlHmlOl
+ k9GoyIb23GDIBKnGLzrH8bmrp_I1G9FQ-
+X-Sonic-MF: <lazyjoyce@aol.com>
+X-Sonic-ID: 84b4ed03-0c47-4879-84a6-00a7d12e0c36
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic314.consmr.mail.bf2.yahoo.com with HTTP; Fri, 16 Feb 2024 03:29:30 +0000
+Date: Fri, 16 Feb 2024 03:28:26 +0000 (UTC)
+From: Joyce Anderson <lazyjoyce@aol.com>
+To: "sbrower@brentwoodlg.com" <sbrower@brentwoodlg.com>
+Cc: Greg/Sandy Leonhardt <gregleonhardt@gmail.com>, 
+	Ruth Leonhardt <rleo.usa@gmail.com>, 
+	Scott Leonhardt <sleonhardt@comcast.net>
+Message-ID: <962904478.1724448.1708054106670@mail.yahoo.com>
+Subject: Administration of Alice Louise Leonhardt Estate
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1724447_1082419269.1708054106668"
+References: <962904478.1724448.1708054106670.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.22077 AolMailNorrin
+Content-Length: 5019
+
+------=_Part_1724447_1082419269.1708054106668
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Steven Brower,
+My siblings and I are in receipt of the documents you sent regarding the es=
+tate of Alice Louise Leonhardt.=C2=A0 We find it difficult to blindly agree=
+ and sign the settlement waiver without additional information.
+Our understanding and belief is that the remainder of the estate is now ent=
+irely in the Chase Account and is to be divided amongst=C2=A0the eight (8) =
+surviving children.=C2=A0 If our=C2=A0understanding=C2=A0is correct then we=
+ are all in full agreement.=C2=A0 Unfortunately=C2=A0we have no access to a=
+ny accounting other than the couple items identified in your letter.
+Please forgive this dotting of i's and crossing of t's.=C2=A0 We do believe=
+ our understanding is correct but also know there is a difference between b=
+elief=C2=A0and knowledge.=C2=A0 The terms of the settlement waiver require =
+us to take these steps prior to signing.
+Also, the settlement waiver has a paradoxical problem.=C2=A0 It states that=
+ we have received a distribution from the estate before signing.=C2=A0 Howe=
+ver we must sign the settlement waiver before the distribution can be made.=
+=C2=A0 These two things can not both be true.
+Sincerely,
+Joyce AndersonWith the permission of:
+Greg LeonhardtScott Leonhardt
+Ruth Leonhardt(All were copied on this email)
+
+------=_Part_1724447_1082419269.1708054106668
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"ydp2b35b9d8yahoo-style-wrap" style=
+=3D"font-family:arial;font-size:16px;"><div dir=3D"ltr" data-setdir=3D"fals=
+e"><div><div dir=3D"ltr" style=3D"font-family:arial;font-size:16px;"><font =
+color=3D"#000000">Dear Steven Brower,</font></div><div dir=3D"ltr" style=3D=
+"font-family:arial;font-size:16px;"><font color=3D"#000000"><br clear=3D"no=
+ne"></font></div><div dir=3D"ltr" style=3D"font-family:arial;font-size:16px=
+;"><font color=3D"#000000">My
+ siblings and I are in receipt of the documents you sent regarding the=20
+estate of Alice Louise Leonhardt.&nbsp; We find it difficult to blindly agr=
+ee
+ and sign the settlement waiver without additional information.</font></div=
+><div dir=3D"ltr" style=3D"font-family:arial;font-size:16px;"><font color=
+=3D"#000000"><br clear=3D"none"></font></div><div dir=3D"ltr" style=3D"font=
+-family:arial;font-size:16px;"><font color=3D"#000000">Our
+ understanding and belief is that the remainder of the estate is now=20
+entirely in the Chase Account and is to be divided amongst&nbsp;the eight (=
+8)
+ surviving children.&nbsp; If our&nbsp;understanding&nbsp;is correct then w=
+e are all in
+ full agreement.&nbsp; Unfortunately&nbsp;we have no access to any accounti=
+ng=20
+other than the couple items identified in your letter.</font></div><div dir=
+=3D"ltr" style=3D"font-family:arial;font-size:16px;"><font color=3D"#000000=
+"><br clear=3D"none"></font></div><div style=3D"font-family:arial;font-size=
+:16px;"><font color=3D"#000000">Please
+ forgive this dotting of i's and crossing of t's.&nbsp; We do believe our=
+=20
+understanding is correct but also know there is a difference between=20
+belief&nbsp;and knowledge.&nbsp; The terms of the settlement waiver require=
+ us to=20
+take these steps prior to signing.</font></div><div dir=3D"ltr" style=3D"fo=
+nt-family:arial;font-size:16px;"><font color=3D"#000000"><br clear=3D"none"=
+></font></div><div style=3D"font-family:arial;font-size:16px;"><font color=
+=3D"#000000">Also,
+ the settlement waiver has a paradoxical problem.&nbsp; It states that we=
+=20
+have received a distribution from the estate before signing.&nbsp; However =
+we
+ must sign the settlement waiver before the distribution can be made.&nbsp;=
+=20
+These two things can not both be true.</font></div><div dir=3D"ltr" style=
+=3D"font-family:arial;font-size:16px;"><font color=3D"#000000"><br clear=3D=
+"none"></font></div><div dir=3D"ltr" style=3D"font-family:arial;font-size:1=
+6px;"><font color=3D"#000000">Sincerely,</font></div><div dir=3D"ltr" style=
+=3D"font-family:arial;font-size:16px;"><font color=3D"#000000"><br clear=3D=
+"none"></font></div><div dir=3D"ltr" style=3D"font-family:arial;font-size:1=
+6px;"><font color=3D"#000000">Joyce Anderson</font></div><div dir=3D"ltr" s=
+tyle=3D"font-family:arial;font-size:16px;"><font color=3D"#000000">With the=
+ permission of:<br clear=3D"none"></font></div><div dir=3D"ltr" style=3D"fo=
+nt-family:arial;font-size:16px;"><font color=3D"#000000">Greg Leonhardt</fo=
+nt></div><div dir=3D"ltr" style=3D"font-family:arial;font-size:16px;"><font=
+ color=3D"#000000">Scott Leonhardt<br clear=3D"none"></font></div><div dir=
+=3D"ltr" style=3D"font-family:arial;font-size:16px;"><font color=3D"#000000=
+">Ruth Leonhardt</font></div><div dir=3D"ltr" style=3D"font-family:arial;fo=
+nt-size:16px;">(All were copied on this email)</div></div><br></div></div><=
+/body></html>
+------=_Part_1724447_1082419269.1708054106668--

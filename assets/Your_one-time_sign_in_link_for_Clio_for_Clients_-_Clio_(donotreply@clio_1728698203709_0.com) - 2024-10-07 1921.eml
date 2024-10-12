@@ -1,0 +1,833 @@
+Delivered-To: gregleonhardt@gmail.com
+Received: by 2002:a05:7208:b144:b0:8a:5d0c:de6f with SMTP id v4csp2388896rbb;
+        Mon, 7 Oct 2024 18:21:31 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG3Y0n+RPDhrMHP0JAz6+tznzhcoK+dyW5B6Kbz8b+9+1vXnCS1gXFynpH3RUdvWt3LkEXa
+X-Received: by 2002:a05:6214:4b0c:b0:6cb:7a69:b4cf with SMTP id 6a1803df08f44-6cb9a2fa667mr221710066d6.18.1728350491124;
+        Mon, 07 Oct 2024 18:21:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1728350491; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VBHe9BbJzsKzDLJdDw2AMWl/by+fQKTXRToJXFQ1Oq5PlJQ7SupepbnHB1tEZArmpa
+         EKrIENwXbceLSd60Rap29LLJjIqavMPiUKVRA2QxPRou/kqt/8m2rYYdsGbHl8ttG0zS
+         2cHM4hN7AHprxqkJ5MwZ2TeSfnl4kSXkXVggd38cQWjDUbw0UWF3xoOfVvTZ+vO5Lemd
+         94fuMLqp2B+M2j1F9pGpwogydgjJl/CeAU+xFm7I+C7VhTgwA0HsHo87dJWwVahrsC3y
+         0VTzfIC5p1mEKONxZWTqyff4i7NkXLY+RJ9uzBzyGMSl66AUFK657SzEyOCr8eXSoaOT
+         Y3sw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:content-transfer-encoding:mime-version:subject
+         :message-id:to:from:date:dkim-signature:dkim-signature;
+        bh=Y4FxQ6ROQulDYr3CCAbwjXpmQHysidZ4+dFTkkfiTds=;
+        fh=8YH9FrsqysyXkvsFN/xizWnAgOfhcxW42jmr9VCnStc=;
+        b=kk2D9BZDi7wyV6a2YybzVtwbiPJLM1m8wM85Z3vKyep0IkHvirHesG65LPW1UqGdC+
+         PKW2yBM7xjg1LsC1e+snFAhqcXOwUt3cDWkxPWmW0/MmeqmSxGB3dhcRs1Hfj55TOiv6
+         nHFPTcZZ/j8CruayoTxEc/n5UTtAQ536OL4ipYGzbEuJ6owTA9ncJsUv5IQoPjIEI2D0
+         x0FB+Na9hKE5nqSw4Fxq3YAKXILXc3XQyZ2i3VaOrzXa5BuLxwygTDg6MZzJseQFDoip
+         MmyFknJneuWHTbhZZ5uaahfArfN8/OSyIa+XxakrKSl5GthAXbjdfq9y6im0ZZKfzls/
+         cbBA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@clio.com header.s=aulpg6ftmfripmgxoyubiz6zsc2nel7b header.b=Iwz0F8fX;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=roTjyDWI;
+       spf=pass (google.com: domain of 0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@prod-us-a.ses.clio.com designates 54.240.8.21 as permitted sender) smtp.mailfrom=0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@prod-us-a.ses.clio.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=clio.com
+Return-Path: <0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@prod-us-a.ses.clio.com>
+Received: from a8-21.smtp-out.amazonses.com (a8-21.smtp-out.amazonses.com. [54.240.8.21])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6cba475b56asi74829546d6.278.2024.10.07.18.21.30
+        for <gregleonhardt@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 07 Oct 2024 18:21:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@prod-us-a.ses.clio.com designates 54.240.8.21 as permitted sender) client-ip=54.240.8.21;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@clio.com header.s=aulpg6ftmfripmgxoyubiz6zsc2nel7b header.b=Iwz0F8fX;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=roTjyDWI;
+       spf=pass (google.com: domain of 0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@prod-us-a.ses.clio.com designates 54.240.8.21 as permitted sender) smtp.mailfrom=0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@prod-us-a.ses.clio.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=clio.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=aulpg6ftmfripmgxoyubiz6zsc2nel7b; d=clio.com; t=1728350490;
+	h=Date:From:To:Message-ID:Subject:Mime-Version:Content-Type:Content-Transfer-Encoding;
+	bh=MvG0dC/32Y9et9N0Qe8+e/JB3n32C4G94x/VW0pSuLQ=;
+	b=Iwz0F8fXeekPrXkIDqxIgrswfDCDo1JLjfFG68v6uddeHgmVd4e4ZQ50TRwqFASx
+	hMW0WVYPPGklSeYn5UsfsDUQVX58Zoxj6yDy+UGPK1IdxM9uaJr4zZfZaLhwDNl01ha
+	rGemMmEMXkvyivAz/49iI17LgjpantRE10iSgaxA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1728350490;
+	h=Date:From:To:Message-ID:Subject:Mime-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=MvG0dC/32Y9et9N0Qe8+e/JB3n32C4G94x/VW0pSuLQ=;
+	b=roTjyDWIW0UvJ0KqXxpFhAs819/cAEcQCEGQA7BYeq0SQm0Dm7mfSjidp08cbnFq
+	A1G4cBgeNmf3quWIYN+ZRcx/JdUP3S+B5+PdA4GWJGNZq7RQbTdS+IPNGgerOsXKo1H
+	dh8KR3SDOtc5k+0LBo9H9dh9KWKRPeJcJR/8q7EU=
+Date: Tue, 8 Oct 2024 01:21:30 +0000
+From: Clio <donotreply@clio.com>
+To: gregleonhardt@gmail.com
+Message-ID: <0100019269b79041-88fc85e7-2876-41cd-a109-c98675ad156b-000000@email.amazonses.com>
+Subject: Your one-time sign in link for Clio for Clients
+Mime-Version: 1.0
+Content-Type: multipart/related;
+ boundary="--==_mimepart_6704891a7535d_874ab1050482540";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-SES-ACCOUNT-ID: 
+X-SES-USER-ID: 
+Feedback-ID: ::1.us-east-1.Bhonnyv3Gh1D4YWo47DKEkgBDI9WIAzYwK/n+mXZrnU=:AmazonSES
+X-SES-Outgoing: 2024.10.08-54.240.8.21
+
+
+----==_mimepart_6704891a7535d_874ab1050482540
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6704891a74a3b_874ab105048249c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6704891a74a3b_874ab105048249c
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Click the link below to open Clio for Clients with your secure password-f=
+ree sign in link.=0D
+=0D
+https://clients.clio.com/sign_in/fa09515c6d0243031dda4f98e9d038eb?email=3D=
+gregleonhardt%40gmail.com=0D
+=0D
+The above link will expire in 1 hour. You can get a new one by signing in=
+ from the mobile app or https://clients.clio.com/.=0D
+=0D
+---=0D
+=0D
+Need help?=0D
+=0D
+Give Clio a call at 1-888-858-2546. You can also visit our support resour=
+ces at https://www.clio.com/clients=0D
+=0D
+This is an automated message. Please do not reply to this email.=0D
+=0D
+300 - 4611 Canada Way, Burnaby, BC, V5G 4X3=0D
+=C2=A9 2024 Themis Solutions Inc.=0D
+
+----==_mimepart_6704891a74a3b_874ab105048249c
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE>=0D
+<html>=0D
+<style>=0D
+  a { color: rgb(0, 112, 224); }=0D
+          <style type=3D"text/css">=0D
+          #outlook a{padding:0;} /* Force Outlook to provide a "view in b=
+rowser" message */=0D
+          .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force =
+Hotmail to display emails at full width */=0D
+          .ExternalClass, .ExternalClass p, .ExternalClass span, .Externa=
+lClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /=
+* Force Hotmail to display normal line spacing */=0D
+          img{-ms-interpolation-mode:bicubic;} /* Allow smoother renderin=
+g of resized image in Internet Explorer */=0D
+          body {=0D
+            font-family: Helvetica;=0D
+          }=0D
+          table {=0D
+            table-layout:fixed;=0D
+          }=0D
+=0D
+          .link {=0D
+            text-decoration: underline !important;=0D
+            color: #1170B9 !important;=0D
+          }=0D
+=0D
+          /* MOBILE STYLES */=0D
+          @media only screen and (max-device-width: 480px) {=0D
+            /* Prevent Webkit platforms from changing default text sizes =
+*/=0D
+            body, table, td, h1, h2, h3, p, a {=0D
+              -webkit-text-size-adjust: none !important;=0D
+            }=0D
+            /* Prevent iOS Mail from adding padding to the body */=0D
+            body{=0D
+              width: 100% !important;=0D
+              margin:0 !important;=0D
+            }=0D
+=0D
+            /* Specifically for Android 4.4 */=0D
+            div[style*=3D"margin: 16px 0"] {=0D
+              margin:0 !important;=0D
+            }=0D
+=0D
+            table[class=3D"outer-table"] {=0D
+              width: 100% !important;=0D
+              border: solid 1px #d7dee2;=0D
+              padding: 20px 0 20px 20px !important;=0D
+              table-layout: fixed;=0D
+              margin: auto !important;=0D
+            }=0D
+=0D
+            td[class=3D"header"] {=0D
+              width: 100% !important;=0D
+              padding: 20px 0 0 20px !important;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            td[class=3D"greeting"] {=0D
+              padding: 0 20px 12px 20px !important;=0D
+            }=0D
+=0D
+            td[class=3D"task-assignment-td"] {=0D
+              padding: 0 !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+              background-color:#eceff1 !important;=0D
+            }=0D
+=0D
+            td[class=3D"task-assignment"] {=0D
+              width: 100% !important;=0D
+              padding: 10px !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            table[class=3D"nested-task-assignment"] {=0D
+              border: solid 1px black;=0D
+              width: 100% !important;=0D
+              padding: 0 !important;=0D
+              border-style: none;=0D
+            }=0D
+=0D
+            td[class=3D"task-information"] {=0D
+              width: 100% !important;=0D
+              border-collapse: collapse;=0D
+              padding: 0 !important;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            table[class=3D"nested-task-information"] {=0D
+              width: 100% !important;=0D
+              border-collapse: collapse;=0D
+              padding: 0 !important;=0D
+              margin: 0 !important;=0D
+            }=0D
+=0D
+            td[class=3D"nested-task-information-td"] {=0D
+              padding: 10px !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+              width: 100%;=0D
+            }=0D
+=0D
+            td[class=3D"inner-task-information-td"] {=0D
+              width: 100% !important;=0D
+              border-collapse: collapse;=0D
+              padding: 20px 20px 20px 20px !important;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            td[class=3D"resource-assignment-td"] {=0D
+              padding: 0 !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+              background-color: #eceff1 !important;=0D
+            }=0D
+=0D
+            td[class=3D"resource-assignment"] {=0D
+              width: 100% !important;=0D
+              padding: 10px !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            table[class=3D"nested-resource-assignment"] {=0D
+              border: solid 1px black;=0D
+              width: 100% !important;=0D
+              padding: 0 !important;=0D
+              border-style: none;=0D
+            }=0D
+=0D
+            td[class=3D"resource-information"] {=0D
+              width: 100% !important;=0D
+              border-collapse: collapse;=0D
+              padding: 0 !important;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            table[class=3D"nested-resource-information"] {=0D
+              width: 100% !important;=0D
+              border-collapse: collapse;=0D
+              padding: 0 !important;=0D
+              margin: 0 !important;=0D
+            }=0D
+            td[class=3D"nested-resource-information-td"] {=0D
+              width: 100% !important;=0D
+              padding: 10px !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+              width: 100%;=0D
+            }=0D
+=0D
+            td[class=3D"inner-resource-information-td"] {=0D
+              width: 100% !important;=0D
+              border-collapse: collapse;=0D
+              padding: 20px 20px 20px 20px !important;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            td[class=3D"cc-info"] {=0D
+              width: 100% !important;=0D
+              padding: 0 !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed !important;=0D
+            }=0D
+=0D
+            td[class=3D"nested-cc-info"] {=0D
+              width: 100% !important;=0D
+              padding: 20px 20px 0 20px !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed !important;=0D
+            }=0D
+=0D
+            td[class=3D"other-info"] {=0D
+              width: 100% !important;=0D
+              padding: 0 !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed !important;=0D
+            }=0D
+=0D
+            td[class=3D"nested-other-info"] {=0D
+              width: 100% !important;=0D
+              padding: 0 20px 20px 20px !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed !important;=0D
+            }=0D
+=0D
+            p[class=3D"footer-information"] {=0D
+              padding-top: 0 !important;=0D
+            }=0D
+=0D
+            td[class=3D"footer"] {=0D
+              width: 100% !important;=0D
+              padding: 20px 0 20px 0 !important;=0D
+              text-decoration: none;=0D
+            }=0D
+=0D
+            h2[class=3D"brand-name"] {=0D
+              font-size: 16px;=0D
+              display: block !important;=0D
+              text-align: left !important;=0D
+              vertical-align: middle !important;=0D
+            }=0D
+=0D
+            p[class=3D"body-message"] {=0D
+              font-size: 14px;=0D
+            }=0D
+=0D
+            p[class=3D"due-at"] a {=0D
+              text-decoration: none !important;=0D
+              color: #263238 !important;=0D
+            }=0D
+=0D
+            p[class=3D"footer-information"] a {=0D
+              text-decoration: none !important;=0D
+              color: #667881 !important;=0D
+            }=0D
+=0D
+            td[class=3D"line-divide-td"] {=0D
+              padding: 20px 0 20px 0 !important;=0D
+              border-collapse: collapse;=0D
+              table-layout: fixed;=0D
+            }=0D
+=0D
+            img[class=3D"line-divide"] {=0D
+              display: block !important;=0D
+              width: 90% !important;=0D
+              height: 1px !important;=0D
+              padding: 0 !important;=0D
+              margin: 0 auto !important;=0D
+            }=0D
+=0D
+            img[class=3D"clio"] {=0D
+              padding: 0 !important;=0D
+            }=0D
+=0D
+            img[class=3D"logo"] {=0D
+              display: block !important;=0D
+              margin: 0 auto !important;=0D
+              padding: 0 !important=0D
+            }=0D
+          }=0D
+=0D
+          /* SPECIFICALLY FOR OUTLOOK */=0D
+          <!--[if mso]>=0D
+            <center>=0D
+            <table><tr><td width=3D"584">=0D
+          <![endif]-->=0D
+        </style>=0D
+=0D
+        <!--[if mso]>=0D
+          <style>=0D
+            .header {=0D
+              padding-top: 32px !important;=0D
+            }=0D
+            .greeting {=0D
+              padding-top: 20px !important;=0D
+            }=0D
+=0D
+            .footer {=0D
+              padding-top: 32px !important;=0D
+            }=0D
+=0D
+            .high-priority {=0D
+              display: block;=0D
+              vertical-align: middle !important;=0D
+              padding-left: 8px !important;=0D
+            }=0D
+=0D
+            .line-divide-td {=0D
+              display: block;=0D
+              padding-top: 32px !important;=0D
+              padding-bottom: 32px !important;=0D
+            }=0D
+=0D
+            .task-information {=0D
+              border-right-style:solid 1px #d7dee2 !important;=0D
+              border-left-style:solid 1px #d7dee2 !important;=0D
+            }=0D
+=0D
+            .task-header {=0D
+              padding-bottom: 12px !important;=0D
+            }=0D
+          </style>=0D
+        <![endif]-->=0D
+        <!--[if mso gte 12]>=0D
+          <style>=0D
+            .td-due-at {=0D
+              padding-top: 12px !important;=0D
+            }=0D
+          </style>=0D
+        <![endif]-->=0D
+=0D
+          <style type=3D"text/css">=0D
+           #outer_container {=0D
+             background-color: #F0F3F5;=0D
+             padding-top: 24px;=0D
+             padding-bottom: 24px;=0D
+           }=0D
+=0D
+          @media only screen and (max-width: 436px) {=0D
+            #outer_container {=0D
+              background-color: #ffffff;=0D
+              padding: 0px;=0D
+            }=0D
+          }=0D
+        </style>=0D
+=0D
+          <style type=3D"text/css">=0D
+          #inner_container {=0D
+            max-width: 420px;=0D
+            background-color: #ffffff;=0D
+            border-radius: 12px;=0D
+            border: solid;=0D
+            border-color: white;=0D
+          }=0D
+=0D
+          #mc_inner_container {=0D
+            max-width: 420px;=0D
+            background-color: #ffffff;=0D
+            border-radius: 12px;=0D
+            padding: 0px 32px;=0D
+          }=0D
+=0D
+          @media only screen and (max-width: 436px) {=0D
+            #inner_container {=0D
+              padding: 24px 24px 32px 24px;=0D
+            }=0D
+            #mc_inner_container {=0D
+              padding: 0px 16px;=0D
+            }=0D
+          }=0D
+        </style>=0D
+=0D
+</style>=0D
+<table id=3D"outer_container" align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" height=3D"100%" width=3D"100%">=0D
+  <tr>=0D
+    <td align=3D"center" valign=3D"top" class=3D"email">=0D
+      <table id=3D"mc_inner_container" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"max-width: 420px;">=0D
+                <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" role=3D"presentation" style=3D"background-color:#ffffff; width:=
+100%;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"left" width=3D"100%" height=3D=
+"32" style=3D"background-color:transparent;font-size:1px; line-height:1px=
+;"></td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+        <tr>=0D
+          <td valign=3D"top" align=3D"center">=0D
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"background-color:transparent; width:100%; table-layout=
+: fixed;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"center">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%">=0D
+                    <tr>=0D
+                              <p align=3D"center" style=3D"margin:0">=0D
+          <img width=3D"72" height=3D"72" border=3D"0" style=3D"display:b=
+lock;" class=3D"clio" src=3D"cid:6704891a70272_874ab105048235b@manage-res=
+que-worker-3-7cc8d67dfc-5w5xx.mail" />=0D
+        </p>=0D
+=0D
+                    </tr>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+              <tr>=0D
+                <td align=3D"center" valign=3D"top">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%">=0D
+                    <tr>=0D
+                      <h1 style=3D"font-family: Arial, &#39;Helvetica Neu=
+e&#39;, Helvetica, sans-serif; text-align:left; font-style:normal; font-w=
+eight:normal; line-height:150%; letter-spacing:normal; color:#333333; fon=
+t-size:20px; font-weight:bold; display:block; padding-top: 24px; max-widt=
+h: inherit; margin:0; text-align: center;">=0D
+                        <strong>You're almost there!</strong>=0D
+                      </h1>=0D
+                    </tr>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+                      <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" role=3D"presentation" style=3D"background-color:#ffffff; width:=
+100%;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"left" width=3D"100%" height=3D=
+"12" style=3D"background-color:transparent;font-size:1px; line-height:1px=
+;"></td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+              <tr>=0D
+                <td align=3D"center" valign=3D"top">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%">=0D
+                    <tr>=0D
+                        <p style=3D"font-family: Arial, &#39;Helvetica Ne=
+ue&#39;, Helvetica, sans-serif; text-align:left; font-style:normal; font-=
+weight:normal; line-height:150%; letter-spacing:normal; color:#333333;; f=
+ont-size: 16px; text-align: center; margin-top: 0; margin-bottom: 12px; l=
+ine-height: 20px;">=0D
+                          Click the button below to open Clio for Clients=
+ with your <strong>secure password-free sign in link</strong>.=0D
+                        </p>=0D
+                        <p style=3D"font-family: Arial, &#39;Helvetica Ne=
+ue&#39;, Helvetica, sans-serif; text-align:left; font-style:normal; font-=
+weight:normal; line-height:150%; letter-spacing:normal; color:#333333;; f=
+ont-size: 16px; text-align: center; margin-top: 0; margin-bottom: 12px; l=
+ine-height: 20px;">=0D
+                          This link will expire in 1 hour. You can get a =
+new one by signing in from the mobile app or <a href=3D"https://clients.c=
+lio.com/">clients.clio.com</a>.=0D
+                        </p>=0D
+                    </tr>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+        <tr>=0D
+          <td align=3D"center" valign=3D"top">=0D
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"background-color:transparent; width:100%; table-layout=
+: fixed;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"center">=0D
+                  <a href=3D"https://clients.clio.com/sign_in/fa09515c6d0=
+243031dda4f98e9d038eb?email=3Dgregleonhardt%40gmail.com" target=3D"_blank=
+" style=3D"font-family: Arial, &#39;Helvetica Neue&#39;, Helvetica, sans-=
+serif; text-align:left; font-style:normal; font-weight:normal; line-heigh=
+t:150%; letter-spacing:normal; color:#333333;       font-family: Arial, &=
+#39;Helvetica Neue&#39;, Helvetica, sans-serif; text-align:left; font-sty=
+le:normal; font-weight:normal; line-height:150%; letter-spacing:normal; c=
+olor:#333333; color:#FFFFFF !important;=0D
+       text-decoration:none;=0D
+       background-color: #006CD8;=0D
+       display: inline-block;=0D
+       padding: 15px 0px 16px 0px;=0D
+       border-radius: 8px;=0D
+       width: 100%;=0D
+ font-family: Arial, &#39;Helvetica Neue&#39;, Helvetica, sans-serif; tex=
+t-align:left; font-style:normal; font-weight:normal; line-height:150%; le=
+tter-spacing:normal; color:#333333;; font-style: normal; font-weight: bol=
+d; font-size: 16px; line-height: 20px; color: #FFFFFF; flex: none; order:=
+ 0; align-self: center; text-align: center; text-align: center;" title=3D=
+"Confirm email address">=0D
+                    Sign in to secure portal=0D
+                  </a>=0D
+                </td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+                <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" role=3D"presentation" style=3D"background-color:#ffffff; width:=
+100%;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"left" width=3D"100%" height=3D=
+"12" style=3D"background-color:transparent;font-size:1px; line-height:1px=
+;"></td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+        <tr>=0D
+          <td align=3D"center" valign=3D"top">=0D
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"background-color:transparent; width:100%; table-layout=
+: fixed;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"center">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%">=0D
+                    <tr>=0D
+                      <td align=3D"center" valign=3D"top">=0D
+                        <p style=3D"font-family: Arial, &#39;Helvetica Ne=
+ue&#39;, Helvetica, sans-serif; text-align:left; font-style:normal; font-=
+weight:normal; line-height:150%; letter-spacing:normal; color:#333333;; f=
+ont-size: 16px; text-align: center; margin-top: 0; margin-bottom: 12px; l=
+ine-height: 20px;">=0D
+                          Copy this link to your browser if the button do=
+esn=E2=80=99t work: <a style=3D"overflow-wrap: break-word; width: 100%;" =
+href=3D"https://clients.clio.com/sign_in/fa09515c6d0243031dda4f98e9d038eb=
+?email=3Dgregleonhardt%40gmail.com" target=3D"_blank">https://clients.cli=
+o.com/sign_in/fa09515c6d0243031dda4f98e9d038eb?email=3Dgregleonhardt%40gm=
+ail.com</a>=0D
+                        </p>=0D
+                      </td>=0D
+                    </tr>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+                <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" role=3D"presentation" style=3D"background-color:#ffffff; width:=
+100%;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"left" width=3D"100%" height=3D=
+"12" style=3D"background-color:transparent;font-size:1px; line-height:1px=
+;"></td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+                <tr>=0D
+          <td>=0D
+            <p style=3D"border-top:1px solid #CCD9E0; margin-top: 0; marg=
+in-bottom: 0;"></p>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+                <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" role=3D"presentation" style=3D"background-color:#ffffff; width:=
+100%;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"left" width=3D"100%" height=3D=
+"24" style=3D"background-color:transparent;font-size:1px; line-height:1px=
+;"></td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+        <tr>=0D
+        <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"background-color:transparent; width:100%; table-layout=
+: fixed;">=0D
+              <tr>=0D
+                <p style=3D"font-family: Arial, &#39;Helvetica Neue&#39;,=
+ Helvetica, sans-serif; text-align:left; font-style:normal; font-weight:n=
+ormal; line-height:150%; letter-spacing:normal; color:#333333; font-size:=
+14px; line-height:20px; font-weight:400; margin:0; color: #576C82; paddin=
+g-bottom:12px;"><strong>For help with Clio for Clients:</strong> Give Cli=
+o a call at <a href=3D'tel:1-888-858-2546'>1-888-858-2546</a>. You can al=
+so visit our <a href=3D'https://www.clio.com/clients'>support&nbsp;resour=
+ces</a>.</p>=0D
+              </tr>=0D
+              <tr>=0D
+                <p style=3D"font-family: Arial, &#39;Helvetica Neue&#39;,=
+ Helvetica, sans-serif; text-align:left; font-style:normal; font-weight:n=
+ormal; line-height:150%; letter-spacing:normal; color:#333333; font-size:=
+14px; line-height:20px; font-weight:400; margin:0; color: #576C82; paddin=
+g-bottom:12px;">This is an automated message. Please do not reply to this=
+ email.</p>=0D
+              </tr>=0D
+              <tr>=0D
+                <p style=3D"font-family: Arial, &#39;Helvetica Neue&#39;,=
+ Helvetica, sans-serif; text-align:left; font-style:normal; font-weight:n=
+ormal; line-height:150%; letter-spacing:normal; color:#333333; font-size:=
+14px; line-height:20px; font-weight:400; margin:0; color: #576C82;">300 -=
+ 4611 Canada Way, Burnaby, BC, V5G 4X3</p>=0D
+              </tr>=0D
+              <tr>=0D
+                <p style=3D"font-family: Arial, &#39;Helvetica Neue&#39;,=
+ Helvetica, sans-serif; text-align:left; font-style:normal; font-weight:n=
+ormal; line-height:150%; letter-spacing:normal; color:#333333; font-size:=
+14px; line-height:20px; font-weight:400; margin:0; color: #576C82;">=C2=A9=
+ 2024 Themis Solutions Inc.</p>=0D
+              </tr>=0D
+            </table>=0D
+                    <tr>=0D
+          <td valign=3D"top" align=3D"left">=0D
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" role=3D"presentation" style=3D"background-color:#ffffff; width:=
+100%;">=0D
+              <tr>=0D
+                <td valign=3D"top" align=3D"left" width=3D"100%" height=3D=
+"32" style=3D"background-color:transparent;font-size:1px; line-height:1px=
+;"></td>=0D
+              </tr>=0D
+            </table>=0D
+          </td>=0D
+        </tr>=0D
+=0D
+          </td>=0D
+        </tr>=0D
+      </table>=0D
+    </td>=0D
+  </tr>=0D
+</table>=0D
+</html>=0D
+
+----==_mimepart_6704891a74a3b_874ab105048249c--
+
+----==_mimepart_6704891a7535d_874ab1050482540
+Content-Type: image/png;
+ filename=clio-app.png
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ filename=clio-app.png
+Content-ID: <6704891a70272_874ab105048235b@manage-resque-worker-3-7cc8d67dfc-5w5xx.mail>
+
+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
+8H9D0nH5tNK1MgAAAABJRU5ErkJggg==
+
+----==_mimepart_6704891a7535d_874ab1050482540--
