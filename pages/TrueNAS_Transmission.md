@@ -1,0 +1,12 @@
+- WEB_Port - 3096
+	- This is the WEB connection port.
+- Pear_Port - 50413
+	- I believe this is the BitTorrent communications port.
+- Create the following directories.
+	- Configuration Storage
+		- /mnt/volume1/BitTorrent/conf
+	- Download Storage
+		- /mnt/volume1/BitTorrent/download
+	- Incomplete Storage
+		- /mnt/volume1/Bittorrent/incomplete
+- When filling in the configuration parameters there is a 'download storage in container' and an 'incomplete storage in container' setting.  Leave these alone they point to the directories inside the docker container.
