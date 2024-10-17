@@ -1,0 +1,7 @@
+- A fairly straight forward install.  Install the app from the app store.
+	- NOTE: You MUST add user 'sc-syncthing' to the permissions list for each shared folder.
+		- Control Panel => Shared Folders => {the folder you are sharing}
+		- Click the 'Permissions' tab and the pull down 'Local users'
+		- Select 'System internal user'
+		- Find 'sc-syncthing' in the list and give it 'Read/Write' access.
+- That is it.  you should now be able to share the folder with SyncThing.
