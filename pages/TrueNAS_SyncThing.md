@@ -11,3 +11,10 @@
   background-color:: red
 - NOTE: When entering a 'Folder Path' to share in the SyncThing Portal. Enter the 'Mount Path' not the 'Host Path'.
   background-color:: red
+- ### Configuration Changes
+	- On the TrueNAS Scale console:
+		- System Settings -> Advanced -> Sysctl
+			- Var: fs.inotify.max_user_watches
+			  Value: 524288
+			  Description: Increase inotify limit
+			  Enabled: YES
