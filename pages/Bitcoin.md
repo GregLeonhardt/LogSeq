@@ -22,7 +22,8 @@
 	- Bitcoin Core is now installed on your Debian system. You can start the software by typing bitcoin-qt in the terminal, or you can launch it from the Applications menu.
 	- Please note that these instructions assume a basic familiarity with the Linux command line. Make sure to double-check the version numbers and adjust the commands accordingly if there are updates available on the Bitcoin Core website.
 		- ## Executables:
-		- TODO : The following list is incomplete.
+		- TThe following list is incomplete.
+			-
 		- ```
 		  bitcoin-qt
 		  bitcoind

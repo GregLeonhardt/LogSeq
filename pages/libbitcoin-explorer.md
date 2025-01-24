@@ -59,7 +59,7 @@
 		  ./install.sh --prefix=`pwd` --build-boost --disable-shared
 		  ```
 	- # Old Notes that used to work (option-3)
-		- TODO This procedure needs to be reformatted or deleted.
+		- This procedure needs to be reformatted or deleted.
 		- **# About Libbitcoin
 		  
 		  The libbitcoin toolkit is a set of cross platform C++ libraries for building bitcoin applications. The toolkit consists of several libraries, most of which depend on the foundational libbitcoin-system library. Each library's repository can be cloned and built using common automake 1.14+ instructions or cmake 3.5+ instructions. There are no packages yet in distribution however each library includes an installation script (described below) which is regularly verified via github actions.
