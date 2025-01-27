@@ -4,10 +4,9 @@ total-days::
 
 	- Seizure
 		- ((662c7d2b-2582-413a-b3e0-ea1de763a9f8))
-admitted:: March 22, 2024
-discharged:: March 28, 2024
-total-days:: 7
-
+		  admitted:: March 22, 2024
+		  discharged:: March 28, 2024
+		  total-days:: 7
 	- Fevers for the past few days.
 		- A bloodborne bacteria that normally lives in the digestive system. Infectious disease believes the source was the central line but nobody will speculate how.  There was also a mysterious loss of about three units of blood between Monday and checking into the hospital.
 - admitted:: January 20, 2024
@@ -37,7 +36,10 @@ total-days:: 7
 - Stroke-like symptoms
 	- No diagnosis
 		- Magnesium levels were low and she received magnesium IV.
-- TODO  The list is NOT complete.  Add the remaining times she was admitted.
+- The list is NOT complete.  Add the remaining times she was admitted.
+  :LOGBOOK:
+  CLOCK: [2025-01-26 Sun 22:54:31]
+  :END:
 	- admitted:: July 19, 2023
 	  discharged:: September 21, 2023
 	  total-days:: 43

@@ -1,24 +1,24 @@
 - Applications I use on Synology that need replacements:
-	- TODO BitTorrent
-	- TODO File Synchronization
-	- TODO Backup to a second server
-	- TODO Video Player (Local and Remote)
-		- TODO Local
-		- TODO Remote
-	- TODO Audio Player (Local and Remote)
-		- TODO Local
-		- TODO Remote
-	- TODO Image Viewer (Local and Remote)
-		- TODO Local
-		- TODO Remote
-	- TODO Recipe Manager (Local and Remote)
-		- TODO Local
-		- TODO Remote
-	- TODO LogSeq (Local and Remote)
-		- TODO Local
-		- TODO Remote
-	- TODO Network Video Recorder (NVR)
-	- TODO CrashPlan
+	- BitTorrent
+	- File Synchronization
+	- Backup to a second server
+	- Video Player (Local and Remote)
+		- Local
+		- Remote
+	- Audio Player (Local and Remote)
+		- Local
+		- Remote
+	- Image Viewer (Local and Remote)
+		- Local
+		- Remote
+	- Recipe Manager (Local and Remote)
+		- Local
+		- Remote
+	- LogSeq (Local and Remote)
+		- Local
+		- Remote
+	- Network Video Recorder (NVR)
+	- CrashPlan
 - Additional needs:
-	- TODO Public facing connection monitor
-		- TOD FailToBan (or something like it)
+	- Public facing connection monitor
+		- FailToBan (or something like it)
