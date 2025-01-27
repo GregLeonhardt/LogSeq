@@ -86,7 +86,7 @@ total-days::
 - Admitted:: April 17, 2023
   Discharged:: May 04, 2023
   total-days:: 18
-	- TODO What was the reason she came to the hospital?
+	- What was the reason she came to the hospital?
 - Admitted:: March 11, 2023
   Discharged:: March 23, 2023
   Days:: 13
