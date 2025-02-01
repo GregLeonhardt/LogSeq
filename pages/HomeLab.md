@@ -15,13 +15,13 @@
 	- COPY data from Synology to TrueNAS 
 	  | :--- | :--- | :---: |
 	  | Synology | TrueNAS | Status|
-	  | /homes/Belkin | /NetBackup/HOMES/NormaBelkin | DONE  |
-	  | /homes/Donald | /NetBackup/HOMES/DonaldRiggio | TODO |
-	  | /homes/GregLeonhardt | /NetBackup/HOMES/GregLeonhardt | TODO  |
-	  | /homes/HermanLeonhardt | /NetBackup/HOMES/HermanLeonhardt | TODO  |
-	  | /homes/JK_Leonhardt | /NetBackup/HOMES/JasonLeonhardt | TODO  |
-	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | TODO  |
-	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | TODO  |
+	  | /homes/Belkin | /NetBackup/HOMES/NormaBelkin | 20250201 |
+	  | /homes/Donald | /NetBackup/HOMES/DonaldRiggio | 20250201 |
+	  | /homes/GregLeonhardt | /NetBackup/HOMES/GregLeonhardt | 20250201 |
+	  | /homes/HermanLeonhardt | /NetBackup/HOMES/HermanLeonhardt | 20250201 |
+	  | /homes/JK_Leonhardt | /NetBackup/HOMES/JasonLeonhardt | 20250201 |
+	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | 20250201 |
+	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | 20250201 |
 	  | /video | /NetBackup/Media/HomeMovies | TODO |
 	  | /VideoServer/Movies | /NetBackup/Media/Movies | TODO  | 
 	  | /RecipeArchiive | /NetBackup/RECIPES | TODO  |
@@ -32,8 +32,8 @@
 	- Verify the copy data and delete the source files from Synology.
 	  | :--- | :--- | :---: |
 	  | Compare-A | Compare-B | Status |
-	  | /TNS_HOMES/NormaBelkin | /homes/belkin | TODO |
-	  | /TNS_HOMES/DonaldRiggio | /homes/Donald | TODO |
+	  | /TNS_HOMES/NormaBelkin | /homes/belkin | 20250201|
+	  | /TNS_HOMES/DonaldRiggio | /homes/Donald | STARTED|
 	  | /TNS_HOMES/GregLeonhardt | /homes/GregLeonhardt | TODO |
 	  | /TNS_HOMES/HermanLeonhardt | /homes/HermanLeonhardt | TODO |
 	  | /TNS_HOMES/JK_Leonhardt | /homes/JasonLeonhardt | TODO |
