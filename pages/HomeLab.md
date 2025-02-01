@@ -1,6 +1,5 @@
 ### Things I need to do to move all the Synology
 	- Copy data from it's current location on Synology to it's new home on TrueNAS.
-	-
 	- MOUNT TrueNAS shares on Synology
 	  | :--- | :--- |
 	  | TrueNAS | Status |
@@ -15,20 +14,20 @@
 	  | TAPE | DONE |
 	- COPY data from Synology to TrueNAS 
 	  | :--- | :--- | :---: |
-	  | Synology | TrueNAS | DONE |
-	  | /homes/Belkin | /NetBackup/HOMES/NormaBelkin | DONE |
-	  | /homes/Donald | /NetBackup/HOMES/DonaldRiggio | DONE |
-	  | /homes/GregLeonhardt | /NetBackup/HOMES/GregLeonhardt | DONE |
-	  | /homes/HermanLeonhardt | /NetBackup/HOMES/HermanLeonhardt | DONE |
-	  | /homes/JK_Leonhardt | /NetBackup/HOMES/JasonLeonhardt | DONE |
-	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | DONE |
-	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | DONE |
+	  | Synology | TrueNAS | Status|
+	  | /homes/Belkin | /NetBackup/HOMES/NormaBelkin | DONE  |
+	  | /homes/Donald | /NetBackup/HOMES/DonaldRiggio | TODO |
+	  | /homes/GregLeonhardt | /NetBackup/HOMES/GregLeonhardt | TODO  |
+	  | /homes/HermanLeonhardt | /NetBackup/HOMES/HermanLeonhardt | TODO  |
+	  | /homes/JK_Leonhardt | /NetBackup/HOMES/JasonLeonhardt | TODO  |
+	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | TODO  |
+	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | TODO  |
 	  | /video | /NetBackup/Media/HomeMovies | TODO |
-	  | /VideoServer/Movies | /NetBackup/Media/Movies | STARTED | 
-	  | /RecipeArchiive | /NetBackup/RECIPES | STARTED |
-	  | /STK | /NetBackup/STK | DONE |
+	  | /VideoServer/Movies | /NetBackup/Media/Movies | TODO  | 
+	  | /RecipeArchiive | /NetBackup/RECIPES | TODO  |
+	  | /STK | /NetBackup/STK | TODO  |
 	  | /STORA | /NetBackup/STORA| TODO |
-	  | /SneakerNet | /NetBackup/SNEAKERNET | STARTED |
+	  | /SneakerNet | /NetBackup/SNEAKERNET | TODO  |
 	  |  /Tape-Backup | /NetBackup/TAPE | TODO |
 	- Verify the copy data and delete the source files from Synology.
 	  | :--- | :--- | :---: |
@@ -41,7 +40,7 @@
 	  | /TNS_HOMES/JaneEngelcke | /home/steger | TODO |
 	  | /TNS_HOMES/TomLeonhardt | /home/tom | TODO |
 	  | /TNS_MEDIA/HomeMovies | /video | TODO |
-	  | /TNS_MEDIA/Movies | /VideoStation/Movies | STARTED |
+	  | /TNS_MEDIA/Movies | /VideoStation/Movies | TODO  |
 	  | /TNS_MEDIA/TV_Shows | /VideoStation/TV-Shows | TODO |
 	  | /TNS_RECIPES | /RecipeArchive | TODO |
 	  | /TNS_STK | /STK | TODO |
