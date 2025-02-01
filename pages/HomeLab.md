@@ -24,7 +24,7 @@
 	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | 20250201 |
 	  | /video | /NetBackup/Media/HomeMovies | TODO |
 	  | /VideoServer/Movies | /NetBackup/Media/Movies | STARTED  | 
-	  | /RecipeArchiive | /NetBackup/RECIPES | TODO  |
+	  | /RecipeArchiive | /NetBackup/RECIPES | STARTED |
 	  | /STK | /NetBackup/STK | TODO  |
 	  | /STORA | /NetBackup/STORA| TODO |
 	  | /SneakerNet | /NetBackup/SNEAKERNET | TODO  |
