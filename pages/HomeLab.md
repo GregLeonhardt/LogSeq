@@ -23,7 +23,7 @@
 	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | 20250201 |
 	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | 20250201 |
 	  | /video | /NetBackup/Media/HomeMovies | TODO |
-	  | /VideoServer/Movies | /NetBackup/Media/Movies | TODO  | 
+	  | /VideoServer/Movies | /NetBackup/Media/Movies | STARTED  | 
 	  | /RecipeArchiive | /NetBackup/RECIPES | TODO  |
 	  | /STK | /NetBackup/STK | TODO  |
 	  | /STORA | /NetBackup/STORA| TODO |
