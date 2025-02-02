@@ -33,12 +33,12 @@
 	  | :--- | :--- | :---: |
 	  | Compare-A | Compare-B | Status |
 	  | /TNS_HOMES/NormaBelkin | /homes/belkin | 20250201|
-	  | /TNS_HOMES/DonaldRiggio | /homes/Donald | STARTED|
+	  | /TNS_HOMES/DonaldRiggio | /homes/Donald | 20250201 |
 	  | /TNS_HOMES/GregLeonhardt | /homes/GregLeonhardt | TODO |
-	  | /TNS_HOMES/HermanLeonhardt | /homes/HermanLeonhardt | TODO |
-	  | /TNS_HOMES/JK_Leonhardt | /homes/JasonLeonhardt | TODO |
-	  | /TNS_HOMES/JaneEngelcke | /home/steger | TODO |
-	  | /TNS_HOMES/TomLeonhardt | /home/tom | TODO |
+	  | /TNS_HOMES/HermanLeonhardt | /homes/HermanLeonhardt | 20250201 |
+	  | /TNS_HOMES/JK_Leonhardt | /homes/JasonLeonhardt | 20250201 |
+	  | /TNS_HOMES/JaneEngelcke | /home/steger | 20250201 |
+	  | /TNS_HOMES/TomLeonhardt | /home/tom | 20250201 |
 	  | /TNS_MEDIA/HomeMovies | /video | TODO |
 	  | /TNS_MEDIA/Movies | /VideoStation/Movies | TODO  |
 	  | /TNS_MEDIA/TV_Shows | /VideoStation/TV-Shows | TODO |
