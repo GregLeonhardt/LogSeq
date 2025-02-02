@@ -22,19 +22,19 @@
 	  | /homes/JK_Leonhardt | /NetBackup/HOMES/JasonLeonhardt | 20250201 |
 	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | 20250201 |
 	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | 20250201 |
-	  | /video | /NetBackup/Media/HomeMovies | TODO |
+	  | /video | /NetBackup/Media/HomeMovies | 20250202 |
 	  | /VideoServer/Movies | /NetBackup/Media/Movies | STARTED  | 
 	  | /RecipeArchiive | /NetBackup/RECIPES | STARTED |
-	  | /STK | /NetBackup/STK | TODO  |
-	  | /STORA | /NetBackup/STORA| TODO |
-	  | /SneakerNet | /NetBackup/SNEAKERNET | TODO  |
-	  |  /Tape-Backup | /NetBackup/TAPE | TODO |
+	  | /STK | /NetBackup/STK | STARTED  |
+	  | /STORA | /NetBackup/STORA| 20250202 |
+	  | /SneakerNet | /NetBackup/SNEAKERNET | 20250202 |
+	  |  /Tape-Backup | /NetBackup/TAPE | 20250202 |
 	- Verify the copy data and delete the source files from Synology.
 	  | :--- | :--- | :---: |
 	  | Compare-A | Compare-B | Status |
 	  | /TNS_HOMES/NormaBelkin | /homes/belkin | 20250201|
 	  | /TNS_HOMES/DonaldRiggio | /homes/Donald | 20250201 |
-	  | /TNS_HOMES/GregLeonhardt | /homes/GregLeonhardt | TODO |
+	  | /TNS_HOMES/GregLeonhardt | /homes/GregLeonhardt | STARTED |
 	  | /TNS_HOMES/HermanLeonhardt | /homes/HermanLeonhardt | 20250201 |
 	  | /TNS_HOMES/JK_Leonhardt | /homes/JasonLeonhardt | 20250201 |
 	  | /TNS_HOMES/JaneEngelcke | /home/steger | 20250201 |
@@ -43,7 +43,7 @@
 	  | /TNS_MEDIA/Movies | /VideoStation/Movies | TODO  |
 	  | /TNS_MEDIA/TV_Shows | /VideoStation/TV-Shows | TODO |
 	  | /TNS_RECIPES | /RecipeArchive | TODO |
-	  | /TNS_STK | /STK | TODO |
+	  | /TNS_STK | /STK | STARTED |
 	  | /TNS_STORA | /STORA | TODO |
-	  | /TNS_SNEAKERNET | /SneakerNet | TODO |
-	  | /TNS_TAPE | /Tape-Backup | TODO |
+	  | /TNS_SNEAKERNET | /SneakerNet | STARTED |
+	  | /TNS_TAPE | /Tape-Backup | STARTED |
