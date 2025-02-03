@@ -22,8 +22,8 @@
 	  | /homes/JK_Leonhardt | /NetBackup/HOMES/JasonLeonhardt | 20250201 |
 	  | /homes/steger | /NetBackup/HOMES/JaneEngelcke | 20250201 |
 	  | /homes/tom | /NetBackup/HOMES/TomLeonhardt | 20250201 |
-	  | /video | /NetBackup/Media/HomeMovies | 20250202 |
-	  | /VideoServer/Movies | /NetBackup/Media/Movies | STARTED  | 
+	  | /video | /NetBackup/Media/HomeMovies | TODO |
+	  | /VideoServer/Movies | /NetBackup/Media/Movies | 20250203 | 
 	  | /RecipeArchiive | /NetBackup/RECIPES | STARTED |
 	  | /STK | /NetBackup/STK | STARTED  |
 	  | /STORA | /NetBackup/STORA| 20250202 |
