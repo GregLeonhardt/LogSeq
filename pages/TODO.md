@@ -1,1 +1,68 @@
-- Just follow the 'Linked References' and finish whatever is unfinished.
+## [[TODO]]
+	- 2025-02-23 Install the WEBTREE genealogy docker container.
+		- Install the Docker container
+		- Import data from FTM
+		- Enable NGINX
+	- 2025-02-22 Add USERS and Import photos into Immich
+		- 2025-02-22 <s>Leonhardt@Nick (DONE)</s>
+		- Leonhardt@Greg
+		- Leonhardt@Herman
+		- Leonhardt@Tom
+		- Leonhardt@Jason
+		- Steger@Lois
+		- Belkin@Norma
+	- 2025-02-20 Restore archive for the TAPE-BACKUP directory.
+		- 2025-02-20 <s>Restore from HyperBackup</s>
+		- 2025-02-22 Copy to TrueNAS (In Progress)
+	- 2025-01-27 GIT docker container
+		- Install the container
+		- Copy existing data to the new container
+		- Verify access
+	- 2025-01-27 Synology System Logs
+		- Build an automated copy routine to copy the logs from Synology to TrueNAS
+	- 2025-01-22 Finalize migration of all data from Synology to TrueNAS
+		- TV-SHOWS
+			- Data migration
+			- Migration Verification
+		- SNEAKERNET
+			- Data migration
+			- Migration Verification
+		- HOME-VIDEO
+			- Data migration
+			- Migration Verification
+		- PHOTOS
+			- Data migration
+			- Migration Verification
+		- STK
+			- Data migration
+			- Migration Verification
+		- MOVIES
+			- Data migration
+			- Migration Verification
+		- STORA
+			- Data migration
+			- Migration Verification
+		- MUSIC
+			- Data migration
+			- Migration Verification
+		- SNEAKERNET
+			- Data migration
+			- Migration Verification
+		- PHOTOS
+			- Data migration
+			- Migration Verification
+		- FTM
+			- Data migration
+			- Migration Verification
+		- USERS
+			- Data migration
+			- Migration Verification
+		- TAPE
+			- Data migration
+			- Migration Verification
+		- HOME-VIDEO
+			- Data migration
+			- Migration Verification
+		- RECIPES
+			- Data migration
+			- Migration Verification
