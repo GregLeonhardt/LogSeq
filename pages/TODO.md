@@ -7,9 +7,10 @@
 		- 2025-02-22 <s>Leonhardt@Nick (DONE)</s>
 		- Leonhardt@Greg
 		- Leonhardt@Herman
+		- Leonhardt@Louise
 		- Leonhardt@Tom
 		- Leonhardt@Jason
-		- Steger@Lois
+		- Steger-Engelcke@Jane
 		- Belkin@Norma
 	- 2025-02-20 Restore archive for the TAPE-BACKUP directory.
 		- 2025-02-20 <s>Restore from HyperBackup</s>
