@@ -1,0 +1,3 @@
+- I am going to try something new here.
+- I have been having trouble sleeping on and off for some time.  For the past few days I have been wondering if it has anything to do with what I am eating.  For example I know that anything with caffeine in it will keep me up so I avoid it.  My memory isn't good enough to relate not sleeping very good or the opposite *sleeping good) with any specific foods.
+- So.  Here is my goal.  I will log everything I eat and drink for the day then rate how I slept that night.  Sounds simple and it is but will I be able to follow through with doing it.
