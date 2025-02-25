@@ -5,14 +5,14 @@
 		- ####-##-## Enable NGINX
 	- 2025-02-22 Add USERS and Import photos into Immich
 		- 2025-02-22 Leonhardt@Nick
-		- 2025-02-23 Leonhardt@Greg
-		- 2025-02-23 Leonhardt@Herman
+		- 2025-02-24 Leonhardt@Greg
+		- 2025-02-24 Leonhardt@Herman
 		- ####-##-## Leonhardt@Louise
-		- 2025-02-23 Leonhardt_Nick
-		- ####-##-## Leonhardt@Tom
+		- 2025-02-24 Leonhardt_Nick
+		- 2025-02-25 Leonhardt@Tom
 		- ####-##-## Leonhardt@Jason
-		- 2025-02-23 Steger-Engelcke@Jane
-		- ####-##-## Belkin@Norma
+		- 2025-02-24 Steger-Engelcke@Jane
+		- 2025-02-25 Belkin@Norma
 	- 2025-01-27 GIT docker container (alpine/git)
 		- ####-##-## Install the container
 		- ####-##-## Copy existing data to the new container
