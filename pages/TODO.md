@@ -1,4 +1,12 @@
 # To Do
+	- ##
+	- # Shinobi or ZoneMinder
+	- ### Free and open-source option, modern video surveillance solution known for its ease of use.
+		- Install Docker container
+		- Configure
+			- Cameras
+			- Timelaps
+			- Purge files
 	- ## [[WebTrees]]
 		- ### WebTrees is a free, open-source, web-based genealogy application that allows users to create, manage, and share family trees online.
 			- ~~Install Docker container~~
@@ -8,6 +16,7 @@
 		- ### Immich is a free, open-source, self-hosted photo and video management solution
 			- ~~Install Docker container~~
 			- Configure
+			  collapsed:: true
 				- Nick
 				- Greg
 				- Louise
@@ -27,31 +36,3 @@
 				- There is no way to backup TrueNAS apps (yes the data can be backed up but the apps can not be backed up).  If I used a Docker container manager the apps are backed up as the Dockage data.
 			- ~~Install Docker container~~
 -
-- This is the OLD-TODO list
-	- 2025-01-27 Synology System Logs
-		- ####-##-## Build an automated copy routine to copy the logs from Synology to TrueNAS
-	- 2025-01-22 Finalize migration of all data from Synology to TrueNAS
-		- ####-##-## FTM
-		- ####-##-## HOME-VIDEO
-		- 2025-02-10 MOVIES
-		- ####-##-## MUSIC
-		- ####-##-## PHOTOS
-		- ####-##-## RECIPES
-		- ####-##-## SNEAKERNET
-		- 2025-02-08 STK
-		- ####-##-## STORA
-		- ####-##-## TAPE
-		- 2025-02-10 TV-SHOWS
-		- ####-##-## USERS & PHOTOS
-			- 2025-02-01 Norma_Belkin
-			- 2025-02-01 Donald_Riggio
-			- ####-##-## Greg_Leonhardt
-			- 2025-02-01 Herman_Leonhardt
-			- 2025-02-01 Jason_Leonhardt
-			- 2025-02-01 Jane_Engelcke-Steger
-			- 2025-02-01 Tom_Leonhardt
-			-
-- # D.O.N.E.
-- 2025-02-20 Restore archive for the TAPE-BACKUP directory.
-	- 2025-02-20 Restore from HyperBackup
-	- 2025-02-25 Copy to TrueNAS
