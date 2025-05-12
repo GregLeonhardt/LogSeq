@@ -1,5 +1,8 @@
 # To Do
-	- ##
+	- ## Mealie
+		- ### Mealie is **a self hosted recipe manager and meal planner** with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
+			- Install Docker container
+			- Import existing data to the new container.
 	- # Shinobi or ZoneMinder
 	- ### Free and open-source option, modern video surveillance solution known for its ease of use.
 		- Install Docker container
