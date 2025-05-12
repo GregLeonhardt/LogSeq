@@ -1,22 +1,33 @@
-## [[TODO]]
-	- 2025-02-23 Install the WEBTREE genealogy docker container.
-		- ####-##-## Install the Docker container
-		- ####-##-## Import data from FTM
-		- ####-##-## Enable NGINX
-	- 2025-02-22 Add USERS and Import photos into Immich
-		- 2025-02-22 Leonhardt@Nick
-		- 2025-02-24 Leonhardt@Greg
-		- 2025-02-24 Leonhardt@Herman
-		- ####-##-## Leonhardt@Louise
-		- 2025-02-24 Leonhardt_Nick
-		- 2025-02-25 Leonhardt@Tom
-		- ####-##-## Leonhardt@Jason
-		- 2025-02-24 Steger-Engelcke@Jane
-		- 2025-02-25 Belkin@Norma
-	- 2025-01-27 GIT docker container (alpine/git)
-		- ####-##-## Install the container
-		- ####-##-## Copy existing data to the new container
-		- ####-##-## Verify access
+# To Do
+	- ## [[WebTrees]]
+		- ### WebTrees is a free, open-source, web-based genealogy application that allows users to create, manage, and share family trees online.
+			- ~~Install Docker container~~
+			- Configure for external internet access (NGINX)
+			- Add data
+	- ## [[Immich]]
+		- ### Immich is a free, open-source, self-hosted photo and video management solution
+			- ~~Install Docker container~~
+			- Configure
+				- Nick
+				- Greg
+				- Louise
+				- Tom
+				- Jason
+				- Jane
+				- Norma
+		- ## [[Git]]
+			- ### Git is a distributed version control system used to track changes in computer files, especially source code during software development.
+				- Install Docker container
+				- Move existing repos to the new container.
+- # Done
+	- ## Dockage
+		- ### Dockge is a fancy, easy-to-use self-hosted docker compose.yaml stack-oriented manager.
+			- NOTES: My initial plan was to exclusively use TrueNAS apps but there are problems:
+				- Not everything is available so some Docker container manager is needed.
+				- There is no way to backup TrueNAS apps (yes the data can be backed up but the apps can not be backed up).  If I used a Docker container manager the apps are backed up as the Dockage data.
+			- ~~Install Docker container~~
+-
+- This is the OLD-TODO list
 	- 2025-01-27 Synology System Logs
 		- ####-##-## Build an automated copy routine to copy the logs from Synology to TrueNAS
 	- 2025-01-22 Finalize migration of all data from Synology to TrueNAS
