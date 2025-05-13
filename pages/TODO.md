@@ -85,6 +85,7 @@
 			- ~~Configure~~
 		- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
 	- ## [[SyncThing]]
+	  collapsed:: true
 		- ### Syncthing is a free, open-source continuous file synchronization program that allows users to securely sync and share files across multiple devices.
 			- ~~Install Docker container~~
 			- ~~Configure~~
@@ -99,6 +100,7 @@
 				- 9-RecipeArchive-All_The_Old_Stuff_Compressed
 			- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
 	- ## [[Dockage]]
+	  collapsed:: true
 		- ### Dockge is a fancy, easy-to-use self-hosted docker compose.yaml stack-oriented manager.
 			- NOTES: My initial plan was to exclusively use TrueNAS apps but there are problems:
 				- Not everything is available so some Docker container manager is needed.
