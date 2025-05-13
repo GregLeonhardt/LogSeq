@@ -1,4 +1,11 @@
 # To Do
+	- ## [[Paperless-ngx]]
+	  collapsed:: true
+		- ### Paperless-ngx is a free and open-source document management system that transforms physical documents into a searchable online archive.
+			- ~~~Install Docker container.~~~
+			- ~~~Configure~~~
+		- ### Follow-up: The container is installed and running as a Dockage container but I want to move the data to the Docker dataset.
+			- This shouldn't be anything more than copy the data over and modify the config.yaml file to the new locations.
 	- ## DeDup
 	  collapsed:: true
 		- ### RecipeArchive
@@ -20,6 +27,7 @@
 	- ## [[Mealie]]
 	  collapsed:: true
 		- ### Mealie is **a self hosted recipe manager and meal planner** with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
+		  collapsed:: true
 			- Install Docker container
 			- Import existing data to the new container.
 	- ## Shinobi or ZoneMinder
@@ -77,7 +85,6 @@
 			- ~~Configure~~
 		- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
 	- ## [[SyncThing]]
-	  collapsed:: true
 		- ### Syncthing is a free, open-source continuous file synchronization program that allows users to securely sync and share files across multiple devices.
 			- ~~Install Docker container~~
 			- ~~Configure~~
@@ -92,7 +99,6 @@
 				- 9-RecipeArchive-All_The_Old_Stuff_Compressed
 			- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
 	- ## [[Dockage]]
-	  collapsed:: true
 		- ### Dockge is a fancy, easy-to-use self-hosted docker compose.yaml stack-oriented manager.
 			- NOTES: My initial plan was to exclusively use TrueNAS apps but there are problems:
 				- Not everything is available so some Docker container manager is needed.
