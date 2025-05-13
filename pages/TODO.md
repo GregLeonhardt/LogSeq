@@ -2,20 +2,6 @@
 	- ## DeDup
 	  collapsed:: true
 		- ### RecipeArchive
-	- ## [[DDNS Updater]]
-		- ### DDNS Updater checks for changes to the external IP address of a Microsoft Windows computer, and updates a dynamic DNS (DDNS) service whenever a change is detected.
-			- ~~Install the Docker container~~
-			- ~~Configure~~
-				- Client Key: f5862204bfb111efa921e901e67ca7b5
-				- UserName: gregleonhardt
-				- 508r.dyndns.org
-				- humhub.dyndns.org
-				- immich.myphotos.cc
-				- webtree.dyndns.org
-				- myrecipies.homeip.net
-				- familytree.homeip.net
-				- humhub.homeip.net
-		- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
 	- ## Backup to local HDD
 	  collapsed:: true
 		- ### Phase 1 Local HDD backup.
@@ -69,6 +55,21 @@
 			- Install Docker container
 			- Move existing repos to the new container.
 - # Done
+	- ## [[DDNS Updater]]
+	  collapsed:: true
+		- ### DDNS Updater checks for changes to the external IP address of a Microsoft Windows computer, and updates a dynamic DNS (DDNS) service whenever a change is detected.
+			- ~~Install the Docker container~~
+			- ~~Configure~~
+				- Client Key: f5862204bfb111efa921e901e67ca7b5
+				- UserName: gregleonhardt
+				- 508r.dyndns.org
+				- humhub.dyndns.org
+				- immich.myphotos.cc
+				- webtree.dyndns.org
+				- myrecipies.homeip.net
+				- familytree.homeip.net
+				- humhub.homeip.net
+		- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
 	- ## [[Jellyfin]]
 	  collapsed:: true
 		- ### Jellyfin is a free and open-source media server that allows users to organize, manage, and stream their media files from a dedicated server to various devices.
