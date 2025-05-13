@@ -1,5 +1,18 @@
 # To Do
 	- # SyncThing
+		- ### Syncthing is a free, open-source continuous file synchronization program that allows users to securely sync and share files across multiple devices.
+			- ~~Install Docker container~~
+			- ~~Configure~~
+			  collapsed:: true
+				- 0-RecipeArchive-bin
+				- 1-RecipeArchive-RecipeArchive
+				- 2-RecipeArchive-RecipeArchive_Compressed
+				- 3-RecipeArchive-Documents
+				- 4-RecipeArchive-PDF
+				- 5-RecipeArchive-Compressed_ZIP
+				- 8-RecipeArchive-All_The_Old_Stuff
+				- 9-RecipeArchive-All_The_Old_Stuff_Compressed
+			- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
 	- ## [[Jellyfin]]
 		- ### Jellyfin is a free and open-source media server that allows users to organize, manage, and stream their media files from a dedicated server to various devices.
 			- ~~Install Docker container~~
