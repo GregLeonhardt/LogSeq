@@ -3,11 +3,9 @@
 	  collapsed:: true
 		- ### RecipeArchive
 	- ## [[DDNS Updater]]
-	  collapsed:: true
 		- ### DDNS Updater checks for changes to the external IP address of a Microsoft Windows computer, and updates a dynamic DNS (DDNS) service whenever a change is detected.
 			- ~~Install the Docker container~~
 			- ~~Configure~~
-			  collapsed:: true
 				- Client Key: f5862204bfb111efa921e901e67ca7b5
 				- UserName: gregleonhardt
 				- 508r.dyndns.org
