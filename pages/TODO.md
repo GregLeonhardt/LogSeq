@@ -1,24 +1,9 @@
 # To Do
-	- # SyncThing
-		- ### Syncthing is a free, open-source continuous file synchronization program that allows users to securely sync and share files across multiple devices.
-			- ~~Install Docker container~~
-			- ~~Configure~~
-			  collapsed:: true
-				- 0-RecipeArchive-bin
-				- 1-RecipeArchive-RecipeArchive
-				- 2-RecipeArchive-RecipeArchive_Compressed
-				- 3-RecipeArchive-Documents
-				- 4-RecipeArchive-PDF
-				- 5-RecipeArchive-Compressed_ZIP
-				- 8-RecipeArchive-All_The_Old_Stuff
-				- 9-RecipeArchive-All_The_Old_Stuff_Compressed
-			- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
-	- ## [[Jellyfin]]
-		- ### Jellyfin is a free and open-source media server that allows users to organize, manage, and stream their media files from a dedicated server to various devices.
-			- ~~Install Docker container~~
-			- ~~Configure~~
-		- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
+	- ## DeDup
+	  collapsed:: true
+		- ### RecipeArchive
 	- ## [[DDNS Updater]]
+	  collapsed:: true
 		- ### DDNS Updater checks for changes to the external IP address of a Microsoft Windows computer, and updates a dynamic DNS (DDNS) service whenever a change is detected.
 			- ~~Install the Docker container~~
 			- ~~Configure~~
@@ -34,6 +19,7 @@
 				- humhub.homeip.net
 		- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
 	- ## Backup to local HDD
+	  collapsed:: true
 		- ### Phase 1 Local HDD backup.
 			- I should be able to create a local spanned disk pool using the USB drives I have laying around.
 				- ``zpool create  BACKUP /dev/sdx /dev/sdy /dev/sdz``
@@ -48,10 +34,12 @@
 			- In the perfect world all I will need to do is to spin up an UBUNTU system and give it access to the DataSets I want backed up.
 			- I just saw that TrueNAS 25.04 is changing the way virtual environments work so I think that I will wait until I install it before attempting this.
 	- ## [[Mealie]]
+	  collapsed:: true
 		- ### Mealie is **a self hosted recipe manager and meal planner** with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
 			- Install Docker container
 			- Import existing data to the new container.
-	- # Shinobi or ZoneMinder
+	- ## Shinobi or ZoneMinder
+	  collapsed:: true
 		- ### Free and open-source option, modern video surveillance solution known for its ease of use.
 			- Install Docker container
 			- Configure
@@ -59,11 +47,13 @@
 				- Timelaps
 				- Purge files
 	- ## [[WebTrees]]
+	  collapsed:: true
 		- ### WebTrees is a free, open-source, web-based genealogy application that allows users to create, manage, and share family trees online.
 			- ~~Install Docker container~~
 			- Configure for external internet access (NGINX)
 			- Add data
 	- ## [[Immich]]
+	  collapsed:: true
 		- ### Immich is a free, open-source, self-hosted photo and video management solution
 			- ~~Install Docker container~~
 			- Configure
@@ -76,11 +66,34 @@
 				- Jane
 				- Norma
 	- ## [[Git]]
+	  collapsed:: true
 		- ### Git is a distributed version control system used to track changes in computer files, especially source code during software development.
 			- Install Docker container
 			- Move existing repos to the new container.
 - # Done
-	- ## Dockage
+	- ## [[Jellyfin]]
+	  collapsed:: true
+		- ### Jellyfin is a free and open-source media server that allows users to organize, manage, and stream their media files from a dedicated server to various devices.
+			- ~~Install Docker container~~
+			- ~~Configure~~
+		- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
+	- ## [[SyncThing]]
+	  collapsed:: true
+		- ### Syncthing is a free, open-source continuous file synchronization program that allows users to securely sync and share files across multiple devices.
+			- ~~Install Docker container~~
+			- ~~Configure~~
+			  collapsed:: true
+				- 0-RecipeArchive-bin
+				- 1-RecipeArchive-RecipeArchive
+				- 2-RecipeArchive-RecipeArchive_Compressed
+				- 3-RecipeArchive-Documents
+				- 4-RecipeArchive-PDF
+				- 5-RecipeArchive-Compressed_ZIP
+				- 8-RecipeArchive-All_The_Old_Stuff
+				- 9-RecipeArchive-All_The_Old_Stuff_Compressed
+			- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
+	- ## [[Dockage]]
+	  collapsed:: true
 		- ### Dockge is a fancy, easy-to-use self-hosted docker compose.yaml stack-oriented manager.
 			- NOTES: My initial plan was to exclusively use TrueNAS apps but there are problems:
 				- Not everything is available so some Docker container manager is needed.
