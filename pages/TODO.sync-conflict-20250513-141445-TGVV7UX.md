@@ -1,0 +1,46 @@
+## [[TODO]]
+	- 2025-02-23 Install the WEBTREE genealogy docker container.
+		- ####-##-## Install the Docker container
+		- ####-##-## Import data from FTM
+		- ####-##-## Enable NGINX
+	- 2025-02-22 Add USERS and Import photos into Immich
+		- 2025-02-22 Leonhardt@Nick
+		- 2025-02-24 Leonhardt@Greg
+		- 2025-02-24 Leonhardt@Herman
+		- ####-##-## Leonhardt@Louise
+		- 2025-02-24 Leonhardt_Nick
+		- 2025-02-25 Leonhardt@Tom
+		- ####-##-## Leonhardt@Jason
+		- 2025-02-24 Steger-Engelcke@Jane
+		- 2025-02-25 Belkin@Norma
+	- 2025-01-27 GIT docker container (alpine/git)
+		- ####-##-## Install the container
+		- ####-##-## Copy existing data to the new container
+		- ####-##-## Verify access
+	- 2025-01-27 Synology System Logs
+		- ####-##-## Build an automated copy routine to copy the logs from Synology to TrueNAS
+	- 2025-01-22 Finalize migration of all data from Synology to TrueNAS
+		- ####-##-## FTM
+		- ####-##-## HOME-VIDEO
+		- 2025-02-10 MOVIES
+		- ####-##-## MUSIC
+		- ####-##-## PHOTOS
+		- ####-##-## RECIPES
+		- ####-##-## SNEAKERNET
+		- 2025-02-08 STK
+		- ####-##-## STORA
+		- ####-##-## TAPE
+		- 2025-02-10 TV-SHOWS
+		- ####-##-## USERS & PHOTOS
+			- 2025-02-01 Norma_Belkin
+			- 2025-02-01 Donald_Riggio
+			- ####-##-## Greg_Leonhardt
+			- 2025-02-01 Herman_Leonhardt
+			- 2025-02-01 Jason_Leonhardt
+			- 2025-02-01 Jane_Engelcke-Steger
+			- 2025-02-01 Tom_Leonhardt
+			-
+- # D.O.N.E.
+- 2025-02-20 Restore archive for the TAPE-BACKUP directory.
+	- 2025-02-20 Restore from HyperBackup
+	- 2025-02-25 Copy to TrueNAS
