@@ -7,7 +7,7 @@
 			  logseq.order-list-type:: number
 			- This isn't really a MUST but I want to be able to revert to an old version.  In order to do that the final (as final as final can be knowing it will never be finished) configuration changes need to be in place.
 	- ## [[Mealie]]
-		- ### Mealie is **a self hosted recipe manager and meal planner** with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. It's designed to help users organize, manage, and share their recipes, create meal plans, and generate shopping lists.
+		- ### Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. It's designed to help users organize, manage, and share their recipes, create meal plans, and generate shopping lists.
 			- Install Docker container
 			- Configure
 		- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
