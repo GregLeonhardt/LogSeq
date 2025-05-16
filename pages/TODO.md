@@ -1,4 +1,16 @@
 # To Do
+	- ## Upgrade TrueNAS software.
+		- ### Before I can do this the following projects must be complete.
+			- Mealie
+			  logseq.order-list-type:: number
+			- Paperless-NGX
+			  logseq.order-list-type:: number
+			- This isn't really a MUST but I want to be able to revert to an old version.  In order to do that the final (as final as final can be knowing it will never be finished) configuration changes need to be in place.
+	- ## [[Mealie]]
+		- ### Mealie is **a self hosted recipe manager and meal planner** with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. It's designed to help users organize, manage, and share their recipes, create meal plans, and generate shopping lists.
+			- Install Docker container
+			- Configure
+		- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
 	- ## [[Paperless-ngx]]
 		- ### Paperless-ngx is a free and open-source document management system that transforms physical documents into a searchable online archive.
 			- ~~~Install Docker container.~~~
@@ -6,8 +18,17 @@
 		- ### Follow-up: The container is installed and running as a Dockage container but I want to move the data to the Docker dataset.
 			- This shouldn't be anything more than copy the data over and modify the config.yaml file to the new locations.
 	- ## DeDup
-	  collapsed:: true
 		- ### RecipeArchive
+			- Create a compressed archive of every identifiable old download.
+			  logseq.order-list-type:: number
+			- Using HtTrack and the WayBack Downloader, pull a new version of sites that can be identified.
+			  logseq.order-list-type:: number
+			- If there is an old download of an identifiable new download, delete it.
+			  logseq.order-list-type:: number
+			- Scan all the remaining stuff to see if it is a duplicate of the new stuff.  When located attempt to rebuild the old site.
+			  logseq.order-list-type:: number
+				- If the site can be located as a still active site or something on the WayBack Machine, get a new copy of site and continue from stem #2.
+				  logseq.order-list-type:: number
 	- ## Backup to local HDD
 		- ### ~~Phase 1 Local HDD backup.~~
 		  collapsed:: true
@@ -20,18 +41,10 @@
 					- Where BACKUP is the pool name
 					- Where /dev/sdw is the HDDs
 		- ### Phase 2 CrashPlan
-		  collapsed:: true
 			- I think that I will be able to run Crashplan in a virtual OS on the TrueNAS server.
 			- In the perfect world all I will need to do is to spin up an UBUNTU system and give it access to the DataSets I want backed up.
 			- I just saw that TrueNAS 25.04 is changing the way virtual environments work so I think that I will wait until I install it before attempting this.
-	- ## [[Mealie]]
-	  collapsed:: true
-		- ### Mealie is **a self hosted recipe manager and meal planner** with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
-		  collapsed:: true
-			- Install Docker container
-			- Import existing data to the new container.
 	- ## Shinobi or ZoneMinder
-	  collapsed:: true
 		- ### Free and open-source option, modern video surveillance solution known for its ease of use.
 			- Install Docker container
 			- Configure
@@ -39,13 +52,11 @@
 				- Timelaps
 				- Purge files
 	- ## [[WebTrees]]
-	  collapsed:: true
 		- ### WebTrees is a free, open-source, web-based genealogy application that allows users to create, manage, and share family trees online.
 			- ~~Install Docker container~~
 			- Configure for external internet access (NGINX)
 			- Add data
 	- ## [[Git]]
-	  collapsed:: true
 		- ### Git is a distributed version control system used to track changes in computer files, especially source code during software development.
 			- Install Docker container
 			- Move existing repos to the new container.
@@ -63,6 +74,7 @@
 				- Jason
 				- Jane
 				- Norma
+			- ~~Import Photos and Videos.~~
 	- ## [[DDNS Updater]]
 	  collapsed:: true
 		- ### DDNS Updater checks for changes to the external IP address of a Microsoft Windows computer, and updates a dynamic DNS (DDNS) service whenever a change is detected.
