@@ -1,6 +1,5 @@
 # To Do
 	- ## [[Paperless-ngx]]
-	  collapsed:: true
 		- ### Paperless-ngx is a free and open-source document management system that transforms physical documents into a searchable online archive.
 			- ~~~Install Docker container.~~~
 			- ~~~Configure~~~
@@ -10,8 +9,8 @@
 	  collapsed:: true
 		- ### RecipeArchive
 	- ## Backup to local HDD
-	  collapsed:: true
-		- ### Phase 1 Local HDD backup.
+		- ### ~~Phase 1 Local HDD backup.~~
+		  collapsed:: true
 			- I should be able to create a local spanned disk pool using the USB drives I have laying around.
 				- ``zpool create  BACKUP /dev/sdx /dev/sdy /dev/sdz``
 					- Where BACKUP is the pool name
@@ -21,6 +20,7 @@
 					- Where BACKUP is the pool name
 					- Where /dev/sdw is the HDDs
 		- ### Phase 2 CrashPlan
+		  collapsed:: true
 			- I think that I will be able to run Crashplan in a virtual OS on the TrueNAS server.
 			- In the perfect world all I will need to do is to spin up an UBUNTU system and give it access to the DataSets I want backed up.
 			- I just saw that TrueNAS 25.04 is changing the way virtual environments work so I think that I will wait until I install it before attempting this.
@@ -44,11 +44,17 @@
 			- ~~Install Docker container~~
 			- Configure for external internet access (NGINX)
 			- Add data
+	- ## [[Git]]
+	  collapsed:: true
+		- ### Git is a distributed version control system used to track changes in computer files, especially source code during software development.
+			- Install Docker container
+			- Move existing repos to the new container.
+- # Done
 	- ## [[Immich]]
 	  collapsed:: true
 		- ### Immich is a free, open-source, self-hosted photo and video management solution
 			- ~~Install Docker container~~
-			- Configure
+			- ~~Configure~~
 			  collapsed:: true
 				- Nick
 				- Greg
@@ -57,12 +63,6 @@
 				- Jason
 				- Jane
 				- Norma
-	- ## [[Git]]
-	  collapsed:: true
-		- ### Git is a distributed version control system used to track changes in computer files, especially source code during software development.
-			- Install Docker container
-			- Move existing repos to the new container.
-- # Done
 	- ## [[DDNS Updater]]
 	  collapsed:: true
 		- ### DDNS Updater checks for changes to the external IP address of a Microsoft Windows computer, and updates a dynamic DNS (DDNS) service whenever a change is detected.
