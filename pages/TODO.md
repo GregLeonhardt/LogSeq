@@ -1,16 +1,11 @@
 # To Do
 	- ## Upgrade TrueNAS software.
 		- ### Before I can do this the following projects must be complete.
-			- Mealie
+			- ~~Mealie~~
 			  logseq.order-list-type:: number
 			- Paperless-NGX
 			  logseq.order-list-type:: number
 			- This isn't really a MUST but I want to be able to revert to an old version.  In order to do that the final (as final as final can be knowing it will never be finished) configuration changes need to be in place.
-	- ## [[Mealie]]
-		- ### Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. It's designed to help users organize, manage, and share their recipes, create meal plans, and generate shopping lists.
-			- Install Docker container
-			- Configure
-		- ### Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.
 	- ## [[Paperless-ngx]]
 		- ### Paperless-ngx is a free and open-source document management system that transforms physical documents into a searchable online archive.
 			- ~~~Install Docker container.~~~
@@ -29,7 +24,7 @@
 			  logseq.order-list-type:: number
 				- If the site can be located as a still active site or something on the WayBack Machine, get a new copy of site and continue from stem #2.
 				  logseq.order-list-type:: number
-	- ## Backup to local HDD
+	- ## Backup
 		- ### ~~Phase 1 Local HDD backup.~~
 		  collapsed:: true
 			- I should be able to create a local spanned disk pool using the USB drives I have laying around.
@@ -40,6 +35,10 @@
 				- ``zpool add  BACKUP /dev/sdw``
 					- Where BACKUP is the pool name
 					- Where /dev/sdw is the HDDs
+		- Phase-2 GIT
+			- Docker
+			  collapsed:: true
+				- Archive all the configuration and environment files to the GIT repository.
 		- ### Phase 2 CrashPlan
 			- I think that I will be able to run Crashplan in a virtual OS on the TrueNAS server.
 			- In the perfect world all I will need to do is to spin up an UBUNTU system and give it access to the DataSets I want backed up.
@@ -61,6 +60,12 @@
 			- Install Docker container
 			- Move existing repos to the new container.
 - # Done
+	- ## [[Mealie]]
+	  collapsed:: true
+		- ### Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. It's designed to help users organize, manage, and share their recipes, create meal plans, and generate shopping lists.
+			- ~~Install Docker container~~
+			- ~~Configure~~
+		- ### ~~Follow-up: The container is installed and running as a TrueNAS container but I am moving everything over to Dockge so I am going to have to do it all over again.~~
 	- ## [[Immich]]
 	  collapsed:: true
 		- ### Immich is a free, open-source, self-hosted photo and video management solution
