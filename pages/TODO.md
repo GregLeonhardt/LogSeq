@@ -6,12 +6,6 @@
 			- Paperless-NGX
 			  logseq.order-list-type:: number
 			- This isn't really a MUST but I want to be able to revert to an old version.  In order to do that the final (as final as final can be knowing it will never be finished) configuration changes need to be in place.
-	- ## [[Paperless-ngx]]
-		- ### Paperless-ngx is a free and open-source document management system that transforms physical documents into a searchable online archive.
-			- ~~~Install Docker container.~~~
-			- ~~~Configure~~~
-		- ### Follow-up: The container is installed and running as a Dockage container but I want to move the data to the Docker dataset.
-			- This shouldn't be anything more than copy the data over and modify the config.yaml file to the new locations.
 	- ## DeDup
 		- ### RecipeArchive
 			- Create a compressed archive of every identifiable old download.
@@ -60,6 +54,15 @@
 			- Install Docker container
 			- Move existing repos to the new container.
 - # Done
+	- ## [[Paperless-ngx]]
+	  collapsed:: true
+		- ### Paperless-ngx is a free and open-source document management system that transforms physical documents into a searchable online archive.
+		  collapsed:: true
+			- ~~~Install Docker container.~~~
+			- ~~~Configure~~~
+		- ### ~~Follow-up: The container is installed and running as a Dockage container but I want to move the data to the Docker dataset.~~
+		  collapsed:: true
+			- This shouldn't be anything more than copy the data over and modify the config.yaml file to the new locations.
 	- ## [[Mealie]]
 	  collapsed:: true
 		- ### Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. It's designed to help users organize, manage, and share their recipes, create meal plans, and generate shopping lists.
