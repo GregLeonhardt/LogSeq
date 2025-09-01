@@ -1,0 +1,122 @@
+# Files
+	- ### recipes.csv
+		- Contains the core recipe information:
+			- recipe-id
+				- A unique identifier for each recipe.
+			- name
+				- A name or title given to the recipe.
+				- NOTE: There may be many recipes with the same name.
+			- author
+				- Identifies the creator of the recipe.  This is usually a person but may be an organization or company.
+			- serves
+				- How many people this recipe will serve.
+			- serving-size
+				- How much of what each person is expected to receive.  This could also be referred to as a portion size.
+			- yield
+				- The total amount of something the recipe will produce.
+				- NOTE: serves, serving-size, and yield are all similar.  In fact any two of the three and be used to calculate the third.
+				- NOTE:  Many recipes do not contain any of the three.
+			- time-prep
+				- The amount of time expected to assemble and prepare the ingredients.  This would include things like mixing ingredients, preheating an appliance, etc.
+			- time-cook
+				- The amount of time to cook, bake, fry the ingredients.
+			- time-wait
+				- The amount of time to rest, cook, chill, freeze the disk after it has been prepared and cooked.
+			- time-total
+				- All of the ablove time combined.
+			- copyright
+				- Copyright information found in the source recipe.
+			- formatted-by
+				- Many time people receive recipes and store them is a well known format and list themselves as the person who performed this work.
+			- nutrition
+				- Lists the nutrition information for the recipe.
+				- NOTE: There is no standard format for this information.  It is only what was found in the source recipe.
+				- NOTE: Many, no, most recipes do not contain any nutrition information.  If nothing is found in the source recipe, no nutrition information is listed.
+	- ### recipes-metadata.csv
+		- Contains information about where the recipe was obtained from.  In the case of e-Mail: who posted it, where it was posted to and when.
+		- recipe-id
+			- A unique identifier for each recipe.
+		- source-format
+			- Shows the source format of the original recipe.
+			- NOTE: This field is only recorded for accounting reference.
+		- filename
+			- The filename of the source file the recipe was originally located.
+			- NOTE: No file information is provided for email messages.
+		- filesize
+			- The size (in bytes) of the source file the recipe was originally located.
+		- file-timestamp
+			- The date and time of source file the recipe was originally located.
+			- NOTE: Many recipe files are contained in compressed archives where the date and time are from when the file was archived.
+		- email-address
+			- The email address of the person sending the recipe.
+		- email-timestamp
+			- The date and time when the email was sent.
+		- email-subject
+			- Subject of the email.
+		- group-name
+			- The email address of the recipe group.
+			- NOTE: People send email messages to a recipe group.  The email group then sends the email to it's members.
+			- NOTE: Often times the recipe group will bundle many emails into a single message and send the bundle to it's members.
+		- group-timestamp
+			- The date and time the group relayed the source email message to it's members.
+		- group-subject
+			- The subject that was used for the email bundle.
+	- ### recipes-description.csv
+		- A description of the recipe.
+		- There may be from zero to many lines of text used foe the recipe description.
+		- recipe-id
+			- A unique identifier for each recipe.
+		- seq-num
+			- Used to keep each description line of text in the intended order.
+		- text
+			- A single line of description text.
+	- ### recipes-ingredients.csv
+		- Lists how much of what will be used to create the dish.
+		- recipe-id
+			- A unique identifier for each recipe.
+		- seq-num
+			- Used to keep each ingredient is the authors intended order.
+		- amount
+			- How many or how much of something.
+				- When present, this is always a number.
+		- unit
+			- How to measure the amount.
+				- Example, Cups, Grams, Liters, Teaspoons, etc.
+		- ingredient
+			- What is it that will be added.
+				- Example; Salt, Eggs, Flower, Corn Starch, etc.
+		- preperation
+			- Though some recipes carry this to an extreme, it is meant to be a simple notation for the state the ingredient is to be in when the recipe is assembled.
+				- Example: shrimp should be "deveined" before adding to the recipe.
+				- NOTE: some ingredients may have multiple lines of preparation information.  When this occurs the amount, unit, and ingredient information is not repeated.
+	- ### recipes-directions.csv
+		- A step-by-step set of instructions for making the recipe.
+			- Each recipe shall have from one to many steps.
+		- recipe-id
+			- A unique identifier for each recipe.
+		- seq-num
+			- Used to keep each direction line of text in the intended order.
+		- text
+			- A single line of direction text.
+	- ### recipes-categories.csv
+		- There are many category types and many categories for each type.
+		- NOTE: The order in which they are presented has no reliance so there is no seq-num for this table.
+		- recipe-id
+			- A unique identifier for each recipe.
+		- cuisine
+			- Used to indicate the ethnicity or region where the recipe originated from or is associated with.
+				- Example: French, South West, Indian, etc.
+		- occasion
+			- The recipe may be associated with
+				- Examples, Christmas, Wedding, etc.
+		- meal
+			- This usually indicates the time of day when the recipe would be used for.
+				- Examples, Breakfast, Snack, Dinner, etc.
+		- diet
+			- Indicates the recipe may be used for a special diet.
+				- Example, Low-Fat, Low-Carb, Etc.
+		- appliance
+			- Example: Air Fryer, Blender, Microwave, etc.
+		- chapter
+			- A general reference to cookbook chapters.
+				- Example: Soups & Stews, Breads, Pork, Beef, etc.
