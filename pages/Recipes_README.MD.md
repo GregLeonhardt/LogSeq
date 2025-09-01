@@ -1,7 +1,7 @@
 # Files
 	- ### recipes.csv
 		- Contains the core recipe information:
-			- recipe-id
+			- recipe_id
 				- A unique identifier for each recipe.
 			- name
 				- A name or title given to the recipe.
@@ -34,7 +34,7 @@
 				- NOTE: Many, no, most recipes do not contain any nutrition information.  If nothing is found in the source recipe, no nutrition information is listed.
 	- ### recipes-metadata.csv
 		- Contains information about where the recipe was obtained from.  In the case of e-Mail: who posted it, where it was posted to and when.
-		- recipe-id
+		- recipe_id
 			- A unique identifier for each recipe.
 		- source-format
 			- Shows the source format of the original recipe.
@@ -64,7 +64,7 @@
 	- ### recipes-description.csv
 		- A description of the recipe.
 		- There may be from zero to many lines of text used foe the recipe description.
-		- recipe-id
+		- recipe_id
 			- A unique identifier for each recipe.
 		- seq-num
 			- Used to keep each description line of text in the intended order.
@@ -72,7 +72,7 @@
 			- A single line of description text.
 	- ### recipes-ingredients.csv
 		- Lists how much of what will be used to create the dish.
-		- recipe-id
+		- recipe_id
 			- A unique identifier for each recipe.
 		- seq-num
 			- Used to keep each ingredient in the authors intended order.
@@ -92,7 +92,7 @@
 	- ### recipes-directions.csv
 		- A step-by-step set of instructions for making the recipe.
 			- Each recipe shall have from one to many steps.
-		- recipe-id
+		- recipe_id
 			- A unique identifier for each recipe.
 		- seq-num
 			- Used to keep each direction line of text in the intended order.
@@ -101,7 +101,7 @@
 	- ### recipes-categories.csv
 		- There are many category types and many categories for each type.
 		- NOTE: The order in which they are presented has no reliance so there is no seq-num for this table.
-		- recipe-id
+		- recipe_id
 			- A unique identifier for each recipe.
 		- cuisine
 			- Used to indicate the ethnicity or region where the recipe originated from or is associated with.

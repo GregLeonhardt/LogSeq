@@ -1,2 +1,2 @@
-- Detailed information on the files and file contents is in [[Recipes-README.MD]]
+- Detailed information on the files and file contents is in [[Recipes_README.MD]]
 -
