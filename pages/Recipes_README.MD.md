@@ -130,7 +130,7 @@ The recipes are stored in normalized form across multiple CSV files, all linked 
   ---
 - ### recipes-directions.csv
   
-  Contains step-by-step instructions.
+  Contains step-by-step instructions for preparing the recipe.
   
   * **recipe\_id** - A unique identifier for each recipe.
   * **seq\_num** - Sequence number to preserve step order.
