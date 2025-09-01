@@ -23,7 +23,7 @@
 			- time-wait
 				- The amount of time to rest, cook, chill, freeze the disk after it has been prepared and cooked.
 			- time-total
-				- All of the ablove time combined.
+				- All of the above times combined.
 			- copyright
 				- Copyright information found in the source recipe.
 			- formatted-by
