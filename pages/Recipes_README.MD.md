@@ -1,18 +1,17 @@
 # Recipe Dataset
-- This dataset contains over XXX recipes collected from various sources over the past 30 years.
-- The recipes are stored in normalized form across multiple CSV files, all linked together by a common `recipe_id` key.
-- Note: In the provided examples, rows are split across lines for readability. In the actual CSV files, each row is on a single line as governed by RFC 4180.
-  
-  ---
-- ## Changelog
-- v1: 2025/09/01 Initial release
+
+This dataset contains over 1 million recipes collected from various sources over the past 30 or so years.
+
+The recipes are stored in normalized form across multiple CSV files, all linked together by a common `recipe_id` key.
+
+---
+- ## Change Log:
+- v1:	2025/09/01	Initil release.
   
   ---
 - ## Structure
   
   The dataset is split into the following files:
-  
-  ---
 - ### recipes.csv
   
   Contains the core recipe information:
@@ -36,7 +35,7 @@
   **Example:**
   
   ```csv
-  recipe_id,name,author,serves,time_prep,time_cook,time_wait_time_total,copyright,formatted_by,nutrition
+  recipe_id,name,author,serves,time_prep,time_cook,time_wait,time_total,copyright,formatted_by,nutrition
   "recipe_id",
   "name",
   "author",
@@ -47,62 +46,147 @@
   "time_total",
   "copyright",
   "formatted_by",
-  "nutrition
-  
+  "nutrition"
   ```
   
   ---
-	- ### recipes-categories.csv
-	  
-	  Contains categorization tags for each recipe.
-	  
-	  * **recipe\_id** - A unique identifier for each recipe.
-	  * **cuisine** - Ethnicity or region (e.g., French, Indian, Southwest).
-	  * **occasion** - Occasion (e.g., Christmas, Wedding).
-	  * **meal** - Meal type (e.g., Breakfast, Snack, Dinner).
-	  * **diet** - Special diet (e.g., Low-Fat, Low-Carb).
-	  * **appliance** - Appliances used (e.g., Air Fryer, Microwave).
-	  * **chapter** - Cookbook-style chapter tags (e.g., Soups & Stews, Breads).
-	  
-	  **Example:**
-	  
-	  ```csv
-	  recipe_id,name,author,serves,time_prep,time_cook
-	  1,"Chicken Parmesan","John Doe",4,"15 min","30 min"
-	  ```
-	  
-	  
-	  ---
-	  - ## Relationships
-	  
-	  * `recipes.csv` is the **core table**.
-	  * All other files are linked to `recipes.csv` by the **recipe\_id** field.
-	  * `seq_num` is used in description, ingredients, and directions files to preserve author-intended order.
-	  
-	  **Example:**
-	  
-	  ```csv
-	  recipe_id,name,author,serves,time_prep,time_cook
-	  1,"Chicken Parmesan","John Doe",4,"15 min","30 min"
-	  ```
-	  
-	  
-	  ---
-	  - ## Dataset Notes
-	  
-	  * Some fields (e.g., nutrition, serving size) are often missing due to source variability.
-	  * Time values are free text (not standardized to minutes).
-	  * File and email metadata is included for provenance but may not be useful for recipe analysis.
-	  
-	  **Example:**
-	  
-	  ```csv
-	  recipe_id,name,author,serves,time_prep,time_cook
-	  1,"Chicken Parmesan","John Doe",4,"15 min","30 min"
-	  ```
-	  
-	  
-	  ---
+- ### recipes-metadata.csv
+  
+  Contains information about where the recipe was obtained.
+  
+  * **recipe\_id** - A unique identifier for each recipe.
+  * **source\_format** - Format of the original recipe file (for accounting reference).
+  * **filename** - Original source filename (not available for emails).
+  * **filesize** - Size in bytes of the original source file.
+  * **file\_timestamp** - Timestamp from the source file (may reflect archive date).
+  * **email\_address** - Sender�s email address.
+  * **email\_timestamp** - Date/time when the email was sent.
+  * **email\_subject** - Subject line of the email.
+  * **group\_name** - Recipe group name (email distribution list).
+  * **group\_timestamp** - Date/time when the group relayed the email to its members.
+  * **group\_subject** - Subject used for bundled group emails.
+  
+  **Example:**
+  
+  ```csv
+  recipe_id,source_format,filename,filesize,file_size,file_timestamp,email_address,email_timestamp,email_subject,group_address,group_timestamp,group_subject
+  recipe_id",
+  "source_format",
+  "filename",
+  "filesize",
+  "file_size",
+  "file_timestamp",
+  "email_address",
+  "email_timestamp",
+  "email_subject",
+  "group_address",
+  "group_timestamp",
+  "group_subject"
+  ```
+  
+  ---
+- ### recipes-description.csv
+  
+  Contains free-text descriptions of the recipe.
+  
+  * **recipe\_id** - A unique identifier for each recipe.
+  * **seq\_num** - Sequence number to preserve line order.
+  * **text** - A line of description text.
+  
+  **Example:**
+  
+  ```csv
+  recipe_id,seq_num,text
+  recipe_id",
+  "seq_num",
+  "text",
+  ```
+  
+  ---
+- ### recipes-ingredients.csv
+  
+  Lists the ingredients needed for the recipe.
+  
+  * **recipe\_id** - A unique identifier for each recipe.
+  * **seq\_num** - Sequence number to preserve the author�s intended order.
+  * **amount** - Numeric quantity (if present).
+  * **unit** - Unit of measure (cups, grams, liters, teaspoons, etc.).
+  * **ingredient** - Name of the ingredient (e.g., Salt, Eggs, Cornstarch).
+  * **preparation** - Preparation notes (e.g., deveined shrimp).
+  *Note: Some ingredients may have multiple preparation lines; in those cases, `amount`, `unit`, and `ingredient` may be blank.*
+  
+  **Example:**
+  
+  ```csv
+  recipe_id,seq_num,amount,unit,ingredient,preperation
+  recipe_id",
+  "seq_num",
+  "amount",
+  "unit",
+  "ingredient",
+  "preperation"
+  ```
+  
+  ---
+- ### recipes-directions.csv
+  
+  Contains step-by-step instructions.
+  
+  * **recipe\_id** - A unique identifier for each recipe.
+  * **seq\_num** - Sequence number to preserve step order.
+  * **text** - A line of instruction text.
+  
+  **Example:**
+  
+  ```csv
+  recipe_id,seq_num,text
+  recipe_id",
+  "seq_num",
+  "text",
+  ```
+  
+  ---
+- ### recipes-categories.csv
+  
+  Contains categorization tags for each recipe.
+  
+  * **recipe\_id** - A unique identifier for each recipe.
+  * **cuisine** - Ethnicity or region (e.g., French, Indian, Southwest).
+  * **occasion** - Occasion (e.g., Christmas, Wedding).
+  * **meal** - Meal type (e.g., Breakfast, Snack, Dinner).
+  * **diet** - Special diet (e.g., Low-Fat, Low-Carb).
+  * **appliance** - Appliances used (e.g., Air Fryer, Microwave).
+  * **chapter** - Cookbook-style chapter tags (e.g., Soups & Stews, Breads).
+  
+  **Example:**
+  
+  ```csv
+  recipe_id,cuisine,occasion,meal,diet,appliance,chapter
+  recipe_id",
+  "cuisine",
+  "occasion",
+  "meal",
+  "diet",
+  "appliance",
+  "chapter"
+  ```
+  
+  ---
+- ## Relationships
+  
+  * `recipes.csv` is the **core table**.
+  * All other files are linked to `recipes.csv` by the **recipe\_id** field.
+  * `seq_num` is used in description, ingredients, and directions files to preserve author-intended order.
+  
+  ---
+- ## Dataset Notes
+  
+  * Some fields (e.g., nutrition, serving size) are often missing due to source variability.
+  * Time values are free text (not standardized to minutes).
+  * File and email metadata is included for provenance but may not be useful for recipe analysis.
+  * In the above examples, rows may be split across lines for readability. In the actual CSV files, each row is on a single line as governed by RFC 4180.
+  * Recipe_id consists of a 48 character recipe_id and a four character duplicate counter separated by an underscore.  Sometimes the original poster will post a correction, sometimes the same recipe is posted by multiple people.  The point is that the same recipe may be received multiple times from multiple people but may contain modified directions, notes, descriptions etc.  The duplicate counter is used to archive all instances of the recipe.
+  ---
 - ## License
   
   Specify your dataset license here (e.g., CC BY 4.0, CC0 1.0). Kaggle requires a license declaration.
@@ -110,5 +194,4 @@
   ---
 - ## Acknowledgments
   
-  This dataset was compiled from recipes collected via multiple formats (files, emails, groups, archives).
-  Credit goes to the original recipe authors editors and posters where possible.
+  This dataset was compiled from recipes collected via multiple formats (files, emails, groups, archives). Credit goes to the original recipe authors where possible.
