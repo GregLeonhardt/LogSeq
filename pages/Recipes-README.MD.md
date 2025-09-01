@@ -21,13 +21,13 @@
 			- time-cook
 				- The amount of time to cook, bake, fry the ingredients.
 			- time-wait
-				- The amount of time to rest, cook, chill, freeze the disk after it has been prepared and cooked.
+				- The amount of time to rest, cook, chill, freeze the dish after it has been prepared and cooked.
 			- time-total
 				- All of the above times combined.
 			- copyright
 				- Copyright information found in the source recipe.
 			- formatted-by
-				- Many time people receive recipes and store them is a well known format and list themselves as the person who performed this work.
+				- Many time people receive recipes and store them in a well known format and lists themselves as the person who performed this work.
 			- nutrition
 				- Lists the nutrition information for the recipe.
 				- NOTE: There is no standard format for this information.  It is only what was found in the source recipe.
@@ -75,7 +75,7 @@
 		- recipe-id
 			- A unique identifier for each recipe.
 		- seq-num
-			- Used to keep each ingredient is the authors intended order.
+			- Used to keep each ingredient in the authors intended order.
 		- amount
 			- How many or how much of something.
 				- When present, this is always a number.
@@ -85,7 +85,7 @@
 		- ingredient
 			- What is it that will be added.
 				- Example; Salt, Eggs, Flower, Corn Starch, etc.
-		- preperation
+		- preparation
 			- Though some recipes carry this to an extreme, it is meant to be a simple notation for the state the ingredient is to be in when the recipe is assembled.
 				- Example: shrimp should be "deveined" before adding to the recipe.
 				- NOTE: some ingredients may have multiple lines of preparation information.  When this occurs the amount, unit, and ingredient information is not repeated.
